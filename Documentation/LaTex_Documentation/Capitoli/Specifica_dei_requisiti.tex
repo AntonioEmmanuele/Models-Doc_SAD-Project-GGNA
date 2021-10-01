@@ -27,7 +27,7 @@ Nella realtà tutti gli attori descritti non corrisponderanno tutti a persone fi
 Dopo aver identificato a pieno gli attori che utilizzeranno il sistema, bisogna associare ad ogni attore i suoi obiettivi.
 \begin{table}[!h]
 	\centering
-	\begin{tabular}{|c || l|}
+	\begin{tabular}{|p{0.3\linewidth}|p{0.65\linewidth}|}
 		\hline
 		\rowcolor{Red}
 		Attore & Obiettivi \\
@@ -114,6 +114,7 @@ La descrizione dettagliata è stata fatta solo per alcuni casi d'uso.
 
 \begin{longtable}[htbp]{|p{0.3\linewidth}|p{0.65\linewidth}|}
 	\hline
+		\rowcolor{Blue}
 	\textbf{Titolo} & Gestisci Ordinazione \\
 	\hline
 	\textbf{Livello} & Obiettivo Utente \\
@@ -149,7 +150,7 @@ La descrizione dettagliata è stata fatta solo per alcuni casi d'uso.
 	\multirow{8}*{\textbf{Estensioni}}
 	& 3.A Dipendente di sala inizia ordinazione a tavolo \\
 	& 4.A Cliente comunica i prodotti \\
-	& 5.A Il dipendente di sala inserisce merci aggiuntive per prodotto \\
+	& 5.A Il dipendente di sala inserisce prodotti con eventuali merci aggiuntive \\
 	& 6.A Il cliente comunica preferenza di consegna per prodotti \\
 	& 7.A Il dipendente di sala inserisce la preferenza di consegna \\
 	& 8.A Il dipendente di sala aggiunge ordinazione \\
@@ -159,5 +160,80 @@ La descrizione dettagliata è stata fatta solo per alcuni casi d'uso.
 	& 3.B Il dipendente di sala rimuove una ordinazione \\
 	& 4.B Il sistema viene aggiornato \\
 	& 5.B Viene notificato l’evento ad eventuali realizzatori precedentemente notificati \\
+	& \\
+	& 4.C Cliente comunica al dipendente di modificare un prodotto all'interno di un'ordinazione \\
+	& 5.C Dipendente di sala modifica l'ordinazione con i nuovi prodotti \\
+	& 6.C Dipendente di sala inoltra la modifica \\
+	& 7.C Il sistema inoltra la modifica ai corrispondenti realizzatori \\
+	
+	& \\
+	& 4.D Cliente comunica al dipendente di aggiungere un prodotto all'interno di un'ordinazione \\
+	& 5.D Dipendente aggiunge il prodotto (o i prodotti) all'ordinazione \\
+	& 6.D Il sistema viene aggiornato e invia una notifica ai realizzatori \\
+	
+	& \\
+	& 4.E Cliente comunica al dipendente di rimuovere un prodotto all'interno di un'ordinazione \\
+	& 5.E Dipendente rimuove il prodotto (o i prodotti) all'ordinazione \\
+	& 6.E Il sistema viene aggiornato e invia una notifica ai realizzatori \\
+	
+	\hline
+	\multirow{6}*{\textbf{Scenari Alternativi}}
+	& 4.A.1 Prodotto comunicato non è disponibile \\
+	& 4.A.2 Ripeti 4.A \\
+	& \\
+	& 3.B.1 Ordinazione non rimovibile (già completata) \\
+	& 3.B.2 Ripeti 3.B \\
+	& 4.C.1 L'ordinazione non è modificabile (poichè in lavorazione) \\
+	& 4.C.2 Ripeti 4.C \\
+	& \\
+	& 4.D.1 Il prodotto non è disponibile \\
+	& 4.D.2 Ripeti 4.D \\
+	& \\
+	& 4.E.1 Il prodotto non è rimovibile (poichè in lavorazione) \\
+	& 4.E.2 Ripeti 4.E \\
+	\hline
+\end{longtable}
+
+\begin{longtable}[htbp]{|p{0.3\linewidth}|p{0.65\linewidth}|}
+	\hline
+	\rowcolor{Green}
+	\textbf{Titolo} & Notifica Ordinazione \\
+	\hline
+	\textbf{Livello} & Obiettivo Utente \\
+	\hline
+	\textbf{Portata} & Applicazione Android o interfaccia Desktop \\
+	\hline
+	\textbf{Attore Primario} & Realizzatore di ordinazione \\
+	\hline
+	\multirow{8}*{\textbf{Parti Interessate}} 
+	& \textendash \underline{Realizzatore di ordinazione} (vuole notificare l’aver completato uno o più lavori, altri realizzatori inoltre possono aspettare questa notifica come segnale per poter iniziare il loro lavoro). \\
+	& \textendash \underline{Cliente} (vuole ricevere l’ordinazione). \\
+	& \textendash \underline{Proprietario} (vuole che cliente riceva l’ordinazione) \\
+	\hline
+	\multirow{1}*{\textbf{Pre-Condizioni}}
+	& \textendash L'ordinazione da notificare esiste \\
+	\hline
+	\multirow{6}*{\textbf{Garanzia di successo}}
+	& \textendash Prodotto in ordinazione viene posto in stato di terminato \\
+	& \textendash Qualora i prodotti di tutta l’ordinazione vengano posti come terminati allora anche l’ordinazione stessa viene posta come terminata \\
+	\hline
+	\multirow{7}*{\textbf{Scenario Principale}} 
+	& 1. Realizzatore richiede ordinazioni al sistema \\
+	& 2. Il sistema restituisce le ordinazioni che può eseguire \\
+	& 3. Il realizzatore notifica il completamento del prodotto \\
+	& 4. Il sistema si aggiorna \\
+	& 5. Il sistema sblocca prodotti pendenti \\
+	\hline
+	
+	\multirow{2}*{\textbf{Estensioni}}
+	& 3.A Il realizzatore seleziona un prodotto \\
+	& 4.A Il sistema restituisce i dati del prodotto \\
+	& \\
+	& 5.A Il prodotto completato era l'ultimo \\
+	& 6.B Il sistema aggiorna lo stato dell'ordinazione \\
+	& 7.B Il sistema invia un'ordinazione pendente per altri realizzatori di ordinazione in attesa di quel completamento	\\
+	\hline
+	\multirow{1}*{\textbf{Scenari Alternativi}}
+	& 7.B.1 Non ci sono ordini pendenti \\
 	\hline
 \end{longtable}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.11.2)  1 OCT 2021 14:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.11.2)  1 OCT 2021 19:48
 entering extended mode
 **./main.tex
 (main.tex
@@ -893,20 +893,20 @@ s
 (Capitoli/Progettazione.aux) (Capitoli/Implementazione.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Info: Redefining \it@ocap on input line 27.
-LaTeX Info: Redefining \it@ccap on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Info: Redefining \it@ocap on input line 30.
+LaTeX Info: Redefining \it@ccap on input line 30.
 
 
 File italian.ldf warning: 
@@ -914,7 +914,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 27.
+italian.ldf    on input line 30.
 
 ("C:\Users\Giuseppe\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ucs\ucsencs.def
 "
@@ -922,7 +922,7 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 \c@lstlisting=\count175
  ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 27.
+LaTeX Info: Redefining \selectfont on input line 30.
 
 ("C:\Users\Giuseppe\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\sup
 p-pdf.mkii"
@@ -986,7 +986,7 @@ G,.JBIG2,.JB2,.eps]
 Package todonotes Warning: The length marginparwidth is less than 2cm and will 
 most likely cause issues with the appearance of inserted todonotes. The issue c
 an be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to 
-loading the todonotes package. on input line 27.
+loading the todonotes package. on input line 30.
 
 \AtBeginShipoutBox=\box52
 
@@ -1099,7 +1099,7 @@ File: Immagini/AttoriFinali.png Graphic file (type png)
 Package pdftex.def Info: Immagini/AttoriFinali.png  used on input line 19.
 (pdftex.def)             Requested size: 58.49762pt x 70.07521pt.
 
-Overfull \hbox (60.0692pt too wide) in paragraph at lines 30--78
+Overfull \hbox (5.69879pt too wide) in paragraph at lines 30--78
  [][] 
  []
 
@@ -1123,45 +1123,69 @@ Overfull \hbox (1.589pt too wide) in paragraph at lines 89--90
  []
 
 [10 <./Immagini/DiagrammaCasiUso.png>]
-Underfull \hbox (badness 2351) in paragraph at lines 126--127
+Underfull \hbox (badness 2351) in paragraph at lines 127--128
 []|\OT1/cmr/m/n/12 {$[]$ (vo-glio-no ese-gui-re le lo-ro
  []
 
 
-Underfull \hbox (badness 3547) in paragraph at lines 129--130
+Underfull \hbox (badness 3547) in paragraph at lines 130--131
 []|\OT1/cmr/m/n/12 {$[]$ (vuo-le ri-ce-ve-re le
  []
 
 
-Overfull \hbox (4.69606pt too wide) in paragraph at lines 137--138
+Overfull \hbox (4.69606pt too wide) in paragraph at lines 138--139
 []|[]| 
  []
 
 
-Overfull \hbox (5.69879pt too wide) in alignment at lines 115--151
+Overfull \hbox (5.69879pt too wide) in alignment at lines 115--152
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 151
+Underfull \vbox (badness 10000) detected at line 152
  []
 
 
-Underfull \hbox (badness 5578) in paragraph at lines 157--158
+Underfull \hbox (badness 5578) in paragraph at lines 158--159
 []|\OT1/cmr/m/n/12 10.A Ven-go-no in-via-te no-ti-fi-che in ma-nie-ra
  []
 
 
-Overfull \hbox (5.69879pt too wide) in alignment at lines 151--163
+Overfull \hbox (5.69879pt too wide) in alignment at lines 152--173
  [] [] 
  []
 
-[11] [12]) [13]
+[11]
+Overfull \hbox (5.69879pt too wide) in alignment at lines 173--195
+ [] [] 
+ []
+
+[12] [13]
+Overfull \hbox (4.69606pt too wide) in paragraph at lines 216--217
+[]|[]| 
+ []
+
+
+Overfull \hbox (5.69879pt too wide) in alignment at lines 197--234
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 234
+ []
+
+
+Overfull \hbox (5.69879pt too wide) in alignment at lines 234--239
+ [] [] 
+ []
+
+[14]) [15]
 \openout2 = `Capitoli/Analisi_dei_requisiti.aux'.
 
  (Capitoli/Analisi_dei_requisiti.tex
 Capitolo 5.
-) [14
+) [16
 
 
 
@@ -1170,7 +1194,7 @@ Capitolo 5.
 
  (Capitoli/Progettazione.tex
 Capitolo 6.
-) [15
+) [17
 
 
 
@@ -1179,7 +1203,7 @@ Capitolo 6.
 
  (Capitoli/Implementazione.tex
 Capitolo 7.
-) [16
+) [18
 
 
 
@@ -1187,7 +1211,7 @@ Capitolo 7.
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [17
+) [19
 
 
 ] (main.aux (coverpage.aux) (Capitoli/Introduzione.aux)
@@ -1199,13 +1223,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 23344 strings out of 492484
- 451236 string characters out of 3120242
- 557158 words of memory out of 3000000
- 27144 multiletter control sequences out of 15000+200000
+ 23347 strings out of 492484
+ 451264 string characters out of 3120242
+ 560290 words of memory out of 3000000
+ 27147 multiletter control sequences out of 15000+200000
  10731 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,64p,1015b,601s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,13n,64p,1015b,601s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Giuseppe/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmbx12.pfb><C:/Users/Giuseppe/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Giuseppe/AppData/Local/Programs/Mi
@@ -1213,9 +1237,9 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Giuseppe/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Giu
 seppe/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.p
 fb>
-Output written on main.pdf (18 pages, 425987 bytes).
+Output written on main.pdf (20 pages, 430921 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
+ 99 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
