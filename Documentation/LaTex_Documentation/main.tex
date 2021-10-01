@@ -2,7 +2,8 @@
 \documentclass[oneside,12pt]{book}  
 \usepackage[italian]{babel}
 \usepackage[utf8x]{inputenc}
-\usepackage{multirow}
+\usepackage{array,multirow}
+\usepackage{longtable}
 \usepackage{listings}
 \usepackage{ragged2e}
 \usepackage{setspace}
@@ -12,6 +13,8 @@
 \usepackage{glossaries}
 \usepackage{xcolor,colortbl}
 \definecolor{Red}{rgb}{1,0,0}
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{{\textbullet}~}
 \usepackage{pdfpages}
 
 \usepackage{fancyhdr}

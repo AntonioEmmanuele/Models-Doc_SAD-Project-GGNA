@@ -35,8 +35,11 @@ Dopo aver identificato a pieno gli attori che utilizzeranno il sistema, bisogna 
 		\hline
 		\multirow{9}{6em} {Proprietario} & Inserimento di un dipendente \\
 		& Rimozione di un dipendente \\ & Modifica dei ruolo di un dipendente \\
-		& Modifica dei tavoli e delle sale \\
 		& Visualizzazione dei dipendenti \\
+		& Inserimento di un tavolo\\
+		& Rimozione di un tavolo\\
+		& Modifica di un tavolo\\
+		& Visualizzazione dei tavoli \\
 		& Inserimento di prodotti nel menu \\
 		& Rimozioni di prodotti dal menu \\
 		& Modifica di prodotti del menu \\
@@ -47,7 +50,7 @@ Dopo aver identificato a pieno gli attori che utilizzeranno il sistema, bisogna 
 		& Creazione di un'ordinazione per un cliente  \\
 		& Rimozione di un'ordinazione \\ 
 		& Modifica di un'ordinazione \\
-		& Visualizzazione di un'ordinazione per tavolo \\
+		& Visualizzazione delle ordinazioni \\
 		\hline
 	
 		\multirow{3}{6em} {Accoglienza} 
@@ -56,9 +59,8 @@ Dopo aver identificato a pieno gli attori che utilizzeranno il sistema, bisogna 
 		& Visualizzazione di tutti i tavoli \\
 		\hline	
 		
-		\multirow{2}{6em} {Cassiere} 
-		& Visualizzazione degli ordini per tavolo  \\
-		& Generazione vendita per un cliente\\ 
+		\multirow{1}{6em} {Cassiere} 
+		& Generazione vendita di un tavolo (pagamento dei clienti)\\ 
 		\hline
 		
 		\multirow{2}{7em} {Realizzatore di ordinazione} 
@@ -74,4 +76,88 @@ Dopo aver identificato a pieno gli attori che utilizzeranno il sistema, bisogna 
 		\hline
 	\end{tabular}
 \end{table}
-Gran parte degli obiettivi riguardano operazioni CRUD (Create, Read, Update, Delete) che possono essere raggruppate in un solo obiettivo.
+Gran parte degli obiettivi riguardano operazioni \textit{CRUD} (Create, Read, Update, Delete) che possono essere raggruppate in un solo obiettivo.
+
+\section{Diagramma dei Casi D'Uso}
+Tutti gli obbiettivi CRUD dei vari attori sono stati inglobati in un unico caso d'uso con il prefisso \textbf{Gestisci}, per indicare le operazioni che racchiudono.
+\begin{centering}
+	\includegraphics[width=\textwidth]{Immagini/DiagrammaCasiUso.png}
+\end{centering}
+
+\subsection{Descrizione Breve}
+\subsubsection{Gestisci Ordinazione}
+Come descritto in precedenza questo caso d'uso racchiude le operazioni CRUD riguardo ad un'ordinazione di uno o più clienti. Il cameriere infatti deve essere in grado di creare un'ordinazione per un cliente e poterla, in seguito, modificare, visualizzare o addirittura rimuoverla dal sistema.
+
+\subsubsection{Aggiorna Tavolo}
+L'addetto all'accoglienza si occupa di fare accomodare i clienti nella sala. Il suo obiettivo è quindi avere una visione completa dei tavoli comunicando, tramite il sistema, quali tavoli hanno clienti in attesa di ordinazione, quali tavoli sono liberi e quali sono occupati.
+
+\subsubsection{Gestisci Dipendenti}
+Il proprietario può aggiungere/rimuovere dipendenti dal sistema. Dato che un dipendente può assumere più o meno ruoli, il proprietario può decidere ogni dipendente che ruolo deve avere durante il servizio.
+
+\subsubsection{Gestisci Sala}
+Il proprietario può indicare l'identificativo di ogni tavolo in relazione alla sala in cui appartiene. Gli altri dipendenti quindi posso accedere tramite l'identificativo a tutte le informazioni che riguardano i tavoli (numero di persone accomodate, lista dei prodotti ordinati, ecc).
+
+\subsubsection{Gestisci Prodotti Menù}
+Il proprietario può effettuare operazioni CRUD per la gestione del menù del locale.
+
+\subsubsection{Genera Vendita}
+Il compito del cassiere è quello di completare il pagamento dei clienti in relazione a ciò che hanno ordinato. Esso quindi deve poter risalire, tramite il tavolo, a tutti gli ordini associati ai clienti per generare il prezzo complessivo da pagare.
+
+\subsubsection{Notifica Ordinazione}
+Per rendere il sistema quanto più automatizzato possibile, i realizzatori di ordinazioni (cuoco, pizzaiolo, ecc) devono notificare il completamento di un'ordinazione tramite il sistema. In questo modo, inviando una notifica il sistema provvederà ad avvisare altri dipendenti in attesa di quel completamento.
+
+\subsubsection{Gestisci Merce}
+Ogni prodotto del menu è composto da un insieme di merci disponibili in magazzino. Il compito dell'economo è quindi quello di gestire le merci, per avere sotto controllo le merci in esaurimento. L'esaurimento di una merce comporta la non disponibilità di tutti i prodotti del menu che la contenevano.
+
+\subsection{Descrizione Dettagliata}
+La descrizione dettagliata è stata fatta solo per alcuni casi d'uso.
+
+\begin{longtable}[htbp]{|p{0.3\linewidth}|p{0.65\linewidth}|}
+	\hline
+	\textbf{Titolo} & Gestisci Ordinazione \\
+	\hline
+	\textbf{Livello} & Obiettivo Utente \\
+	\hline
+	\textbf{Portata} & Applicazione Android o interfaccia Desktop \\
+	\hline
+	\textbf{Attore Primario} & Dipendente di sala \\
+	\hline
+	\multirow{8}*{\textbf{Parti Interessate}} 
+	& \textendash \underline{Dipendenti di sala} (vogliono eseguire le loro mansioni) \\
+	& \textendash \underline{Proprietario} (vuole che i clienti siano soddisfatti dal servizio) \\
+	& \textendash \underline{Clienti} (vogliono essere serviti nel miglior modo possibile) \\
+	& \textendash \underline{Realizzatore di ordinazioni} (vuole ricevere le ordinazioni) \\
+	\hline
+	\multirow{8}*{\textbf{Pre-Condizioni}}
+	& \textendash Il dipendente di sala non può gestire ordinazioni dei tavoli non suoi \\
+	& \textendash Il dipendente di sala non può aggiungere prodotti ad ordinazioni già completate \\
+	& \textendash Il dipendente di sala non può rimuove prodotti in lavorazione di una ordinazione \\
+	& \textendash Il dipendente di sala non può rimuovere merce ad un prodotto in lavorazione \\
+	\hline
+	\multirow{5}*{\textbf{Garanzia di successo}}
+	& \textendash Una ordinazione viene creata/modificata/rimossa \\
+	& \textendash Una notifica viene inviata ad un realizzatore di ordinazione \\
+	& \textendash La merce numerabile costituente i prodotti viene riservata per l’ordinazione \\
+	\hline
+	\multirow{5}*{\textbf{Scenario Principale}} 
+	& 1. Dipendente di sala visualizza i tavoli in attesa di ordinazione di una sala \\
+	& 2. Dipendente di sala seleziona un tavolo \\\
+	& 3. Dipendente di sala visualizza ordinazioni tavolo \\
+	& 4. Dipendente di sala visualizza ordinazione\\
+	\hline
+	
+	\multirow{8}*{\textbf{Estensioni}}
+	& 3.A Dipendente di sala inizia ordinazione a tavolo \\
+	& 4.A Cliente comunica i prodotti \\
+	& 5.A Il dipendente di sala inserisce merci aggiuntive per prodotto \\
+	& 6.A Il cliente comunica preferenza di consegna per prodotti \\
+	& 7.A Il dipendente di sala inserisce la preferenza di consegna \\
+	& 8.A Il dipendente di sala aggiunge ordinazione \\
+	& 9.A Il sistema viene aggiornato \\
+	& 10.A Vengono inviate notifiche in maniera  intelligente ai realizzatori di ordinazioni \\
+	& \\
+	& 3.B Il dipendente di sala rimuove una ordinazione \\
+	& 4.B Il sistema viene aggiornato \\
+	& 5.B Viene notificato l’evento ad eventuali realizzatori precedentemente notificati \\
+	\hline
+\end{longtable}
