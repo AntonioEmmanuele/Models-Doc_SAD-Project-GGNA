@@ -8,7 +8,7 @@
 \contentsline {section}{\numberline {3.3}Utenti}{5}%
 \contentsline {section}{\numberline {3.4}Obiettivi delle parti interessate}{5}%
 \contentsline {section}{\numberline {3.5}Caratteristiche del sistema}{5}%
-\contentsline {chapter}{\numberline {4}Specifica dei requisiti}{7}%
+\contentsline {chapter}{\numberline {4}Specifica dei Requisiti}{7}%
 \contentsline {section}{\numberline {4.1}Attori Primari}{7}%
 \contentsline {section}{\numberline {4.2}Attori Finali}{8}%
 \contentsline {section}{\numberline {4.3}Tabella Attori-Obiettivi}{8}%
@@ -23,6 +23,12 @@
 \contentsline {subsubsection}{Notifica Ordinazione}{11}%
 \contentsline {subsubsection}{Gestisci Merce}{11}%
 \contentsline {subsection}{\numberline {4.4.2}Descrizione Dettagliata}{11}%
-\contentsline {chapter}{\numberline {5}Analisi dei requisiti}{16}%
-\contentsline {chapter}{\numberline {6}Progettazione}{17}%
-\contentsline {chapter}{\numberline {7}Implementazione}{18}%
+\contentsline {section}{\numberline {4.5}Requisiti non funzionali}{15}%
+\contentsline {subsection}{\numberline {4.5.1}Funzionalit\IeC {\`a}}{15}%
+\contentsline {subsection}{\numberline {4.5.2}Utilizzabilit\IeC {\`a}}{15}%
+\contentsline {subsection}{\numberline {4.5.3}Affidabilit\IeC {\`a}}{15}%
+\contentsline {subsection}{\numberline {4.5.4}Prestazioni}{15}%
+\contentsline {subsection}{\numberline {4.5.5}Sostenibilit\IeC {\`a}}{16}%
+\contentsline {chapter}{\numberline {5}Analisi dei requisiti}{17}%
+\contentsline {chapter}{\numberline {6}Progettazione}{18}%
+\contentsline {chapter}{\numberline {7}Implementazione}{19}%

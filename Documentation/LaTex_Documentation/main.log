@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.11.2)  1 OCT 2021 19:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.11.2)  2 OCT 2021 10:42
 entering extended mode
 **./main.tex
 (main.tex
@@ -1024,14 +1024,21 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 
 
 {C:/Users/Giuseppe/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./logo_u
-nina.png>]) (main.toc)
+nina.png>]) (main.toc [1
+
+
+])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [1
 
 
-]
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+Make it at least 14.49998pt.
+We now make it that large for the rest of the document.
+This may cause the page layout to be inconsistent, however.
+
+[1]
 \openout2 = `Capitoli/Introduzione.aux'.
 
  (Capitoli/Introduzione.tex
@@ -1071,19 +1078,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
 
 
-]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
-Make it at least 14.49998pt.
-We now make it that large for the rest of the document.
-This may cause the page layout to be inconsistent, however.
-
-[5]) [6]
+] [5]) [6]
 \openout2 = `Capitoli/Specifica_dei_requisiti.aux'.
 
  (Capitoli/Specifica_dei_requisiti.tex
 Capitolo 4.
-<Immagini/AttoriPrimari.png, id=34, 765.6103pt x 310.91156pt>
+<Immagini/AttoriPrimari.png, id=37, 765.6103pt x 310.91156pt>
 File: Immagini/AttoriPrimari.png Graphic file (type png)
 <use Immagini/AttoriPrimari.png>
 Package pdftex.def Info: Immagini/AttoriPrimari.png  used on input line 6.
@@ -1093,7 +1093,7 @@ Package pdftex.def Info: Immagini/AttoriPrimari.png  used on input line 6.
 
 
  <./Immagini/AttoriPrimari.png>]
-<Immagini/AttoriFinali.png, id=39, 72.27pt x 86.57344pt>
+<Immagini/AttoriFinali.png, id=42, 72.27pt x 86.57344pt>
 File: Immagini/AttoriFinali.png Graphic file (type png)
 <use Immagini/AttoriFinali.png>
 Package pdftex.def Info: Immagini/AttoriFinali.png  used on input line 19.
@@ -1106,7 +1106,7 @@ Overfull \hbox (5.69879pt too wide) in paragraph at lines 30--78
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Immagini/DiagrammaCasiUso.png, id=40, 639.13782pt x 387.69844pt>
+<Immagini/DiagrammaCasiUso.png, id=43, 639.13782pt x 387.69844pt>
 File: Immagini/DiagrammaCasiUso.png Graphic file (type png)
 <use Immagini/DiagrammaCasiUso.png>
 Package pdftex.def Info: Immagini/DiagrammaCasiUso.png  used on input line 84.
@@ -1180,12 +1180,12 @@ Overfull \hbox (5.69879pt too wide) in alignment at lines 234--239
  [] [] 
  []
 
-[14]) [15]
+[14]) [15] [16]
 \openout2 = `Capitoli/Analisi_dei_requisiti.aux'.
 
  (Capitoli/Analisi_dei_requisiti.tex
 Capitolo 5.
-) [16
+) [17
 
 
 
@@ -1194,7 +1194,7 @@ Capitolo 5.
 
  (Capitoli/Progettazione.tex
 Capitolo 6.
-) [17
+) [18
 
 
 
@@ -1203,7 +1203,7 @@ Capitolo 6.
 
  (Capitoli/Implementazione.tex
 Capitolo 7.
-) [18
+) [19
 
 
 
@@ -1211,7 +1211,7 @@ Capitolo 7.
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [19
+) [20
 
 
 ] (main.aux (coverpage.aux) (Capitoli/Introduzione.aux)
@@ -1237,9 +1237,9 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Giuseppe/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Giu
 seppe/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.p
 fb>
-Output written on main.pdf (20 pages, 430921 bytes).
+Output written on main.pdf (22 pages, 435073 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
+ 105 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
