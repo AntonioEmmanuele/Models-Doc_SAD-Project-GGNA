@@ -16,7 +16,7 @@
 \contentsline {subsection}{\numberline {4.4.1}Descrizione Breve}{10}%
 \contentsline {subsubsection}{Gestisci Ordinazione}{10}%
 \contentsline {subsubsection}{Aggiorna Tavolo}{10}%
-\contentsline {subsubsection}{Gestisci Dipendenti}{10}%
+\contentsline {subsubsection}{Gestisci Dipendenti}{11}%
 \contentsline {subsubsection}{Gestisci Sala}{11}%
 \contentsline {subsubsection}{Gestisci Prodotti Men\IeC {\`u}}{11}%
 \contentsline {subsubsection}{Genera Vendita}{11}%
@@ -28,7 +28,9 @@
 \contentsline {subsection}{\numberline {4.5.2}Utilizzabilit\IeC {\`a}}{15}%
 \contentsline {subsection}{\numberline {4.5.3}Affidabilit\IeC {\`a}}{15}%
 \contentsline {subsection}{\numberline {4.5.4}Prestazioni}{15}%
-\contentsline {subsection}{\numberline {4.5.5}Sostenibilit\IeC {\`a}}{16}%
+\contentsline {subsection}{\numberline {4.5.5}Sostenibilit\IeC {\`a}}{15}%
 \contentsline {chapter}{\numberline {5}Analisi dei requisiti}{17}%
-\contentsline {chapter}{\numberline {6}Progettazione}{18}%
-\contentsline {chapter}{\numberline {7}Implementazione}{19}%
+\contentsline {section}{\numberline {5.1}Modello di Dominio}{17}%
+\contentsline {section}{\numberline {5.2}State Chart Diagram}{18}%
+\contentsline {chapter}{\numberline {6}Progettazione}{19}%
+\contentsline {chapter}{\numberline {7}Implementazione}{20}%
