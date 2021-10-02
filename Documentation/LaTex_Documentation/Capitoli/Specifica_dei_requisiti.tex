@@ -151,8 +151,8 @@ La descrizione dettagliata è stata fatta solo per alcuni casi d'uso.
 	& 3. Dipendente di sala visualizza ordinazioni tavolo \\
 	& 4. Dipendente di sala visualizza ordinazione\\
 	\hline
-	
-	\multirow{8}*{\textbf{Estensioni}}
+	\newpage
+	\multirow{28}*{\textbf{Estensioni}}
 	& 3.A Dipendente di sala inizia ordinazione a tavolo \\
 	& 4.A Cliente comunica i prodotti \\
 	& 5.A Il dipendente di sala inserisce prodotti con eventuali merci aggiuntive \\
@@ -182,7 +182,7 @@ La descrizione dettagliata è stata fatta solo per alcuni casi d'uso.
 	& 6.E Il sistema viene aggiornato e invia una notifica ai realizzatori \\
 	
 	\hline
-	\multirow{6}*{\textbf{Scenari Alternativi}}
+	\multirow{10}*{\textbf{Scenari Alternativi}}
 	& 4.A.1 Prodotto comunicato non è disponibile \\
 	& 4.A.2 Ripeti 4.A \\
 	& \\
@@ -225,18 +225,17 @@ La descrizione dettagliata è stata fatta solo per alcuni casi d'uso.
 	\multirow{7}*{\textbf{Scenario Principale}} 
 	& 1. Realizzatore richiede ordinazioni al sistema \\
 	& 2. Il sistema restituisce le ordinazioni che può eseguire \\
-	& 3. Il realizzatore notifica il completamento del prodotto \\
-	& 4. Il sistema si aggiorna \\
-	& 5. Il sistema sblocca prodotti pendenti \\
+	& 3 Il realizzatore seleziona un prodotto \\
+	& 4 Il sistema restituisce i dati del prodotto \\
+	& 5. Il realizzatore notifica il completamento del prodotto \\
+	& 6. Il sistema si aggiorna \\
+	& 7. Il sistema sblocca prodotti pendenti \\
 	\hline
 	
-	\multirow{2}*{\textbf{Estensioni}}
-	& 3.A Il realizzatore seleziona un prodotto \\
-	& 4.A Il sistema restituisce i dati del prodotto \\
-	& \\
+	\multirow{5}*{\textbf{Estensioni}}
 	& 5.A Il prodotto completato era l'ultimo \\
-	& 6.B Il sistema aggiorna lo stato dell'ordinazione \\
-	& 7.B Il sistema invia un'ordinazione pendente per altri realizzatori di ordinazione in attesa di quel completamento	\\
+	& 6.A Il sistema aggiorna lo stato dell'ordinazione \\
+	& 7.A Il sistema invia un'ordinazione pendente per altri realizzatori di ordinazione in attesa di quel completamento	\\
 	\hline
 	\multirow{1}*{\textbf{Scenari Alternativi}}
 	& 7.B.1 Non ci sono ordini pendenti \\
