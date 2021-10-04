@@ -1,5 +1,7 @@
 \chapter{Progettazione}
 La fase di progettazione prevede principalmente la scelta dell'architettura da usare, su cui costruire il sistema. 
+\\Dato il contesto di utilizzo dell'applicativo, la necessità principale è la sincronizzazione del lavoro dei dipendenti. L'obiettivo è quello di informare ogni dipendente del avvenimento di eventi a cui esso è interessato. Ogni azione deve essere memorizzata nel sistema, in conseguenza della quale esso provvede ad avvisare il gruppo di dipendenti relativo.
+\\Ad esempio, al momento della registrazione di un'ordinazione da parte di un cameriere, il sistema provvede a notificare lo chef/pizzaiolo (realizzatore in generale) per informalo della nuova pietanza da preparare.
 \\Per identificare l'architettura ideale bisogna elencare quali sono i componenti che ne fanno parte e in che modo sono interconnessi.
 \begin{itemize}
 	\item I componenti sono di due tipologie:
@@ -7,31 +9,32 @@ La fase di progettazione prevede principalmente la scelta dell'architettura da u
 			\item Dispositivi utente, rappresentano i dispositivi fisici concessi ai dipendenti (smartphone o applicazione desktop)
 			\item Sistema centrale, racchiude la logica di gestione e a cui i dispositivi utente possono fare accesso.
 		\end{itemize}
-	\item I connettori sono principalmente protocolli di rete, in quanto il sistema è pensato per dipendenti che hanno la possibilità di spostarsi all'interno del locale e accedere al sistema centra in modalità remota.
+	\item I connettori sono principalmente protocolli di rete, in quanto il sistema è pensato anche per dipendenti che hanno la possibilità di spostarsi all'interno del locale e accedere al sistema centrale in modalità remota.
 \end{itemize}
 Alla base di ciò i componenti devono ricevere dei cambiamenti del sistema tramite opportune \textit{notifiche}, evitando quindi attese attive.
 
 \section{Architettura}
-Lo stile architetturale utilizzato per realizzare il sistema  è il \textbf{Publish-Subscribe}. Per la realizzazione dell'applicativo infatti vengono ripresi tutti i vantaggi dello stile a \textit{invocazione implicita}:
+Sulla base delle necessità descritte in precedenza, si è scelto di utilizzare uno stile architetturale del tipo \textbf{Publish-Subscribe}. Per la realizzazione dell'applicativo infatti vengono ripresi tutti i vantaggi dello stile a \textit{invocazione implicita}:
 \begin{itemize}
-	\item Tutti i componenti sono altamente disaccoppiati, favorendo la scalabilità del sistema. Il proprietario può quindi assumere/licenziare i dipendenti, o cambiarne i ruoli senza vincolarsi dal sistema.
-	\item Tutta la comunicazione avviene tramite chiamate invocate implicitamente in risposta ad un evento.
+	\item \textit{Disaccoppiamento spaziale}: tutti i componenti sono altamente disaccoppiati, favorendo la scalabilità del sistema. Il proprietario può quindi assumere un numero di dipendenti variabile senza conseguenze.
+	\item \textit{Disaccoppiamento di sincronizzazione}: tutti i componenti non lavorano in "polling", ovvero in attese attive che possono bloccare il sistema.
+	\item \textit{Disaccoppiamento temporale}: tutti i componenti possono essere volatili nel sistema.
 \end{itemize}
 In relazione ai componenti descritti, tutti i dipendenti sono dei \textit{Subscribers} mentre il sistema centrale è l'unico \textit{Publisher}.
 \\I dipendenti, effettuando l'accesso, si iscrivono in automatico al Publisher.
-Dato che il sistema può contenere un numero notevole di dipendenti, il Publisher fa uso di \textbf{Proxy} per smistare i messaggi solamente a specifici Subscibers.
-\\Essi infatti all'atto del login non conoscono i Proxy del sistema, ma è il sistema stesso che li racchiude in gruppi (con lo stesso ruolo) e li associa a determinati Proxy.
+Dato che il sistema può contenere un numero notevole di dipendenti, il Publisher fa uso di \textbf{Proxy} per smistare i messaggi solamente a specifici Subscribers.
+\\Essi infatti all'atto del login non conoscono i Proxy del sistema, ma è il sistema stesso che li racchiude in gruppi (con lo stesso ruolo) e li associa a determinati Proxy. Tutto ciò si traduce in una distribuzione più efficiente del calcolo computazionale.
 \\Riassumendo quindi:
 \begin{table}[H]
 	\centering
-	\begin{tabular}{|l | p{0.7\linewidth} |}
+	\begin{tabular}{|l | p{0.75\linewidth} |}
 		\hline
 		\textbf{Componenti} & Publisher, Subscribers, 
 		Proxy \\
 		\hline
 		\textbf{Connettori} & Protocolli di rete \\
 		\hline
-		\textbf{Dati} & Notifiche \\
+		\textbf{Dati} & Notifiche, Richieste di informazioni, Informazioni pubblicate \\
 		\hline
 		\textbf{Topologia} & Subscribers sono connessi al Publisher indirettamente, ricevendo e inviando notifiche attraverso i Proxy \\
 		\hline
