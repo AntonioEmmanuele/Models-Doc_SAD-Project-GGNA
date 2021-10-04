@@ -120,7 +120,6 @@ Ogni prodotto del menu è composto da un insieme di merci disponibili in magazzi
 
 \subsection{Descrizione Dettagliata}
 La descrizione dettagliata è stata fatta solo per i casi d'uso di rilievo.
-
 \begin{longtable}[htbp]{|p{0.3\linewidth}|p{0.65\linewidth}|}
 	\hline
 		\rowcolor{Blue}	
@@ -128,81 +127,127 @@ La descrizione dettagliata è stata fatta solo per i casi d'uso di rilievo.
 	\hline
 	\textbf{Livello} & Obiettivo Utente \\[0.3cm]
 	\hline
-	\textbf{Portata} & Applicazione Android o interfaccia Desktop \\[0.3cm]
+	\textbf{Portata} & Applicazione Android/Desktop Lightning Order\\[0.3cm]
 	\hline
 	\textbf{Attore Primario} & Dipendente di sala \\[0.3cm]
 	\hline
-	\multirow{8}*{\textbf{Parti Interessate}} 
-	& \textendash \underline{Dipendenti di sala} (vogliono eseguire le loro mansioni) \\
-	& \textendash \underline{Proprietario} (vuole che i clienti siano soddisfatti dal servizio) \\
-	& \textendash \underline{Clienti} (vogliono essere serviti nel miglior modo possibile) \\
-	& \textendash \underline{Realizzatore di ordinazioni} (vuole ricevere le ordinazioni) \\[0.3cm]
+	\multirow{6}*{\textbf{Parti Interessate}} 
+	& \textendash \underline{Dipendenti di sala} (vogliono registrare/modificare un'ordinazione) \\
+	& \textendash \underline{Proprietario} (vuole che i clienti siano serviti) \\
+	& \textendash \underline{Clienti} (vogliono ricevere quanto ordinato) \\
+	& \textendash \underline{Realizzatore di ordinazioni} (vuole essere aggiornato sulle ordinazioni) \\[0.3cm]
 	\hline
-	\multirow{8}*{\textbf{Pre-Condizioni}}
-	& \textendash Il dipendente di sala non può gestire ordinazioni dei tavoli non suoi \\
-	& \textendash Il dipendente di sala non può aggiungere prodotti ad ordinazioni già completate \\
-	& \textendash Il dipendente di sala non può rimuove prodotti in lavorazione di una ordinazione \\
-	& \textendash Il dipendente di sala non può rimuovere merce ad un prodotto in lavorazione \\[0.3cm]
+	\multirow{5}*{\textbf{Pre-Condizioni}}
+	& \textendash Il dipendente di sala è autenticato e ha il ruolo di cameriere \\
+	& \textendash Il tavolo che sta prendendo l'ordinazione non è nello stato di libero\\[0.3cm]
 	\hline
+
 	\multirow{5}*{\textbf{Garanzia di successo}}
-	& \textendash Una ordinazione viene creata/modificata/rimossa \\
+	& \textendash Un'ordinazione viene creata/modificata/rimossa \\
 	& \textendash Una notifica viene inviata ad un realizzatore di ordinazione \\
-	& \textendash La merce numerabile costituente i prodotti viene riservata per l’ordinazione \\[0.3cm]
+	& \textendash La merce numerabile costituente i prodotti viene riservata o ripristinata in caso di eliminazione/modifica\\[0.3cm]
 	\hline
-	\multirow{5}*{\textbf{Scenario Principale}} 
-	& 1. Dipendente di sala visualizza i tavoli in attesa di ordinazione di una sala \\
-	& 2. Dipendente di sala seleziona un tavolo \\\
-	& 3. Dipendente di sala visualizza ordinazioni tavolo \\
-	& 4. Dipendente di sala visualizza ordinazione\\[0.3cm]
+	\multirow{8}*{\textbf{Scenario Principale}} 
+	& 1. Dipendente di sala richiede di visualizzare la lista dei tavoli \\
+	& 2. Il sistema mostra i tavoli in attesa\\
+	& 3. Dipendente di sala seleziona un tavolo \\
+	& 4. Il sistema mostra la lista di ordinazioni del relativo tavolo \\
+	& 5. Il cliente richiede un'operazione (crea/modifica/elimina ordinazione)\\
+	& 6. Il sistema riceve la modifica e notifica gli interessati.\\[0.3cm]
 	\hline
+	
 	\newpage
 	\multirow{28}*{\textbf{Estensioni}}
-	& 3.A Dipendente di sala inizia ordinazione a tavolo \\
-	& 4.A Cliente comunica i prodotti \\
-	& 5.A Il dipendente di sala inserisce prodotti con eventuali merci aggiuntive \\
-	& 6.A Il cliente comunica preferenza di consegna per prodotti \\
-	& 7.A Il dipendente di sala inserisce la preferenza di consegna \\
-	& 8.A Il dipendente di sala aggiunge ordinazione \\
-	& 9.A Il sistema viene aggiornato \\
-	& 10.A Vengono inviate notifiche in maniera  intelligente ai realizzatori di ordinazioni \\
+	& 5.A Dipendente di sala seleziona ordinazione a tavolo \\
+	& 6.A Cliente comunica i prodotti \\
+	& 7.A Il dipendente di sala inserisce prodotti con eventuali merci aggiuntive \\
+	& 8.A Il cliente comunica preferenza di consegna per prodotti \\
+	& 9.A Il dipendente di sala inserisce la preferenza di consegna \\
+	& 10.A Il dipendente di sala aggiunge ordinazione \\
+	& 11.A Il sistema riceve la modifica \\
+	& 12.A Vengono inviate notifiche ai realizzatori di ordinazioni \\
 	& \\
-	& 3.B Il dipendente di sala rimuove una ordinazione \\
-	& 4.B Il sistema viene aggiornato \\
-	& 5.B Viene notificato l’evento ad eventuali realizzatori precedentemente notificati \\
-	& \\
-	& 4.C Cliente comunica al dipendente di modificare un prodotto all'interno di un'ordinazione \\
-	& 5.C Dipendente di sala modifica l'ordinazione con i nuovi prodotti \\
-	& 6.C Dipendente di sala inoltra la modifica \\
-	& 7.C Il sistema inoltra la modifica ai corrispondenti realizzatori \\
+	
+	& 5.B Il dipendente di sala rimuove l'ordinazione selezionata \\
+	& 6.B Il sistema riceve la modifica\\
+	& 7.B Il sistema notifica l’evento ad eventuali realizzatori \\
+	
 	
 	& \\
-	& 4.D Cliente comunica al dipendente di aggiungere un prodotto all'interno di un'ordinazione \\
-	& 5.D Dipendente aggiunge il prodotto (o i prodotti) all'ordinazione \\
-	& 6.D Il sistema viene aggiornato e invia una notifica ai realizzatori \\
+	& 5.D Cliente comunica al dipendente di aggiungere un prodotto all'interno di un'ordinazione \\
+	& 6.D Dipendente aggiunge il prodotto (o i prodotti) all'ordinazione \\
+	& 7.D Il sistema viene aggiornato e invia una notifica ai realizzatori \\[0.3cm]
 	
 	& \\
-	& 4.E Cliente comunica al dipendente di rimuovere un prodotto all'interno di un'ordinazione \\
-	& 5.E Dipendente rimuove il prodotto (o i prodotti) all'ordinazione \\
-	& 6.E Il sistema viene aggiornato e invia una notifica ai realizzatori \\[0.3cm]
+	& 5.E Cliente comunica al dipendente di rimuovere un prodotto all'interno di un'ordinazione \\
+	& 6.E Dipendente rimuove il prodotto (o i prodotti) all'ordinazione \\
+	& 7.E Il sistema viene aggiornato e invia una notifica ai realizzatori \\[0.3cm]
 	
+
 	\hline
 	\multirow{10}*{\textbf{Scenari Alternativi}}
-	& 4.A.1 Prodotto comunicato non è disponibile \\
-	& 4.A.2 Ripeti 4.A \\
+	& 11.A.1 L'ordinazione registrata è la prima per quel tavolo\\
+	& 11.A.2 Il sistema cambia lo stato del tavolo da \textit{"in attesa di ordinazione"} in \textit{"occupato"}\\
+	&\\
+	& 5.A.1 Prodotto comunicato non è disponibile \\
+	& 5.A.2 Ripeti 5 \\
 	& \\
-	& 3.B.1 Ordinazione non rimovibile (già completata) \\
-	& 3.B.2 Ripeti 3.B \\
-	& 4.C.1 L'ordinazione non è modificabile (poichè in lavorazione) \\
-	& 4.C.2 Ripeti 4.C \\
+	& 5.C.1 L'ordinazione non è modificabile (poiché in lavorazione) \\
+	& 5.C.2 Ripeti 5\\
 	& \\
-	& 4.D.1 Il prodotto non è disponibile \\
-	& 4.D.2 Ripeti 4.D \\
+	& 5.D.1 Il prodotto non è disponibile \\
+	& 5.D.2 Ripeti 5 \\
 	& \\
-	& 4.E.1 Il prodotto non è rimovibile (poichè in lavorazione) \\
-	& 4.E.2 Ripeti 4.E \\[0.3cm]
+	& 5.E.1 Il prodotto non è rimovibile (poiché in lavorazione) \\
+	& 5.E.2 Ripeti 5\\[0.3cm]
 	\hline
 \end{longtable}
-\vfill
+
+\vspace*{1.5 cm}
+
+
+\begin{longtable}[htbp]{|p{0.3\linewidth}|p{0.65\linewidth}|}
+	\hline
+	\rowcolor{LightCyan}
+	\textbf{Titolo} & Aggiorna Tavolo\\[0.3cm]
+	\hline
+	\textbf{Livello} & Obiettivo Utente \\[0.3cm]
+	\hline
+	\textbf{Portata} & Applicazione Android/Desktop Lightning Order\\[0.3cm]
+	\hline
+	\textbf{Attore Primario} & Addetto all'accoglienza\\[0.3cm]
+	\hline
+	\multirow{6}*{\textbf{Parti Interessate}} 
+	& \textendash \underline{Dipendenti di sala} (vogliono avere una visione aggiornata dello stato dei tavoli) \\
+	& \textendash \underline{Cliente} (vuole accomodarsi) \\
+	& \textendash \underline{Proprietario} (vuole che i clienti entrino ed escano in maniera ordinata) \\[0.3cm]
+	\hline
+	\multirow{2}*{\textbf{Pre-Condizioni}}
+	& \textendash Il dipendente ha effettuato il login e ricopre il ruolo di addetto all'accoglienza\\[0.3cm]
+	\hline
+	\multirow{6}*{\textbf{Garanzia di successo}}
+	& \textendash Il cliente occupa il tavolo \\
+	& \textendash Lo stato del tavolo viene aggiornato\\
+	& \textendash I camerieri ricevono la notifica di un nuovo tavolo da servire\\[0.3cm]
+	\hline
+	\newpage
+	\multirow{7}*{\textbf{Scenario Principale}} 
+	& 1. Addetto all'accoglienza richiede di visualizzare i tavoli di una sala\\
+	& 2. Il sistema mostra i tavoli con il relativo stato\\
+	& 3. L'addetto all'accoglienza seleziona un tavolo per cui aggiornare lo stato\\
+	& 4. Il sistema registra la modifica e notifica i camerieri in caso di tavolo appena occupato\\[0.3cm]
+	\hline
+	\multirow{5}*{\textbf{Estensioni}}
+	& 3.A L'addetto all'accoglienza seleziona un tavolo nello stato \textit{"occupato"}\\
+	& 4.A L'addetto all'accoglienza seleziona l'aggiornamento dello stato del tavolo in \textit{"libero"}\\
+	&\\
+	& 3.B L'addetto all'accoglienza seleziona un tavolo \textit{libero}\\
+	& 4.B L'addetto all'accoglienza seleziona l'aggiornamento dello stato del tavolo in \textit{"in attesa di ordinazione"}\\[0.3cm]
+	\hline
+\end{longtable}
+
+\vspace*{1.0 cm}
+
 \begin{longtable}[htbp]{|p{0.3\linewidth}|p{0.65\linewidth}|}
 	\hline
 	\rowcolor{Green}
@@ -210,17 +255,17 @@ La descrizione dettagliata è stata fatta solo per i casi d'uso di rilievo.
 	\hline
 	\textbf{Livello} & Obiettivo Utente \\[0.3cm]
 	\hline
-	\textbf{Portata} & Applicazione Android o interfaccia Desktop \\[0.3cm]
+	\textbf{Portata} & Applicazione Android/Desktop Lightning Order\\[0.3cm]
 	\hline
 	\textbf{Attore Primario} & Realizzatore di ordinazione \\[0.3cm]
 	\hline
-	\multirow{8}*{\textbf{Parti Interessate}} 
-	& \textendash \underline{Realizzatore di ordinazione} (vuole notificare l’aver completato uno o più lavori, altri realizzatori inoltre possono aspettare questa notifica come segnale per poter iniziare il loro lavoro). \\
+	\multirow{6}*{\textbf{Parti Interessate}} 
+	& \textendash \underline{Realizzatore di ordinazione} (vuole notificare ad altri realizzatori e ai camerieri l’aver completato uno o più lavori). \\
 	& \textendash \underline{Cliente} (vuole ricevere l’ordinazione). \\
 	& \textendash \underline{Proprietario} (vuole che cliente riceva l’ordinazione) \\[0.3cm]
 	\hline
 	\multirow{1}*{\textbf{Pre-Condizioni}}
-	& \textendash L'ordinazione da notificare esiste \\[0.3cm]
+	& \textendash L'ordinazione da segnare come completata è registrata nel sistema\\[0.3cm]
 	\hline
 	\newpage
 	\multirow{6}*{\textbf{Garanzia di successo}}
@@ -236,7 +281,6 @@ La descrizione dettagliata è stata fatta solo per i casi d'uso di rilievo.
 	& 6. Il sistema si aggiorna \\
 	& 7. Il sistema sblocca prodotti pendenti \\[0.3cm]
 	\hline
-	
 	\multirow{5}*{\textbf{Estensioni}}
 	& 5.A Il prodotto completato era l'ultimo \\
 	& 6.A Il sistema aggiorna lo stato dell'ordinazione \\
@@ -259,12 +303,22 @@ L'interfaccia utente deve essere semplice e intuitiva permettendo così al dipen
 Per i dipendenti i quali dispongono di una postazione fissa l'applicativo sarà invece in esecuzione su un computer fisso con monitor touch screen in modo da rendere l'interazione con l'applicazone semplice e veloce.
 
 \subsection{Affidabilità}
-Il sistema garantirà un corretto coordinamento tra i dipendenti della sala ad esempio impedendo che una stessa ordinazione venga eseguita due volte, tenendo traccia delle ordinazioni gestite da ogni cameriere,  . 
-
+Il sistema deve garantire un corretto coordinamento tra i dipendenti della sala e una prevenzione degli errori impedendo ad esempio che : 
+\begin{itemize}
+	\item una stessa ordinazione venga presa in carico da due realizzatori contemporaneamente;
+	\item un articolo terminato (unità finite nel caso di una bevanda o per assenza di materie prime nel caso di una pietanza) possa essere ordinato da un cliente.
+\end{itemize}
+Ogni ordine registrato deve poter essere modificato, in particolare deve essere possibile eliminare uno degli articoli che ne fanno parte o l'intero ordine. 
+Inoltre il proprietario deve avere la possibilità di gestire tutti gli utenti iscritti all'applicazione. In altre parole nel momento in cui un dipendente non farà più parte dell'azienda questo deve poter essere eliminato dalla \textit{user list} in modo da impedirgli l'accesso all'applicazione con le sue vecchie credenziali.
+%aggiungere NO modifica proprie credenziali
 
 \subsection{Prestazioni}
-Il sistema deve funzionare in Real-Time. La gestione delle ordinazioni, soprattutto, deve poter rispondere immediatamente alle variazioni, modifiche e aggiunta di eventuali ordinazioni nel sistema, per notificare velocemente coloro che dovranno realizzarle.
+Il sistema deve funzionare in Real-Time. La gestione delle ordinazioni, soprattutto, deve poter rispondere immediatamente a variazioni, modifiche e aggiunte di eventuali ordinazioni nel sistema, per notificare velocemente coloro che dovranno realizzarle ed evitare così possibili incomprensioni tra reparti.
 
 \subsection{Sostenibilità}
 Nel lato "mobile" il sistema deve adattarsi alla maggior parte degli smartphone in commercio, onde evitare problemi di compatibilità. \\
 Nel lato "desktop" il sistema deve essere portabile per poter essere configurato in un qualunque ambiente. 
+
+
+
+
