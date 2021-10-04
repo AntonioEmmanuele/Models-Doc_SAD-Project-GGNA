@@ -46,12 +46,9 @@
 \contentsline {subsubsection}{Estensione A}{28}%
 \contentsline {chapter}{\numberline {6}Progettazione}{29}%
 \contentsline {section}{\numberline {6.1}Architettura}{29}%
-\contentsline {subsection}{\numberline {6.1.1}Stile Archietturale}{29}%
-\contentsline {subsubsection}{Blackboard}{29}%
-\contentsline {subsubsection}{Publish-Subscribe}{30}%
-\contentsline {section}{\numberline {6.2}Database}{30}%
-\contentsline {section}{\numberline {6.3}Component Diagram}{31}%
-\contentsline {section}{\numberline {6.4}Deployment Diagram}{31}%
-\contentsline {section}{\numberline {6.5}Class Diagram}{31}%
-\contentsline {section}{\numberline {6.6}Sequence Diagram}{31}%
-\contentsline {chapter}{\numberline {7}Implementazione}{32}%
+\contentsline {subsection}{\numberline {6.1.1}Component Diagram}{30}%
+\contentsline {section}{\numberline {6.2}Database}{31}%
+\contentsline {section}{\numberline {6.3}Deployment Diagram}{32}%
+\contentsline {section}{\numberline {6.4}Class Diagram}{32}%
+\contentsline {section}{\numberline {6.5}Sequence Diagram}{32}%
+\contentsline {chapter}{\numberline {7}Implementazione}{33}%
