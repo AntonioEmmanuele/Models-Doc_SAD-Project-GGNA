@@ -14,31 +14,38 @@ Con questo primo diagramma di analisi si sono fatte le prime ipotesi di funziona
 	\item Tutte le vendite completate vengono memorizzate in uno storico.
 	\item Il prodotto che viene aggiunto all'ordinazione non equivale al prodotto presente nel menu. Esso infatti può subire delle modifiche come aggiunta o rimozioni di merce dalla sua versione di base. Viene indicato quindi come l'entità \textit{Prodotto Ordinato}.
 \end{enumerate}
-
+\newpage
 \section{State Chart Diagram}
 Alcune entità del sistema hanno delle funzionalità diverse in relazione allo stato in cui si trovano.
 
 \subsection{Tavolo}
+\vspace*{0.2cm}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{Immagini/stati_tavolo.jpg}
 \end{figure}
+\vspace*{0.1cm}
 Questi stati valgono solo durante l'esecuzione del sistema. In teoria il locale non può chiudere con tavoli occupati o in attesa di ordinazione. Attraverso questi stati esiste anche più controllo per evitare errori umani. Ad esempio un cameriere non può prendere le ordinazioni di un tavolo libero, ovvero non occupato da nessun cliente.
 
 \subsection{Prodotto Ordinato}
+\vspace*{0.2cm}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Immagini/stati_prodotti_ordinati.jpg}
 \end{figure}
+\vspace*{0.1cm}
 Gli stati vengono aggiornati tramite dei feedback di chi realizza i relativi prodotti.
 
 \subsection{Ordine}
+\vspace*{0.2cm}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{Immagini/stati_ordinazione.jpg}
 \end{figure}
+\vspace*{0.1cm}
 Gli stati dell'ordine dipendono molto dagli stati dei prodotti ordinati che lo compongono, essendo infatti un'aggregazione di prodotti.
 
+\newpage
 \section{Sequence Diagram di Dominio}
 I seguenti sequence diagram sono realizzati solo per indicare le interazioni tra un utente e il sistema.
 
