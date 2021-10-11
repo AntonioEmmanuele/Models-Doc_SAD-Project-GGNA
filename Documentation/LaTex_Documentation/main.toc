@@ -31,11 +31,11 @@
 \contentsline {subsection}{\numberline {4.5.5}Sostenibilit\IeC {\`a}}{18}%
 \contentsline {chapter}{\numberline {5}Analisi dei requisiti}{19}%
 \contentsline {section}{\numberline {5.1}Modello di Dominio}{19}%
-\contentsline {section}{\numberline {5.2}State Chart Diagram}{20}%
+\contentsline {section}{\numberline {5.2}State Chart Diagram}{21}%
 \contentsline {subsection}{\numberline {5.2.1}Tavolo}{21}%
 \contentsline {subsection}{\numberline {5.2.2}Prodotto Ordinato}{22}%
 \contentsline {subsection}{\numberline {5.2.3}Ordine}{23}%
-\contentsline {section}{\numberline {5.3}Sequence Diagram di Dominio}{23}%
+\contentsline {section}{\numberline {5.3}Sequence Diagram di Dominio}{24}%
 \contentsline {subsection}{\numberline {5.3.1}Gestisci Ordinazioni}{24}%
 \contentsline {subsubsection}{Estensione A}{24}%
 \contentsline {subsubsection}{Estensione B}{25}%
@@ -46,9 +46,12 @@
 \contentsline {subsubsection}{Estensione A}{29}%
 \contentsline {chapter}{\numberline {6}Progettazione}{30}%
 \contentsline {section}{\numberline {6.1}Architettura}{31}%
-\contentsline {subsection}{\numberline {6.1.1}Component Diagram}{32}%
-\contentsline {section}{\numberline {6.2}Database}{32}%
-\contentsline {section}{\numberline {6.3}Deployment Diagram}{33}%
-\contentsline {section}{\numberline {6.4}Class Diagram}{33}%
-\contentsline {section}{\numberline {6.5}Sequence Diagram}{33}%
-\contentsline {chapter}{\numberline {7}Implementazione}{34}%
+\contentsline {subsection}{\numberline {6.1.1}Main System}{31}%
+\contentsline {subsection}{\numberline {6.1.2}Proxy}{32}%
+\contentsline {subsection}{\numberline {6.1.3}Applicazione Mobile}{33}%
+\contentsline {subsection}{\numberline {6.1.4}Component Diagram}{34}%
+\contentsline {section}{\numberline {6.2}Database}{34}%
+\contentsline {section}{\numberline {6.3}Deployment Diagram}{35}%
+\contentsline {section}{\numberline {6.4}Class Diagram}{35}%
+\contentsline {section}{\numberline {6.5}Sequence Diagram}{35}%
+\contentsline {chapter}{\numberline {7}Implementazione}{36}%

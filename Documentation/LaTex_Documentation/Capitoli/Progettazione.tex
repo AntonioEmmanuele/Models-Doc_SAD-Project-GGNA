@@ -45,6 +45,44 @@ Dato che il sistema può contenere un numero notevole di dipendenti, il Publishe
 	\end{tabular}
 \end{table}
 
+\subsection{Main System}
+Il sistema principale è l'unico Publisher dello stile utilizzato. Studiando i vari stili architetturali, tra quelli visti durante il corso, l'architettura del sistema non si rispecchia in uno stile architetturale ben preciso, ma è caratterizzata nel seguente modo:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{Immagini/main_system.png}
+\end{figure}
+\begin{itemize}
+	\item \textbf{Database}: Al livello più basso, il componente, racchiude tutte le funzionalità per accedere e modificare i dati all'interno della base di dati del sistema. La business logic accede al database solo attraverso all'interfaccia che tale livello offre, mascherando la reale implementazione.
+	\item \textbf{Business Logic}: Al livello centrale, il componente, racchiude tutte le funzionalità per manipolare le richieste e i dati del sistema. Effettua tutti i controlli necessari prima di inviare una risposta. Si occupa principalmente di implementare i casi d'uso.
+	\item \textbf{Broker}: Al livello più alto il Broker si occupa solo di inviare i le risposte (prodotte dalla Business Logic) ai diretti interessati. 
+	\item \textbf{Request Generator}: Al livello più alto esso riceve, e identifica, le richieste dall'esterno e le inoltra alla Business Logic che si occupa di elaborarle e inviare le risposte al Broker.
+\end{itemize}
+La Business Logic deve esporre un'interfaccia al Request Generator che contiene le funzioni in relazione al caso d'uso da realizzare.
+
+\subsection{Proxy}
+Il proxy contiene un'insieme di utenti connessi al sistema tramite applicazione. Esistono più proxy, ognuno associato ad una categoria di utenti (i.e. Proxy Camerieri è associato a tutti i camerieri). Così facendo, all'atto dell'invio di un messaggio il Broker lo invia ad un relativo Proxy che provvede a smistarlo correttamente. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Immagini/proxy.png}
+\end{figure}
+Oltre a inviare i messaggi a tutti i dispositivi associati, esso riceve anche informazioni solo da essi.
+\\Esso è quindi dotato di tre interfacce:
+\begin{itemize}
+	\item Un'interfaccia per collegarsi al Broker. Il Broker invia un evento da pubblicare, il proxy lo pubblica a tutti i suoi dispositivi.
+	\item Un'interfaccia per collegarsi al Request Generator. Il proxy riceve dai dispositivi eventi di richiesta, il Request Generator riceve da esso l'evento da elaborare.
+	\item Un'interfaccia per collegarsi all'applicazione mobile.
+\end{itemize}
+
+\subsection{Applicazione Mobile}
+Tutto il calcolo computazionale è a carico del \textit{Main System}. L'applicazione deve solo ricevere e inviare eventi dal proxy (o dai proxy, se più di uno) associato. La costruzione del messaggio avviene tramite un'interfaccia grafica per ogni contesto, il resto è gestito tutto dal Main System.
+\\A tal proposito si è utilizzato il pattern Architetturale \textit{MVC (Model View Control)} per la realizzazione dell'applicazione.
+\begin{itemize}
+	\item \textit{Modello} contiene tutti i dati necessari per il messaggio da inviare o ricevuto dall'esterno.
+	\item \textit{Controllo} contiene tutte le funzionalità per interfacciarsi all'esterno tramite opportuni protocolli di rete per inviare e ricevere messaggi.
+	\item \textit{View} è la rappresentazione grafica dei dati.
+\end{itemize}
+
+
 
 \subsection{Component Diagram}
 \begin{figure}[H]
