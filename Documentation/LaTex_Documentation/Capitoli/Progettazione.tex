@@ -74,7 +74,7 @@ Oltre a inviare i messaggi a tutti i dispositivi associati, esso riceve anche in
 \end{itemize}
 
 \subsection{Applicazione Mobile}
-Tutto il calcolo computazionale è a carico del \textit{Main System}. L'applicazione deve solo ricevere e inviare eventi dal proxy (o dai proxy, se più di uno) associato. La costruzione del messaggio avviene tramite un'interfaccia grafica per ogni contesto, il resto è gestito tutto dal Main System.
+Tutto il calcolo computazionale è a carico del \textit{Main System}, mentre lo smistamento dei messaggi è a carico dei \textit{Proxy}. L'applicazione deve solo ricevere e inviare eventi dal proxy (o dai proxy, se più di uno) associato. La costruzione del messaggio avviene tramite un'interfaccia grafica per ogni contesto, il resto è gestito tutto dal Main System.
 \\A tal proposito si è utilizzato il pattern Architetturale \textit{MVC (Model View Control)} per la realizzazione dell'applicazione.
 \begin{itemize}
 	\item \textit{Modello} contiene tutti i dati necessari per il messaggio da inviare o ricevuto dall'esterno.

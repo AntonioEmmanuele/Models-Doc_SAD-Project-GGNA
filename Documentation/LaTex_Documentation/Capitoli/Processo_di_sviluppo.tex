@@ -1,1 +1,50 @@
 \chapter{Processo di sviluppo}
+Il processo di sviluppo utilizzato per la realizzazione (parziale) del software è \textbf{UP} (Unified Process). Un processo di tipo agile ci ha permesso quindi in brevi tempi avere un'implementazione funzionante del software, anche se non soddisfa tutti i casi d'uso richiesti.
+\\Data la grande dimensione dell'applicazione e i tempi ridotti di consegna, l'utilizzo di un processo \textit{guidato da piani} avrebbe generato non pochi problemi.
+
+\section{Github}
+In primo approccio alla realizzazione del sistema si è deciso di utilizzare \textbf{Github} come piattaforma di condivisione di codice, modello e documentazione. Fin dall'inizio il lavoro è stato diviso in tre repository indipendenti:
+\begin{itemize}
+	\item Una repository che contiene tutti i file di documentazione e di modellazione del software.
+	\item Una repository che contiene solo la parte di software \textit{backend}. 
+	\item Una repository che contiene solo la parte di software \textit{frontend}.
+\end{itemize}
+Il motivo della divisione del codice in più repository è quello di scollegare fisicamente la realizzazione delle due parti. Inoltre il \textit{frontend} è pensato per essere implementato su una piattaforma Android, mentre il \textit{backend} su una piattaforma Desktop, accentuando tale suddivisione.
+\\In ogni repository sono state create delle \textit{Branch} per permettere uno sviluppo parallelo tra i vari componenti del gruppo. Infatti durante la realizzazione ogni componente si è occupato di un lavoro, al termine dei quali si poteva continuare con un \textit{Merge} per unirli.
+
+\section{UP}
+Il processo di sviluppo software UP preve lo sviluppo in iterazioni. Ognuna delle quali comprende \textit{analisi}, \textit{progettazione}, \textit{implementazione} e \textit{test}.
+\\Prima di tutto si è effettuata una fase di \textbf{ideazione}, per poi proseguire con la fase di \textit{elaborazione} (che comprende le iterazioni vere e proprie) ed infine una fase di \textit{transazione} per rilasciare una piccola versione ed illustrarne il funzionamento.
+
+\subsection{Ideazione}
+Nei primi giorni si è deciso \textit{cosa} il sistema dovesse fare. In particolare sono stati identificati gli attori che avrebbero preso parte all'applicativo e per ogni attore gli obiettivi da raggiungere. Sono stati valutati i requisiti considerando anche il tempo che si aveva a disposizione per non sfociare in un progetto troppo complesso da realizzare.
+\\In seguito si è effettuato uno studio di fattibilità. Capire se il sistema poteva essere realizzato con gli strumenti che si avevano a disposizione. 
+\\Nel dettaglio nella fase di ideazione sono state eseguite le seguenti azioni:
+\begin{itemize}
+	\item Workshop dei requisiti, attraverso il confronto con gli stackholder (alcuni componenti del gruppo hanno lavorato e/o lavorano ancora nell'ambito della ristorazione).
+	\item Identificazione degli attori.
+	\item Descrizione breve dei primi casi d'uso ricercati.
+	\item Descrizione dettagliata dei casi d'uso più importanti, quelli che rappresentavano il "cuore" del sistema e che racchiudevano le funzionalità di principale interesse.
+	\item Architettura di alto livello 	
+\end{itemize} 
+
+\subsection{Elaborazione}
+La fase di elaborazione è stata divisa in due iterazioni di all'incirca 2-3 settimane ciascuna.
+\begin{enumerate}
+	\item Nella prima iterazione sono stati analizzati i requisti più nello specifico, costruendo:
+	\begin{itemize}
+		\item Modello di dominio
+		\item Sequence Diagram di sistema, per i casi d'uso scelti per l'implementazione
+		\item Progetto dell'architettura del sistema
+		\item Progetto della base di dati
+		\item Implementazione parziale del software \textit{backend}
+	\end{itemize}
+	\item Nella seconda iterazione puntava a realizzare l'applicazione \textit{frontend} per avere un primo rilascio del sistema. In particolare:
+	\begin{itemize}
+		\item Class diagram di dettaglio
+		\item Progettazione della comunicazione tra  \textit{backend} e \textit{frontend}
+		\item Definizione dei messaggi da scambiare
+		\item Progetto dell'archietettura Android
+		\item Implementazione completa del software
+	\end{itemize}
+\end{enumerate}

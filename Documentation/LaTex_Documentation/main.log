@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.11.2)  11 OCT 2021 17:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.11.2)  12 OCT 2021 14:33
 entering extended mode
 **./main.tex
 (main.tex
@@ -1136,11 +1136,11 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 
  (Capitoli/Processo_di_sviluppo.tex
 Capitolo 2.
-) [3
+[3
 
 
 
-]
+] [4]) [5]
 \openout2 = `Capitoli/Documento_di_visione.aux'.
 
  (Capitoli/Documento_di_visione.tex
@@ -1152,31 +1152,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
-[4
+[6
 
 
 
-]) [5] [6]
+]) [7] [8]
 \openout2 = `Capitoli/Specifica_dei_requisiti.aux'.
 
  (Capitoli/Specifica_dei_requisiti.tex
 Capitolo 4.
-<Immagini/AttoriPrimari.png, id=37, 765.6103pt x 310.91156pt>
+<Immagini/AttoriPrimari.png, id=44, 765.6103pt x 310.91156pt>
 File: Immagini/AttoriPrimari.png Graphic file (type png)
 <use Immagini/AttoriPrimari.png>
 Package pdftex.def Info: Immagini/AttoriPrimari.png  used on input line 8.
 (pdftex.def)             Requested size: 430.00462pt x 174.62637pt.
-[7
+[9
 
 
 
  <./Immagini/AttoriPrimari.png>]
-<Immagini/AttoriFinali.png, id=42, 72.27pt x 86.57344pt>
+<Immagini/AttoriFinali.png, id=49, 72.27pt x 86.57344pt>
 File: Immagini/AttoriFinali.png Graphic file (type png)
 <use Immagini/AttoriFinali.png>
 Package pdftex.def Info: Immagini/AttoriFinali.png  used on input line 24.
 (pdftex.def)             Requested size: 51.59845pt x 61.8097pt.
- [8 <./Immagini/AttoriFinali.png>]
+ [10 <./Immagini/AttoriFinali.png>]
 Underfull \hbox (badness 1097) in paragraph at lines 69--70
 []|\OT1/cmr/m/n/12 Generazione ven-di-ta di un ta-vo-lo (pa-ga-men-to dei
  []
@@ -1186,8 +1186,8 @@ Overfull \hbox (3.69841pt too wide) in paragraph at lines 36--84
  [][] 
  []
 
-[9]
-<Immagini/DiagrammaCasiUso.png, id=51, 639.13782pt x 387.69844pt>
+[11]
+<Immagini/DiagrammaCasiUso.png, id=58, 639.13782pt x 387.69844pt>
 File: Immagini/DiagrammaCasiUso.png Graphic file (type png)
 <use Immagini/DiagrammaCasiUso.png>
 Package pdftex.def Info: Immagini/DiagrammaCasiUso.png  used on input line 93.
@@ -1202,7 +1202,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--95
 
  []
 
-[10 <./Immagini/DiagrammaCasiUso.png>]
+[12 <./Immagini/DiagrammaCasiUso.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 135--136
 []|\OT1/cmr/m/n/12 {$[]$ (vo-glio-no re-gi-stra-re/-mo-di-fi-ca-re
  []
@@ -1217,7 +1217,7 @@ Overfull \hbox (3.69841pt too wide) in alignment at lines 123--162
  [] [] 
  []
 
-[11]
+[13]
 Underfull \vbox (badness 10000) detected at line 162
  []
 
@@ -1242,7 +1242,7 @@ Overfull \hbox (3.69841pt too wide) in alignment at lines 162--190
  [] [] 
  []
 
-[12]
+[14]
 Underfull \hbox (badness 1215) in paragraph at lines 195--196
 []|\OT1/cmr/m/n/12 5.C.1 L'or-di-na-zio-ne non e mo-di-fi-ca-bi-le (poiche in
 
@@ -1258,7 +1258,7 @@ Overfull \hbox (3.69841pt too wide) in alignment at lines 190--204
  [] [] 
  []
 
-[13]
+[15]
 Overfull \hbox (3.69841pt too wide) in alignment at lines 209--245
  [] [] 
  []
@@ -1272,7 +1272,7 @@ Overfull \hbox (3.69841pt too wide) in alignment at lines 245--247
  [] [] 
  []
 
-[14]
+[16]
 Underfull \hbox (badness 1286) in paragraph at lines 272--273
 []|\OT1/cmr/m/n/12 {Prodotto in or-di-na-zio-ne vie-ne po-sto in sta-to di
  []
@@ -1301,43 +1301,43 @@ Overfull \hbox (3.69841pt too wide) in alignment at lines 287--292
  [] [] 
  []
 
-[15] [16] [17]) [18]
+[17] [18] [19]) [20]
 \openout2 = `Capitoli/Analisi_dei_requisiti.aux'.
 
  (Capitoli/Analisi_dei_requisiti.tex
 Capitolo 5.
-<Immagini/modello_dominio.jpg, id=82, 1494.58376pt x 1042.89626pt>
+<Immagini/modello_dominio.jpg, id=88, 1494.58376pt x 1042.89626pt>
 File: Immagini/modello_dominio.jpg Graphic file (type jpg)
 <use Immagini/modello_dominio.jpg>
 Package pdftex.def Info: Immagini/modello_dominio.jpg  used on input line 7.
 (pdftex.def)             Requested size: 430.00462pt x 300.04518pt.
-[19
+[21
 
 
 
- <./Immagini/modello_dominio.jpg>] [20]
-<Immagini/stati_tavolo.jpg, id=89, 1230.5975pt x 521.95pt>
+ <./Immagini/modello_dominio.jpg>] [22]
+<Immagini/stati_tavolo.jpg, id=95, 1230.5975pt x 521.95pt>
 File: Immagini/stati_tavolo.jpg Graphic file (type jpg)
 <use Immagini/stati_tavolo.jpg>
 Package pdftex.def Info: Immagini/stati_tavolo.jpg  used on input line 25.
 (pdftex.def)             Requested size: 430.00462pt x 182.38258pt.
-<Immagini/stati_prodotti_ordinati.jpg, id=90, 655.44875pt x 468.75125pt>
+<Immagini/stati_prodotti_ordinati.jpg, id=96, 655.44875pt x 468.75125pt>
 File: Immagini/stati_prodotti_ordinati.jpg Graphic file (type jpg)
 <use Immagini/stati_prodotti_ordinati.jpg>
 Package pdftex.def Info: Immagini/stati_prodotti_ordinati.jpg  used on input li
 ne 34.
 (pdftex.def)             Requested size: 344.005pt x 246.01941pt.
- [21 <./Immagini/stati_tavolo.jpg>]
-<Immagini/stati_ordinazione.jpg, id=94, 908.39375pt x 547.04375pt>
+ [23 <./Immagini/stati_tavolo.jpg>]
+<Immagini/stati_ordinazione.jpg, id=101, 908.39375pt x 547.04375pt>
 File: Immagini/stati_ordinazione.jpg Graphic file (type jpg)
 <use Immagini/stati_ordinazione.jpg>
 Package pdftex.def Info: Immagini/stati_ordinazione.jpg  used on input line 43.
 
 (pdftex.def)             Requested size: 430.00462pt x 258.95532pt.
 
-[22 <./Immagini/stati_prodotti_ordinati.jpg>] [23 <./Immagini/stati_ordinazione
+[24 <./Immagini/stati_prodotti_ordinati.jpg>] [25 <./Immagini/stati_ordinazione
 .jpg>]
-<Immagini/SSD Gestisci Ordinazioni (Successo).jpg, id=102, 1067.99pt x 981.6675
+<Immagini/SSD Gestisci Ordinazioni (Successo).jpg, id=108, 1067.99pt x 981.6675
 pt>
 File: Immagini/SSD Gestisci Ordinazioni (Successo).jpg Graphic file (type jpg)
 <use Immagini/SSD Gestisci Ordinazioni (Successo).jpg>
@@ -1345,7 +1345,7 @@ Package pdftex.def Info: Immagini/SSD Gestisci Ordinazioni (Successo).jpg  used
  on input line 56.
 (pdftex.def)             Requested size: 430.00462pt x 395.2514pt.
 <Immagini/SSD Gestisci Ordinazione (EstensioneB - Elimina Ordinazione).jpg, id=
-103, 919.435pt x 776.9025pt>
+109, 919.435pt x 776.9025pt>
 File: Immagini/SSD Gestisci Ordinazione (EstensioneB - Elimina Ordinazione).jpg
  Graphic file (type jpg)
 <use Immagini/SSD Gestisci Ordinazione (EstensioneB - Elimina Ordinazione).jpg>
@@ -1353,24 +1353,24 @@ File: Immagini/SSD Gestisci Ordinazione (EstensioneB - Elimina Ordinazione).jpg
 Package pdftex.def Info: Immagini/SSD Gestisci Ordinazione (EstensioneB - Elimi
 na Ordinazione).jpg  used on input line 62.
 (pdftex.def)             Requested size: 430.00462pt x 363.35417pt.
- [24 <./Immagini/SSD Gestisci Ordinazioni (Successo).jpg>]
-<Immagini/SSD Gestisci Ordinazione (EstensioneC - Aggiungi prodotto).jpg, id=10
-7, 1016.79875pt x 1417.295pt>
+ [26 <./Immagini/SSD Gestisci Ordinazioni (Successo).jpg>]
+<Immagini/SSD Gestisci Ordinazione (EstensioneC - Aggiungi prodotto).jpg, id=11
+3, 1016.79875pt x 1417.295pt>
 File: Immagini/SSD Gestisci Ordinazione (EstensioneC - Aggiungi prodotto).jpg G
 raphic file (type jpg)
 <use Immagini/SSD Gestisci Ordinazione (EstensioneC - Aggiungi prodotto).jpg>
 Package pdftex.def Info: Immagini/SSD Gestisci Ordinazione (EstensioneC - Aggiu
 ngi prodotto).jpg  used on input line 68.
 (pdftex.def)             Requested size: 430.00462pt x 599.36882pt.
- [25 <./Immagini/SSD Gestisci Ordinazione (EstensioneB - Elimina Ordinazione).j
+ [27 <./Immagini/SSD Gestisci Ordinazione (EstensioneB - Elimina Ordinazione).j
 pg>]
 Overfull \vbox (73.64226pt too high) has occurred while \output is active []
 
 
-[26 <./Immagini/SSD Gestisci Ordinazione (EstensioneC - Aggiungi prodotto).jpg>
+[28 <./Immagini/SSD Gestisci Ordinazione (EstensioneC - Aggiungi prodotto).jpg>
 ]
-<Immagini/SSD Gestisci Ordinazione (EstensioneD - Modifica prodotto).jpg, id=11
-4, 1065.9825pt x 1299.85625pt>
+<Immagini/SSD Gestisci Ordinazione (EstensioneD - Modifica prodotto).jpg, id=12
+0, 1065.9825pt x 1299.85625pt>
 File: Immagini/SSD Gestisci Ordinazione (EstensioneD - Modifica prodotto).jpg G
 raphic file (type jpg)
 <use Immagini/SSD Gestisci Ordinazione (EstensioneD - Modifica prodotto).jpg>
@@ -1378,7 +1378,7 @@ Package pdftex.def Info: Immagini/SSD Gestisci Ordinazione (EstensioneD - Modif
 ica prodotto).jpg  used on input line 74.
 (pdftex.def)             Requested size: 430.00462pt x 524.33649pt.
 <Immagini/SSD Gestisci Ordinazioni (Estensione E - Rimuovi prodotto ordinazione
-).jpg, id=115, 1333.98375pt x 834.11626pt>
+).jpg, id=121, 1333.98375pt x 834.11626pt>
 File: Immagini/SSD Gestisci Ordinazioni (Estensione E - Rimuovi prodotto ordina
 zione).jpg Graphic file (type jpg)
 <use Immagini/SSD Gestisci Ordinazioni (Estensione E - Rimuovi prodotto ordinaz
@@ -1386,58 +1386,58 @@ ione).jpg>
 Package pdftex.def Info: Immagini/SSD Gestisci Ordinazioni (Estensione E - Rimu
 ovi prodotto ordinazione).jpg  used on input line 80.
 (pdftex.def)             Requested size: 430.00462pt x 268.86998pt.
- [27 <./Immagini/SSD Gestisci Ordinazione (EstensioneD - Modifica prodotto).jpg
+ [29 <./Immagini/SSD Gestisci Ordinazione (EstensioneD - Modifica prodotto).jpg
 >]
-<Immagini/SSD Notifica Ordinazione.jpg, id=119, 1083.04625pt x 645.41125pt>
+<Immagini/SSD Notifica Ordinazione.jpg, id=126, 1083.04625pt x 645.41125pt>
 File: Immagini/SSD Notifica Ordinazione.jpg Graphic file (type jpg)
 <use Immagini/SSD Notifica Ordinazione.jpg>
 Package pdftex.def Info: Immagini/SSD Notifica Ordinazione.jpg  used on input l
 ine 87.
 (pdftex.def)             Requested size: 430.00462pt x 256.24937pt.
-) [28 <./Immagini/SSD Gestisci Ordinazioni (Estensione E - Rimuovi prodotto ord
-inazione).jpg>] [29 <./Immagini/SSD Notifica Ordinazione.jpg>]
+) [30 <./Immagini/SSD Gestisci Ordinazioni (Estensione E - Rimuovi prodotto ord
+inazione).jpg>] [31 <./Immagini/SSD Notifica Ordinazione.jpg>]
 \openout2 = `Capitoli/Progettazione.aux'.
 
 
 (Capitoli/Progettazione.tex
 Capitolo 6.
-[30
+[32
 
 
 
 ]
-<Immagini/main_system.png, id=130, 377.15906pt x 398.99063pt>
+<Immagini/main_system.png, id=136, 377.15906pt x 398.99063pt>
 File: Immagini/main_system.png Graphic file (type png)
 <use Immagini/main_system.png>
 Package pdftex.def Info: Immagini/main_system.png  used on input line 52.
 (pdftex.def)             Requested size: 171.99922pt x 181.955pt.
- [31]
-<Immagini/proxy.png, id=134, 314.67563pt x 118.19156pt>
+ [33]
+<Immagini/proxy.png, id=140, 314.67563pt x 118.19156pt>
 File: Immagini/proxy.png Graphic file (type png)
 <use Immagini/proxy.png>
 Package pdftex.def Info: Immagini/proxy.png  used on input line 66.
 (pdftex.def)             Requested size: 258.00539pt x 96.91049pt.
- [32 <./Immagini/main_system.png>]
-<Immagini/dynamic components.jpg, id=139, 1895.08pt x 617.30624pt>
+ [34 <./Immagini/main_system.png>]
+<Immagini/dynamic components.jpg, id=145, 1895.08pt x 617.30624pt>
 File: Immagini/dynamic components.jpg Graphic file (type jpg)
 <use Immagini/dynamic components.jpg>
 Package pdftex.def Info: Immagini/dynamic components.jpg  used on input line 90
 .
 (pdftex.def)             Requested size: 430.00462pt x 140.06532pt.
- [33 <./Immagini/proxy.png>]
-<Immagini/database.jpg, id=144, 1365.1pt x 628.3475pt>
+ [35 <./Immagini/proxy.png>]
+<Immagini/database.jpg, id=151, 1365.1pt x 628.3475pt>
 File: Immagini/database.jpg Graphic file (type jpg)
 <use Immagini/database.jpg>
 Package pdftex.def Info: Immagini/database.jpg  used on input line 97.
 (pdftex.def)             Requested size: 430.00462pt x 197.92091pt.
 
-[34 <./Immagini/dynamic components.jpg> <./Immagini/database.jpg>]) [35]
+[36 <./Immagini/dynamic components.jpg> <./Immagini/database.jpg>]) [37]
 \openout2 = `Capitoli/Implementazione.aux'.
 
 
 (Capitoli/Implementazione.tex
 Capitolo 7.
-) [36
+) [38
 
 
 
@@ -1445,7 +1445,7 @@ Capitolo 7.
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [37
+) [39
 
 
 ] (main.aux (coverpage.aux) (Capitoli/Introduzione.aux)
@@ -1471,9 +1471,9 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Giuseppe/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Giu
 seppe/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.p
 fb>
-Output written on main.pdf (39 pages, 1498854 bytes).
+Output written on main.pdf (41 pages, 1505907 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
+ 183 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  103 words of extra memory for PDF output out of 10000 (max. 10000000)
 
