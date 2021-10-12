@@ -1,5 +1,5 @@
 \chapter{Processo di sviluppo}
-Il processo di sviluppo utilizzato per la realizzazione (parziale) del software è \textbf{UP} (Unified Process). Un processo di tipo agile ci ha permesso quindi in brevi tempi avere un'implementazione funzionante del software, anche se non soddisfa tutti i casi d'uso richiesti.
+Il processo di sviluppo utilizzato per la realizzazione del software è \textbf{UP} (Unified Process). Un processo di tipo agile ci ha permesso quindi in brevi tempi di avere un'implementazione funzionante del software, anche se non soddisfa tutti i casi d'uso richiesti.
 \\Data la grande dimensione dell'applicazione e i tempi ridotti di consegna, l'utilizzo di un processo \textit{guidato da piani} avrebbe generato non pochi problemi.
 
 \section{Github}
@@ -13,12 +13,12 @@ Il motivo della divisione del codice in più repository è quello di scollegare 
 \\In ogni repository sono state create delle \textit{Branch} per permettere uno sviluppo parallelo tra i vari componenti del gruppo. Infatti durante la realizzazione ogni componente si è occupato di un lavoro, al termine dei quali si poteva continuare con un \textit{Merge} per unirli.
 
 \section{UP}
-Il processo di sviluppo software UP preve lo sviluppo in iterazioni. Ognuna delle quali comprende \textit{analisi}, \textit{progettazione}, \textit{implementazione} e \textit{test}.
-\\Prima di tutto si è effettuata una fase di \textbf{ideazione}, per poi proseguire con la fase di \textit{elaborazione} (che comprende le iterazioni vere e proprie) ed infine una fase di \textit{transazione} per rilasciare una piccola versione ed illustrarne il funzionamento.
+Il processo di sviluppo software UP prevede lo sviluppo in iterazioni. Ognuna delle quali comprende \textit{analisi}, \textit{progettazione}, \textit{implementazione} e \textit{test}.
+\\Prima di tutto si è effettuata una fase di \textbf{ideazione}, per poi proseguire con la fase di \textbf{elaborazione} (che comprende le iterazioni vere e proprie) ed infine una fase di \textbf{transazione} per rilasciare una piccola versione ed illustrarne il funzionamento.
 
 \subsection{Ideazione}
 Nei primi giorni si è deciso \textit{cosa} il sistema dovesse fare. In particolare sono stati identificati gli attori che avrebbero preso parte all'applicativo e per ogni attore gli obiettivi da raggiungere. Sono stati valutati i requisiti considerando anche il tempo che si aveva a disposizione per non sfociare in un progetto troppo complesso da realizzare.
-\\In seguito si è effettuato uno studio di fattibilità. Capire se il sistema poteva essere realizzato con gli strumenti che si avevano a disposizione. 
+\\In seguito si è effettuato uno studio di fattibilità, volto a capire se il sistema poteva essere realizzato con gli strumenti che si avevano a disposizione. 
 \\Nel dettaglio nella fase di ideazione sono state eseguite le seguenti azioni:
 \begin{itemize}
 	\item Workshop dei requisiti, attraverso il confronto con gli stackholder (alcuni componenti del gruppo hanno lavorato e/o lavorano ancora nell'ambito della ristorazione).
@@ -29,22 +29,90 @@ Nei primi giorni si è deciso \textit{cosa} il sistema dovesse fare. In particol
 \end{itemize} 
 
 \subsection{Elaborazione}
-La fase di elaborazione è stata divisa in due iterazioni di all'incirca 2-3 settimane ciascuna.
+La fase di elaborazione è stata divisa in tre iterazioni di all'incirca 1-2 settimane ciascuna.
 \begin{enumerate}
-	\item Nella prima iterazione sono stati analizzati i requisti più nello specifico, costruendo:
+	\item Nella prima iterazione sono stati analizzati i requisti più nello specifico focalizzando l'attenzione sulla logica centrale del sistema, costruendo:
 	\begin{itemize}
-		\item Modello di dominio
-		\item Sequence Diagram di sistema, per i casi d'uso scelti per l'implementazione
-		\item Progetto dell'architettura del sistema
-		\item Progetto della base di dati
-		\item Implementazione parziale del software \textit{backend}
+		\item Analisi
+		\begin{itemize}
+			\item Modello di dominio
+			\item Sequence Diagram di sistema
+			\item Comunicazione tra Business Logic e Database
+		\end{itemize}
+		\item Progetto
+		\begin{itemize}
+			\item Progetto dell'architettura del sistema
+			\item Progetto della base di dati
+			\item Progetto dell'architettura del Main System
+			\item Class Diagram di dettaglio della Business Logic
+			\item Sequence Diagram di dettaglio
+		\end{itemize}
+		\item Implementazione
+		\begin{itemize}
+			\item Implementazione Business Logic (BL)
+			\item Implementazione del database (DB)
+		\end{itemize}
+		\item Test
+		\begin{itemize}
+			\item Test di unità della BL
+			\item Test di unità del database
+			\item Test di integrazione tra BL e DB
+		\end{itemize}
 	\end{itemize}
-	\item Nella seconda iterazione puntava a realizzare l'applicazione \textit{frontend} per avere un primo rilascio del sistema. In particolare:
+
+	\item Nella seconda iterazione:
 	\begin{itemize}
-		\item Class diagram di dettaglio
-		\item Progettazione della comunicazione tra  \textit{backend} e \textit{frontend}
-		\item Definizione dei messaggi da scambiare
-		\item Progetto dell'archietettura Android
-		\item Implementazione completa del software
+		\item Analisi
+		\begin{itemize}
+			\item Comunicazione tra Business Logic, Broker e Request Generator
+			\item Comunicazione tra Proxy e Main System
+		\end{itemize}
+		\item Progetto
+		\begin{itemize}
+			\item Class diagram di dettaglio del Broker
+			\item Class diagram di dettaglio del Request Generator
+			\item Class diagram di dettaglio dei Proxy
+		\end{itemize}
+		\item Implementazione
+		\begin{itemize}
+			\item Implementazione del Broker
+			\item Implementazione del Request Generator
+			\item Implementazione dei Proxy
+		\end{itemize}
+		\item Test
+		\begin{itemize}
+			\item Test di unità del Broker
+			\item Test di unità del Request Generator
+			\item Test di unità del Proxy
+		\end{itemize}
 	\end{itemize}
+	\item Nella terza iterazione ci si è focalizzati sul lato \textit{frontend} per rilasciare un applicativo accessibile dall'utente.
+		\begin{itemize}
+			\item Analisi
+			\begin{itemize}
+				\item Comunicazione tra Proxy e Applicazione Android
+				\item Formato dei messaggi da scambiare
+			\end{itemize}
+			\item Progetto
+			\begin{itemize}
+				\item Progetto dell'architettura Android
+			\end{itemize}
+			\item Implementazione
+			\begin{itemize}
+				\item Implementazione dell'architettura 
+			\end{itemize}
+			\item Test
+			\begin{itemize}
+				\item Test di comunicazione tra Android e Sistema
+			\end{itemize}
+		\end{itemize}
 \end{enumerate}
+
+\subsection{Transazione}
+Teoricamente il sistema prevede tre tipi di applicazioni:
+\begin{itemize}
+	\item Una per dispositivi mobile Android
+	\item Una per il sistema centrale, installabile su un sistema con un interprete Java e un database PostgreSQL
+	\item Una per dispositivi Desktop 
+\end{itemize}
+Per motivi di tempistiche si è scelto di implementare solo le prime due. Per tutti i dipendenti un'applicazione Android, la quale viene rilasciata in formato \textit{.apk} con compatibilità minima del sistema operativo \textit{Lollipop 5.0}.
