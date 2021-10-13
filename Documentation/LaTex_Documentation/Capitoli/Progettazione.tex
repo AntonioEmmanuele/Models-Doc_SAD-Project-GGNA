@@ -46,7 +46,7 @@ Dato che il sistema può contenere un numero notevole di dipendenti, il Publishe
 \end{table}
 
 \subsection{Main System}
-Il sistema principale è l'unico Publisher dello stile utilizzato. Studiando i vari stili architetturali, tra quelli visti durante il corso, l'architettura del sistema non si rispecchia in uno stile architetturale ben preciso, ma è caratterizzata nel seguente modo:
+Il sistema principale è l'unico Publisher dello stile utilizzato. Studiando i vari stili architetturali, tra quelli visti durante il corso, e prendendo spunto dallo stile a livelli, l'architettura del sistema non si rispecchia in uno stile architetturale ben preciso, ma è caratterizzata nel seguente modo:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{Immagini/main_system.png}
@@ -58,6 +58,7 @@ Il sistema principale è l'unico Publisher dello stile utilizzato. Studiando i v
 	\item \textbf{Request Generator}: Al livello più alto esso riceve, e identifica, le richieste dall'esterno e le inoltra alla Business Logic che si occupa di elaborarle e inviare le risposte al Broker.
 \end{itemize}
 La Business Logic deve esporre un'interfaccia al Request Generator che contiene le funzioni in relazione al caso d'uso da realizzare.
+\\Tutto il componente viene visto dall'esterno (e quindi dai Proxy) come una blackbox con due sole interfacce: una per ricevere delle richieste e una per pubblicare gli eventi.
 
 \subsection{Proxy}
 Il proxy contiene un'insieme di utenti connessi al sistema tramite applicazione. Esistono più proxy, ognuno associato ad una categoria di utenti (i.e. Proxy Camerieri è associato a tutti i camerieri). Così facendo, all'atto dell'invio di un messaggio il Broker lo invia ad un relativo Proxy che provvede a smistarlo correttamente. 
@@ -72,6 +73,16 @@ Oltre a inviare i messaggi a tutti i dispositivi associati, esso riceve anche in
 	\item Un'interfaccia per collegarsi al Request Generator. Il proxy riceve dai dispositivi eventi di richiesta, il Request Generator riceve da esso l'evento da elaborare.
 	\item Un'interfaccia per collegarsi all'applicazione mobile.
 \end{itemize}
+Attraverso l'analisi degli attori precedentemente descritta si hanno sei tipi di proxy:
+\begin{itemize}
+	\item Proxy Cameriere associato a tutti i camerieri in servizio.
+	\item Proxy Realizzatori associato a tutti i realizzatori di ordinazioni (chef, pizzaiolo, barista).
+	\item Proxy Accoglienza associato all'addetto all'accoglienza.
+	\item Proxy Cossiere associato al cassiere in servizio.
+	\item Proxy Gestione associato al proprietario e all'economo.
+	\item Proxy Login è un proxy generale a cui vengono associati tutti gli utenti che non hanno ancora effettuato l'accesso.
+\end{itemize}
+L'idea di base è che ogni utente, prima di effettuare l'accesso, può contattare solo il \textit{Proxy Login}, il quale provvede in base alle credenziali ad associare il dispositivo al relativo Proxy.
 
 \subsection{Applicazione Mobile}
 Tutto il calcolo computazionale è a carico del \textit{Main System}, mentre lo smistamento dei messaggi è a carico dei \textit{Proxy}. L'applicazione deve solo ricevere e inviare eventi dal proxy (o dai proxy, se più di uno) associato. La costruzione del messaggio avviene tramite un'interfaccia grafica per ogni contesto, il resto è gestito tutto dal Main System.
@@ -87,8 +98,101 @@ Tutto il calcolo computazionale è a carico del \textit{Main System}, mentre lo 
 \subsection{Component Diagram}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{Immagini/dynamic components.jpg}
+	\includegraphics[width=1\textwidth]{Immagini/components.jpg}
 \end{figure}
+Per rendere più chiara la lettura del diagramma, i proxy sono stati \underline{replicati} solo ad uno scopo grafico. 
+\\L'applicazione inoltre non è collegata realmente a tutti i proxy ma solo a quelli a cui corrispondono le sue credenziali di accesso; potenzialmente può essere collegata a tutti i proxy.
+
+\section{Class Diagram}
+Dopo aver illustrato il component diagram, si deve illustrare il modello ad oggetti di ogni componente presente nel sistema.
+
+
+\subsection{Main System}
+Il Main System è il componente più complesso perché contiene a sua volta altri componenti connessi tra loro, quindi non può essere rappresentato con un unico class diagram. 
+\\Nel livello inferiore è presente il database. Esso non può essere rappresentato come class diagram per la sua natura, inoltre non deve essere realizzato poiché ci si affida a database \textit{relazionali} già esistenti.
+
+\subsubsection{Business Logic}
+Il class diagram è diviso in layer orizzontali, in cui ogni livello può interfacciarsi solo con il livello inferiore e può offrire un'interfaccia al livello superiore:
+\begin{itemize}
+	\item \textbf{DataAccess}: livello più basso si occupa di implementare il driver per l'accesso al database.
+	\item \textbf{Areas}: livello centrale mantiene il modello ad oggetti del sistema vero e proprio.
+	\item \textbf{Controller}: livello più alto può accedere al modello inferiore e fornire un'interfaccia per un accesso controllato ai dati.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Immagini/business_logic.jpg}
+\end{figure}
+\hrule
+\vspace{0.5cm}
+\textbf{Areas}:
+Il livello dei dati è a sua volta diviso in layer verticali, in cui ogni livello si occupa di gestire specifiche macro-responsabilita':
+\begin{itemize}
+	\item \textit{MenuAndWareHouseArea} si occupa di gestire le richieste di visualizzazione di prodotti sul menu, di merci, di aggiornamento della disponibilità dei prodotti in relazione alle merci ed alla creazione e personalizzazione di prodotti ordinati.
+	\item \textit{TableAndOrdersArea} si occupa di gestire lo stato dei tavoli, la creazione degli ordini ad un tavolo e la modifica degli ordini.
+	\item \textit{UserData} si occupa di verificare quali siano i ruoli di un utente fornendoli al richiedente, e di registrare gli ordini associati agli utenti.
+\end{itemize}
+Nel dettaglio i tre package sono progettati nel seguente modo.
+\vspace{0.5cm}
+\\\textit{MenuAndWareHouseArea}:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Immagini/MenuAndWareHouseArea.jpg}
+\end{figure}
+La classe \textit{orderedItem} in linea con lo state chart descritto nei capitoli precedenti è stato progettato utilizzando il \underline{design patter State} ed è associato a i prodotti del menu.
+\vspace{0.5cm}
+\\\textit{TableAndOrdersArea}:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Immagini/TableAndOrdersArea.jpg}
+\end{figure}
+Anche in questo caso in linea con lo state chart il \textit{Table} è stato progettato utilizzando il \underline{design patter State}.
+\vspace{0.5cm}
+\\\textit{UserData}:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.3\textwidth]{Immagini/UserData.jpg}
+\end{figure}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\textbf{DataAccess}:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Immagini/DataAccess.jpg}
+\end{figure}
+Ad ogni layer verticale del livello superiore è associato una sola classe di accesso del livello inferiore. Così facendo ogni area può accedere solo alla parte di database interessata. 
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\textbf{Controller}:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Immagini/controller.jpg}
+\end{figure}
+Il \textit{SystemController} offre tutte le funzioni di callback, per prelevare le informazioni necessarie dal modello. Inoltre si serve dell'interfaccia del \textit{Broker} per pubblicare gli eventi necessari.
+
+\subsubsection{Request Generator}
+Si interfaccia con i \textit{Proxy} per ricevere i messaggi e, attraverso un Dispacher, selezionare la funzione di callback del \textit{Controller} giusta per la richiesta.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/request_generator.jpg}
+\end{figure}
+La classe \textit{DispatcherInfo} a seconda del messaggio ricevuto chiama una funzione di callback dell'interfaccia di controller.
+\\Il \textit{MessageListener} è l'interfaccia di un \textit{Receiver}. Esistono Receiver diversi, poiché i messaggi in arrivo hanno come sorgente Proxy diversi; identicamente però richiamano un'unica funzione del \textit{Dispatcher}.
+\\Una seconda soluzione poteva essere di gestire un unico \textit{Receiver} aumentando però la complessità di implementazione. 	
+
+\subsection{Broker}
+Si interfaccia con i \textit{Proxy} per inviare i messaggi. Il broker come il duale del request generator.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Immagini/broker.jpg}
+\end{figure}
+Implementa l'interfaccia con i metodi di callback richiesti dal \textit{SystemController}, a seconda della richiesta viene richiamata uno specifico metodo del \textit{Sender}.
+I metodi del \textit{Sender} possono essere di due tipi:
+\begin{itemize}
+	\item Info: inviano un evento(richiesta) solo a coloro che hanno generato l'evento scatenante.
+	\item Notification: inoltrano una notifica. Una notifica è un evento generato dalla Business Logic per informare tutti i Subcribers della verifica di un evento.
+\end{itemize}
 
 \section{Database}
 Il database deve contenere le informazioni di base che devono essere utilizzate, a partire dai dipendenti che vengono registrati nel sistema e finire con le ordinazioni che vengono effettuate durante l'utilizzo del sistema.
@@ -109,5 +213,7 @@ Il precedente database si riferisce solo ai casi d'uso che si sono scelti di imp
 	\centering
 	\includegraphics[width=1\textwidth]{Immagini/deploy.jpg}
 \end{figure}
-\section{Class Diagram}
+I Proxy sono progettati per comunicare tramite JMS quindi non richiedono che siano avviati nella stessa macchina. Essi possono essere collegati anche su altri \textit{device} e poi connessi in rete. Per motivi di mezzi a disposizione si è scelto di avviare i proxy sulla stessa macchina del Main System.
+\\Analogo discorso vale per il database.
+
 \section{Sequence Diagram}

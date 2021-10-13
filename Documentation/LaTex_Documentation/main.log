@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.11.2)  12 OCT 2021 17:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.11.2)  13 OCT 2021 12:10
 entering extended mode
 **./main.tex
 (main.tex
@@ -1415,34 +1415,84 @@ Package pdftex.def Info: Immagini/main_system.png  used on input line 52.
 <Immagini/proxy.png, id=143, 314.67563pt x 118.19156pt>
 File: Immagini/proxy.png Graphic file (type png)
 <use Immagini/proxy.png>
-Package pdftex.def Info: Immagini/proxy.png  used on input line 66.
+Package pdftex.def Info: Immagini/proxy.png  used on input line 67.
 (pdftex.def)             Requested size: 258.00539pt x 96.91049pt.
- [35 <./Immagini/main_system.png>]
-<Immagini/dynamic components.jpg, id=149, 1895.08pt x 617.30624pt>
-File: Immagini/dynamic components.jpg Graphic file (type jpg)
-<use Immagini/dynamic components.jpg>
-Package pdftex.def Info: Immagini/dynamic components.jpg  used on input line 90
+ [35 <./Immagini/main_system.png>] [36 <./Immagini/proxy.png>]
+<Immagini/components.jpg, id=153, 2202.2275pt x 841.1425pt>
+File: Immagini/components.jpg Graphic file (type jpg)
+<use Immagini/components.jpg>
+Package pdftex.def Info: Immagini/components.jpg  used on input line 101.
+(pdftex.def)             Requested size: 430.00462pt x 164.2339pt.
+
+[37 <./Immagini/components.jpg>]
+<Immagini/business_logic.jpg, id=157, 578.16pt x 726.715pt>
+File: Immagini/business_logic.jpg Graphic file (type jpg)
+<use Immagini/business_logic.jpg>
+Package pdftex.def Info: Immagini/business_logic.jpg  used on input line 123.
+(pdftex.def)             Requested size: 258.00539pt x 324.29088pt.
+ [38]
+<Immagini/MenuAndWareHouseArea.jpg, id=161, 1080.035pt x 1266.7325pt>
+File: Immagini/MenuAndWareHouseArea.jpg Graphic file (type jpg)
+<use Immagini/MenuAndWareHouseArea.jpg>
+Package pdftex.def Info: Immagini/MenuAndWareHouseArea.jpg  used on input line 
+139.
+(pdftex.def)             Requested size: 344.005pt x 403.46846pt.
+ [39 <./Immagini/business_logic.jpg>]
+<Immagini/TableAndOrdersArea.jpg, id=165, 1142.2675pt x 816.04875pt>
+File: Immagini/TableAndOrdersArea.jpg Graphic file (type jpg)
+<use Immagini/TableAndOrdersArea.jpg>
+Package pdftex.def Info: Immagini/TableAndOrdersArea.jpg  used on input line 14
+6.
+(pdftex.def)             Requested size: 344.005pt x 245.76286pt.
+
+[40 <./Immagini/MenuAndWareHouseArea.jpg>]
+<Immagini/UserData.jpg, id=169, 351.3125pt x 546.04pt>
+File: Immagini/UserData.jpg Graphic file (type jpg)
+<use Immagini/UserData.jpg>
+Package pdftex.def Info: Immagini/UserData.jpg  used on input line 153.
+(pdftex.def)             Requested size: 129.00269pt x 200.51523pt.
+<Immagini/DataAccess.jpg, id=170, 1132.23pt x 512.91624pt>
+File: Immagini/DataAccess.jpg Graphic file (type jpg)
+<use Immagini/DataAccess.jpg>
+Package pdftex.def Info: Immagini/DataAccess.jpg  used on input line 161.
+(pdftex.def)             Requested size: 344.005pt x 155.83267pt.
+ [41 <./Immagini/TableAndOrdersArea.jpg> <./Immagini/UserData.jpg>]
+<Immagini/controller.jpg, id=175, 972.63374pt x 473.77pt>
+File: Immagini/controller.jpg Graphic file (type jpg)
+<use Immagini/controller.jpg>
+Package pdftex.def Info: Immagini/controller.jpg  used on input line 170.
+(pdftex.def)             Requested size: 344.005pt x 167.56421pt.
+<Immagini/request_generator.jpg, id=176, 1186.4325pt x 369.38pt>
+File: Immagini/request_generator.jpg Graphic file (type jpg)
+<use Immagini/request_generator.jpg>
+Package pdftex.def Info: Immagini/request_generator.jpg  used on input line 178
 .
-(pdftex.def)             Requested size: 430.00462pt x 140.06532pt.
- [36 <./Immagini/proxy.png>]
-<Immagini/database.jpg, id=154, 1365.1pt x 628.3475pt>
+(pdftex.def)             Requested size: 430.00462pt x 133.8785pt.
+ [42 <./Immagini/DataAccess.jpg> <./Immagini/controller.jpg>]
+<Immagini/broker.jpg, id=180, 602.25pt x 397.485pt>
+File: Immagini/broker.jpg Graphic file (type jpg)
+<use Immagini/broker.jpg>
+Package pdftex.def Info: Immagini/broker.jpg  used on input line 188.
+(pdftex.def)             Requested size: 258.00539pt x 170.2905pt.
+ [43 <./Immagini/request_generator.jpg>]
+<Immagini/database.jpg, id=184, 1365.1pt x 628.3475pt>
 File: Immagini/database.jpg Graphic file (type jpg)
 <use Immagini/database.jpg>
-Package pdftex.def Info: Immagini/database.jpg  used on input line 97.
+Package pdftex.def Info: Immagini/database.jpg  used on input line 213.
 (pdftex.def)             Requested size: 430.00462pt x 197.92091pt.
-
-[37 <./Immagini/dynamic components.jpg> <./Immagini/database.jpg>]
-<Immagini/deploy.jpg, id=158, 1048.91875pt x 558.085pt>
+ [44 <./Immagini/broker.jpg>]
+<Immagini/deploy.jpg, id=188, 1048.91875pt x 558.085pt>
 File: Immagini/deploy.jpg Graphic file (type jpg)
 <use Immagini/deploy.jpg>
-Package pdftex.def Info: Immagini/deploy.jpg  used on input line 110.
+Package pdftex.def Info: Immagini/deploy.jpg  used on input line 226.
 (pdftex.def)             Requested size: 430.00462pt x 228.78227pt.
-) [38 <./Immagini/deploy.jpg>]
+ [45 <./Immagini/database.jpg>]) [46 <./Immagini/deploy.jpg>]
 \openout2 = `Capitoli/Implementazione.aux'.
 
- (Capitoli/Implementazione.tex
+
+(Capitoli/Implementazione.tex
 Capitolo 7.
-) [39
+) [47
 
 
 
@@ -1450,7 +1500,7 @@ Capitolo 7.
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [40
+) [48
 
 
 ] (main.aux (coverpage.aux) (Capitoli/Introduzione.aux)
@@ -1462,10 +1512,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 23970 strings out of 492484
- 463329 string characters out of 3120242
+ 24018 strings out of 492484
+ 464601 string characters out of 3120242
  573729 words of memory out of 3000000
- 27738 multiletter control sequences out of 15000+200000
+ 27778 multiletter control sequences out of 15000+200000
  10731 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,13n,64p,1015b,605s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1476,9 +1526,9 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Giuseppe/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Giu
 seppe/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.p
 fb>
-Output written on main.pdf (42 pages, 1590278 bytes).
+Output written on main.pdf (50 pages, 2164065 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
+ 221 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 108 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 148 words of extra memory for PDF output out of 10000 (max. 10000000)
 
