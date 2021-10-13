@@ -63,5 +63,8 @@
 \contentsline {section}{\numberline {6.3}Database}{44}%
 \contentsline {section}{\numberline {6.4}Deployment Diagram}{46}%
 \contentsline {section}{\numberline {6.5}Sequence Diagram}{46}%
-\contentsline {chapter}{\numberline {7}Implementazione}{47}%
-\contentsline {chapter}{\numberline {8}Test}{48}%
+\contentsline {subsection}{\numberline {6.5.1}Menu Request}{46}%
+\contentsline {subsection}{\numberline {6.5.2}Order Request}{47}%
+\contentsline {subsection}{\numberline {6.5.3}Table Request}{48}%
+\contentsline {chapter}{\numberline {7}Implementazione}{49}%
+\contentsline {chapter}{\numberline {8}Test}{50}%

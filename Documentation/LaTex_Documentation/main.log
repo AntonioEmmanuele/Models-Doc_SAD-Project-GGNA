@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.11.2)  13 OCT 2021 12:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.11.2)  13 OCT 2021 17:14
 entering extended mode
 **./main.tex
 (main.tex
@@ -933,7 +933,8 @@ s
 ) (main.aux (coverpage.aux) (Capitoli/Introduzione.aux)
 (Capitoli/Processo_di_sviluppo.aux) (Capitoli/Documento_di_visione.aux)
 (Capitoli/Specifica_dei_requisiti.aux) (Capitoli/Analisi_dei_requisiti.aux)
-(Capitoli/Progettazione.aux) (Capitoli/Implementazione.aux))
+(Capitoli/Progettazione.aux) (Capitoli/Implementazione.aux) (Capitoli/Test.aux)
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
@@ -1486,13 +1487,32 @@ File: Immagini/deploy.jpg Graphic file (type jpg)
 <use Immagini/deploy.jpg>
 Package pdftex.def Info: Immagini/deploy.jpg  used on input line 214.
 (pdftex.def)             Requested size: 430.00462pt x 228.78227pt.
- [45 <./Immagini/database.jpg>]) [46 <./Immagini/deploy.jpg>]
+ [45 <./Immagini/database.jpg>]
+<Immagini/top_menuRequest.jpg, id=192, 1749.53625pt x 730.73pt>
+File: Immagini/top_menuRequest.jpg Graphic file (type jpg)
+<use Immagini/top_menuRequest.jpg>
+Package pdftex.def Info: Immagini/top_menuRequest.jpg  used on input line 225.
+(pdftex.def)             Requested size: 430.00462pt x 179.59349pt.
+ [46 <./Immagini/deploy.jpg>]
+<Immagini/top_orderRequest.jpg, id=196, 1673.25125pt x 730.73pt>
+File: Immagini/top_orderRequest.jpg Graphic file (type jpg)
+<use Immagini/top_orderRequest.jpg>
+Package pdftex.def Info: Immagini/top_orderRequest.jpg  used on input line 233.
+
+(pdftex.def)             Requested size: 430.00462pt x 187.78876pt.
+<Immagini/top_tableRequest.jpg, id=197, 1772.6225pt x 730.73pt>
+File: Immagini/top_tableRequest.jpg Graphic file (type jpg)
+<use Immagini/top_tableRequest.jpg>
+Package pdftex.def Info: Immagini/top_tableRequest.jpg  used on input line 240.
+
+(pdftex.def)             Requested size: 430.00462pt x 177.26314pt.
+ [47 <./Immagini/top_menuRequest.jpg> <./Immagini/top_orderRequest.jpg>]) [48 <
+./Immagini/top_tableRequest.jpg>]
 \openout2 = `Capitoli/Implementazione.aux'.
 
-
-(Capitoli/Implementazione.tex
+ (Capitoli/Implementazione.tex
 Capitolo 7.
-) [47
+) [49
 
 
 
@@ -1501,7 +1521,7 @@ Capitolo 7.
 
  (Capitoli/Test.tex
 Capitolo 8.
-) [48
+) [50
 
 
 
@@ -1509,7 +1529,7 @@ Capitolo 8.
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [49
+) [51
 
 
 ] (main.aux (coverpage.aux) (Capitoli/Introduzione.aux)
@@ -1522,10 +1542,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 24026 strings out of 492484
- 465005 string characters out of 3120242
- 573729 words of memory out of 3000000
- 27781 multiletter control sequences out of 15000+200000
+ 24047 strings out of 492484
+ 465743 string characters out of 3120242
+ 574149 words of memory out of 3000000
+ 27797 multiletter control sequences out of 15000+200000
  10731 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,13n,64p,1015b,605s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1536,9 +1556,9 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Giuseppe/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Giu
 seppe/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.p
 fb>
-Output written on main.pdf (51 pages, 2165168 bytes).
+Output written on main.pdf (53 pages, 2425048 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
+ 233 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 148 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 

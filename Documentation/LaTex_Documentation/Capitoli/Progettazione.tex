@@ -217,3 +217,25 @@ I Proxy sono progettati per comunicare tramite JMS quindi non richiedono che sia
 \\Analogo discorso vale per il database.
 
 \section{Sequence Diagram}
+I sequence digram mostrati successivamente sono diagrammi di dettaglio che non mostrano la realizzazione delle chiamate a funzioni di livello più basso. Per esse si rimanda al progetto in Visual Paradigm.
+\subsection{Menu Request}
+Rappresenta la richiesta di visualizzare tutto il menu del locale.
+ \begin{figure}[H]
+ 	\centering
+ 	\includegraphics[width=1\textwidth]{Immagini/top_menuRequest.jpg}
+ \end{figure}
+\textit{SystemController} viene chiamato tramite la \textit{controllerIface}. Analogo per il broker con la \textit{brokerIface}. Qualora il ruolo non sia corretto viene comunque pubblicata una risposta con un messaggio di errore "roleFailed".
+
+\subsection{Order Request}
+Rappresenta la richiesta di tutti gli ordini, con la possibilità di selezionare tutti gli ordini di un area (cucina, forno, ecc).
+ \begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{Immagini/top_orderRequest.jpg}
+\end{figure}
+
+\subsection{Table Request}
+Rappresenta la richiesta di tutti i tavoli di una sala.
+ \begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{Immagini/top_tableRequest.jpg}
+\end{figure}
