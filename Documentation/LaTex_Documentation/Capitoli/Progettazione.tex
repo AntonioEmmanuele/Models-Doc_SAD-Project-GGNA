@@ -115,7 +115,9 @@ Il Main System è il componente più complesso perché contiene a sua volta altr
 Il class diagram è diviso in layer orizzontali, in cui ogni livello può interfacciarsi solo con il livello inferiore e può offrire un'interfaccia al livello superiore:
 \begin{itemize}
 	\item \textbf{DataAccess}: livello più basso si occupa di implementare il driver per l'accesso al database.
-	\item \textbf{Areas}: livello centrale mantiene il modello ad oggetti del sistema vero e proprio.
+	\item \textbf{Areas}: livello centrale mantiene il modello ad oggetti del sistema vero e proprio. Le aree interne comunicano tra loro solo attraverso i loro controllori, richiedendo e fornendo servizi.
+	Un esempio è che, pur essendo la TableAndOrdersArea l’area responsabile di generare un ordine, sarà la MenuAndWareHouseArea (gestore del menù) responsabile di inizializzare il prodotto ordinato (dal prodotto del menu) e di ritornarlo all’ordine.
+	\\Un altro esempio riguarda sempre la registrazione di un ordine presso un utente.
 	\item \textbf{Controller}: livello più alto può accedere al modello inferiore e fornire un'interfaccia per un accesso controllato ai dati.
 \end{itemize}
 \begin{figure}[H]
@@ -125,7 +127,12 @@ Il class diagram è diviso in layer orizzontali, in cui ogni livello può interf
 \hrule
 \vspace{0.5cm}
 \textbf{Areas}:
-Il livello dei dati è a sua volta diviso in layer verticali, in cui ogni livello si occupa di gestire specifiche macro-responsabilita':
+Il livello dei dati è a sua volta diviso in layer verticali. La costruzione di un’area segue sempre lo stesso schema:
+\begin{enumerate}
+	\item Gli elementi di dominio che offrono operazioni per modificarne lo stato o per ottenere informazioni.
+	\item Un controller che permette l’accesso ai servizi del package ma consente anche agli elementi di dominio di richiedere servizi agli altri layer verticali.
+\end{enumerate}
+Ogni livello si occupa di gestire specifiche macro-responsabilità:
 \begin{itemize}
 	\item \textit{MenuAndWareHouseArea} si occupa di gestire le richieste di visualizzazione di prodotti sul menu, di merci, di aggiornamento della disponibilità dei prodotti in relazione alle merci ed alla creazione e personalizzazione di prodotti ordinati.
 	\item \textit{TableAndOrdersArea} si occupa di gestire lo stato dei tavoli, la creazione degli ordini ad un tavolo e la modifica degli ordini.
@@ -169,10 +176,10 @@ Ad ogni layer verticale del livello superiore è associato una sola classe di ac
 	\centering
 	\includegraphics[width=0.8\textwidth]{Immagini/controller.jpg}
 \end{figure}
-Il \textit{SystemController} offre tutte le funzioni di callback, per prelevare le informazioni necessarie dal modello. Inoltre si serve dell'interfaccia del \textit{Broker} per pubblicare gli eventi necessari.
+Il \textit{SystemController} offre tutte le funzioni di callback, per prelevare le informazioni necessarie dal modello. Inoltre definisce l’interfaccia che un Broker deve avere qualora voglia ricevere i nuovi eventi generati dalla parte centrale.
 
 \subsubsection{Request Generator}
-Si interfaccia con i \textit{Proxy} per ricevere i messaggi e, attraverso un Dispacher, selezionare la funzione di callback del \textit{Controller} giusta per la richiesta.
+Si interfaccia con i \textit{Proxy} per ricevere i messaggi e, attraverso un Dispacher, selezionare la funzione di callback del \textit{Controller} giusta per la richiesta. Il Eequest Generator inoltre definisce l’interfaccia che un Controller deve avere, qualora voglia iscriversi a quest’ultimo come, dualmente, il Controller fa con il Broker.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{Immagini/request_generator.jpg}
@@ -181,7 +188,7 @@ La classe \textit{DispatcherInfo} a seconda del messaggio ricevuto chiama una fu
 \\Il \textit{MessageListener} è l'interfaccia di un \textit{Receiver}. Esistono Receiver diversi, poiché i messaggi in arrivo hanno come sorgente Proxy diversi; identicamente però richiamano un'unica funzione del \textit{Dispatcher}.
 \\Una seconda soluzione poteva essere di gestire un unico \textit{Receiver} aumentando però la complessità di implementazione. 	
 
-\subsection{Broker}
+\subsubsection{Broker}
 Si interfaccia con i \textit{Proxy} per inviare i messaggi. Il broker come il duale del request generator.
 \begin{figure}[H]
 	\centering
@@ -193,6 +200,13 @@ I metodi del \textit{Sender} possono essere di due tipi:
 	\item Info: inviano un evento(richiesta) solo a coloro che hanno generato l'evento scatenante.
 	\item Notification: inoltrano una notifica. Una notifica è un evento generato dalla Business Logic per informare tutti i Subcribers della verifica di un evento.
 \end{itemize}
+
+\subsection{Proxy}
+ \begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Immagini/proxy_classdiagram.jpg}
+\end{figure}
+Lo scopo del Proxy è quello di inviare/ricevere i messaggi a specifici gruppi di utenti. Si occupa quindi di interfacciarsi dualmente con il Main System (attraver il ReceiverJMS e SenderJMS), e di interfacciarsi con le applicazioni esterne.
 
 \section{Database}
 Il database deve contenere le informazioni di base che devono essere utilizzate, a partire dai dipendenti che vengono registrati nel sistema e finire con le ordinazioni che vengono effettuate durante l'utilizzo del sistema.
@@ -208,6 +222,45 @@ Le caratteristiche principali del database sono le seguenti:
 \end{enumerate}
 Il precedente database si riferisce solo ai casi d'uso che si sono scelti di implementare. Non contiene, ad esempio, la gestione delle vendite e lo storico del locale.
 
+\section{Sequence Diagram}
+I Sequence Diagrams inerenti il Main System sono stati organizzati secondo diversi livelli di dettaglio con una logica a “decomposizione”.
+\\Per una apposita lettura ovviamente i Sequence di uno specifico livello di dettaglio iniziano con un determinato prefisso.
+\begin{enumerate}
+	\item I Sequence top rappresentano il funzionamento dell’intera applicazione, dall’arrivo di un messaggio al Request Generator fino all’arrivo della richiesta al Broker.
+	//I sequence top richiamano operazioni offerte dai Controller delle tre aree verticali.
+	\\Il loro prefisso è: \underline{”top”}. 
+	\item \underline{controllersSequence} sono i Sequence dei Controller verticali dell’Areas.
+	Il loro prefisso è dato dal nome dell’area con la lettera minuscola.
+	\item \underline{menuAndWareHouseArea}: Sequence delle operazioni del Controller dell’area menu e merci.
+	\item \underline{tablesAndOrdersArea}: Sequence dell’area del Controller dell’area ristorante(tavoli ed ordini).
+	\item \underline{userData}: Sequence del controller area utente.
+\end{enumerate}
+Sono stati infine forniti Sequence inerenti il funzionament dei proxy
+\\I sequence digram mostrati successivamente sono diagrammi di dettaglio che non mostrano la realizzazione delle chiamate a funzioni di livello più basso. Per esse si rimanda al progetto in Visual Paradigm.
+
+\subsection{Creazione di un'ordine}
+Rappresenta il generico meccanismo di generazione di svolgimento di una operazione con generazione di notifiche. In genere ogni evento ha suoi particolari metodi per andare a generare le notifiche (metodi di utilita' generateNotifications, non riportati per non appesantire inutilmente i diagrammi).
+\\In questo caso specifico ovviamente le notifiche non sono altro che le comande.
+In relazione alla decomposizione descritta precedentemente, per la creazione di un'ordine il SD \textit{top}:
+ \begin{figure}[H]
+ 	\centering
+ 	\includegraphics[width=1\textwidth]{Immagini/top_orderToTableGenerationRequest.jpg}
+ \end{figure}
+Il Sequence precedente utilizza il metodo generateOrderForTableId, il cui SD è il seguente:
+ \begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{Immagini/tableAndOrdersArea_generateOrderForTableId.jpg}
+\end{figure}
+A sua volta esso richiama il metodo getTable, il cui SSD:
+ \begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Immagini/tablesAndOrdersArea_getTable.jpg}
+\end{figure}
+
+\vspace{1cm}
+Analogamente tutti i SD vengono letti nello stesso modo.
+
+
 \section{Deployment Diagram}
 \begin{figure}[H]
 	\centering
@@ -216,26 +269,58 @@ Il precedente database si riferisce solo ai casi d'uso che si sono scelti di imp
 I Proxy sono progettati per comunicare tramite JMS quindi non richiedono che siano avviati nella stessa macchina. Essi possono essere collegati anche su altri \textit{device} e poi connessi in rete. Per motivi di mezzi a disposizione si è scelto di avviare i proxy sulla stessa macchina del Main System.
 \\Analogo discorso vale per il database.
 
-\section{Sequence Diagram}
-I sequence digram mostrati successivamente sono diagrammi di dettaglio che non mostrano la realizzazione delle chiamate a funzioni di livello più basso. Per esse si rimanda al progetto in Visual Paradigm.
-\subsection{Menu Request}
-Rappresenta la richiesta di visualizzare tutto il menu del locale.
- \begin{figure}[H]
- 	\centering
- 	\includegraphics[width=1\textwidth]{Immagini/top_menuRequest.jpg}
- \end{figure}
-\textit{SystemController} viene chiamato tramite la \textit{controllerIface}. Analogo per il broker con la \textit{brokerIface}. Qualora il ruolo non sia corretto viene comunque pubblicata una risposta con un messaggio di errore "roleFailed".
-
-\subsection{Order Request}
-Rappresenta la richiesta di tutti gli ordini, con la possibilità di selezionare tutti gli ordini di un area (cucina, forno, ecc).
- \begin{figure}[H]
+\section{Messaggi}
+Nel sistema vengono scambiati due tipi di eventi:
+\begin{itemize}
+	\item Richieste.
+	\item Notifiche.
+\end{itemize}
+Le richieste sono eventi che spingono l'applicazione centrale a cambiare stato.
+\\Quando un utente si siede ad un tavolo, ad esempio,  l'addetto all'accoglienza genera una richiesta.
+L'applicazione centrale, notificata dal Proxy, va a cambiare lo stato del tavolo e produce un "messaggio di risposta".
+\\Un messaggio di risposta ad una richiesta arriva sempre mediante chiamata indiretta e riassume il cambiamento dello stato dell'applciazione centrale a seguito dell'evento richiesta.
+Nell'esempio precedente all'addetto all'accoglienza, dopo aver generato un evento, sempre in maniera indiretta gli arriva un report che riporta il nuovo stato del tavolo (sempre in maniera indiretta tramite \textit{Webhook}).
+Per comodità dunque si indicano come richieste sia gli eventi generati dall'applicazione esterna sia i "messaggi di risposta" alle richieste .
+Nonostante i nomi, come già accennato, questi funzionano mediante un meccanismo di invocazione indiretta, sono di fatto delle vere e proprie \textbf{notifiche} (Al sistema centrale viene notificato che un cliente si e' seduto ed all'addetto viene notificata l'avvenuto cambio di stato).
+\\Si riconsideri ora l'esempio:
+Una volta che il cliente si è seduto e che lo stato è cambiato, è necessario notificare ai camerieri che devono andare a prendersi l'ordinazione. Chi deve pero' generare questa notifica? Secondo lo stile adottato l'applicazione ha originalmente generato un evento gestito solo dall'applicazione centrale che va dunque anche l'onere di notificare i camerieri.
+E' dunque compito dell'applicazione centrale andare a generare degli eventi che chiamiamo notifiche.
+\\Nell'esempio l'applicazione centrale oltre alla risposta alla richiesta (inoltrato al proxy accoglienza) genera una notifica che, inoltrata al proxy camerieri, viene inviata in broadcast, notificando di fatto i camerieri.
+\\Si puo' quindi riassuntivamente dire che:
+\begin{itemize}
+	\item Richieste: Sono gli eventi generati dagli utenti tramite l'applicazione.
+	\item Notifiche: Sono gli eventi generati dall'applicazione centrale in seguito ad una richiesta.
+\end{itemize}
+Richieste e notifiche vengono inviate tramite appositi messaggi. Un messaggio funge da "stampino" per una richiesta/notifica, ossia gli offre un insieme di campi base. Il significato di quei campi dipende pero' dalla specifica richiesta/notifica.
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{Immagini/top_orderRequest.jpg}
+	\includegraphics[width=1\textwidth]{Immagini/messages_api.jpg}
 \end{figure}
 
-\subsection{Table Request}
-Rappresenta la richiesta di tutti i tavoli di una sala.
- \begin{figure}[H]
+\subsection{Liste di Richieste}
+menuRequest: Richiedi una lista di menu
+\\freeTableRequest: Un tavolo si e' liberato
+\\clientWaitingForOrderRequest: dei clienti sono stati fatti accomodare
+\\tableRequest: visualizzare tavoli ed ordini connessi(usata sia da camerieri che da accoglienza)
+\\itemComplete: un realizzatore ha terminato un prodotto ordinato(il pizzaiolo ha finito la pizza)
+\\itemWorking: un realizzatore ha iniziato a lavorare ad un prodotto
+\\itemModify: un cameriere su richiesta del cliente modifica il prodotto
+\\cancelOrderRequest: cancellare un ordine
+\\orderRequest: un realizzatore vuole visualizzare la lista di ordini presenti nel locale
+\\orderToTableGenerationRequest: Un cameriere genera un ordine ad un tavolo
+\\orderAddItemsRequest:aggiungi dei prodotti ad un ordine
+\\goodsRequest: visualizza della merce per  uno specifico nome
+\\loginRequest: un utente desidera loggarsi ricevendo la sua lista di ruoli
+
+\subsection{Lista di Notifiche}
+clientWaitingNotification: un cliente e seduto al tavolo attenenendo di compiere la prima ordinazione
+\\orderNotification: notifica generata in seguito all'aggiunta di un ordine, al completamento di tutti gli ordini con una data priorita' o all'aggiunta di nuovi ordini. Coincide di fatto con una comanda.
+\\loginNotification: notifica che un proxy invia all'utente per notificarlo della sua avveuta sottoscrizione (contiene l'indirizzo del proxy su cui andare po ad effettuare post).
+
+\subsection{Scenario di comunicazione}
+Nell'esempio sotto riportato viene rappresentata la comunicazione tra applicazione mobile e Main System attraverso il messaggio \textit{loginRequest}.
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{Immagini/top_tableRequest.jpg}
+	\includegraphics[width=0.7\textwidth]{Immagini/loginScenario.png}
 \end{figure}
+Il contenuto informativo è rappresentato da stringe di tipo JSON.

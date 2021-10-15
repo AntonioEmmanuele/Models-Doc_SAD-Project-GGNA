@@ -1,1 +1,10 @@
 \chapter{Test}
+Vista la natura disaccoppiata dei layer verticali del sistema (che offrono e forniscono servizi) è stato molto facile andare ad effettuare, subito dopo lo sviluppo di ogni layer, un test per verificarne il corretto funzionamento. Si è dunque visto un susseguirsi di sviluppo di layer ed integrazione con test.
+\\I test, eseguiti con \textbf{Junit5}, sono tuttora presenti e mirano a verificare il corretto cambiamento dello stato dell’applicazione a seguito di un cambiamento di un metodo o dell’aggiunta di un’operazione.
+\\Qualora i test necessitino di dati persistenti è stata fornita la versione del db usata in un file \textit{.sql} nella cartella test.
+\\I test non hanno avuto il solo scopo di verificare il codice fino ad un determinato punto dello sviluppo ma  servono anche per verificare il nuovo codice scritto. Alla modifica di ogni funzione di un Controller è necessario infatti rieseguire il test associato ad esso per verificarne il corretto funzionamento.
+\\All’aggiunta di un’operazione ad un controller si forniscono dunque appositi test associati che vanno ad ampliare la suit di test che il ontroller dovrà sempre superare.
+\section{Test di Integrazione}
+In seguito all’integrazione con il Request Generator e il Broker, è stato possibile andare a testare l’applicazioni simulando delle richieste inviate ai Proxy.
+\\In particolare è stato usato \textbf{Postman} per andare ad inviare gli specifici messaggi \textit{Json} (simulando un applicazione utente) e si sono controllate risposte e notifiche arrivate ai Proxy.
+\\L’api di test è stata fornita come esempio di funzionamento nell’applicazione nel codice del “backend”.

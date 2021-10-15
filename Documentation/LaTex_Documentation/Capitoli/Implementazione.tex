@@ -1,6 +1,12 @@
 \chapter{Implementazione}
-linguaggio di programmazione ecc
-\section{Framework}
-\section{Database}
-\section{Messaggi}
-esterni e json
+L’implementazione è avvenuta usando il framework \textbf{Spring} vista la sua semplicità di utilizzo e la velocità di implementazione di un server per i test.
+Altro vantaggio di questo framework è l’enorme quantità di documentazione e di discussioni reperibili in rete che rendono ogni problema di facile risoluzione.
+\\L’enorme supporto di Spring ha inoltre concesso una libera scelta per le altre tecnologie usate nel progetto. In particolare ci ha concesso di usare ed integrare facilmente un database \textbf{PostgreSQL} ed \textbf{ActiveMQ Artemis} per la comunicazione tra Main System e Proxy.
+\vspace{0.5cm}
+PostgreSQL è stato scelto per il suo essere open source e per la sua facilità di utilizzo. Ciononostante si fa presente che grazie alla \textit{Dependency Injection} di Spring sarebbe facile cambiare database, pertanto la sua scelta non è stata dirimente nel progetto.
+\vspace{0.5cm}
+Artemis ActiveMQ è stato scelto come servizio di messaggistica in quanto:
+\begin{itemize}
+	\item Implementa il JMS 2.0
+	\item E’ un MOM configurabile in maniera particolarmente rapida: basta usare un comando per dichiararsi un broker ed un altro per avviarlo e subito si può iniziare a sperimentare.
+\end{itemize}

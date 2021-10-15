@@ -11,6 +11,10 @@ In un primo approccio alla realizzazione del sistema si è deciso di utilizzare 
 \end{itemize}
 Il motivo della divisione del codice in più repository è quello di scollegare fisicamente la realizzazione delle due parti. Inoltre il \textit{frontend} è pensato per essere implementato su una piattaforma Android, mentre il \textit{backend} su una piattaforma Desktop, accentuando tale suddivisione.
 \\In ogni repository sono state create delle \textit{Branch} per permettere uno sviluppo parallelo tra i vari componenti del gruppo. Infatti durante la realizzazione ogni componente si è occupato di un lavoro, al termine dei quali si poteva continuare con un \textit{Merge} per unirli.
+\\All’inizio del lavoro si è anche fatto uso delle fork.
+In particolare si sono usate due diverse fork per il lato backend.
+La prima fork riguardava lo sviluppo dei proxy e la seconda lo sviluppo dell’applicazione centrale.
+In seguito le due fork sono state unite durante l’integrazione.
 
 \section{UP}
 Il processo di sviluppo software UP prevede lo sviluppo in iterazioni. Ognuna delle quali comprende \textit{analisi}, \textit{progettazione}, \textit{implementazione} e \textit{test}.
@@ -55,7 +59,6 @@ La fase di elaborazione è stata divisa in tre iterazioni di all'incirca 1-2 set
 		\item Test
 		\begin{itemize}
 			\item Test di unità della BL
-			\item Test di unità del database
 			\item Test di integrazione tra BL e DB
 		\end{itemize}
 	\end{itemize}
@@ -81,9 +84,7 @@ La fase di elaborazione è stata divisa in tre iterazioni di all'incirca 1-2 set
 		\end{itemize}
 		\item Test
 		\begin{itemize}
-			\item Test di unità del Broker
-			\item Test di unità del Request Generator
-			\item Test di unità del Proxy
+			\item Test di integrazione tra Proxy, Request Generator e Broker
 		\end{itemize}
 	\end{itemize}
 	\item Nella terza iterazione ci si è focalizzati sul lato \textit{frontend} per rilasciare un applicativo accessibile dall'utente.
@@ -99,11 +100,12 @@ La fase di elaborazione è stata divisa in tre iterazioni di all'incirca 1-2 set
 			\end{itemize}
 			\item Implementazione
 			\begin{itemize}
-				\item Implementazione dell'architettura 
+				\item Raffinamento Main System 
 			\end{itemize}
 			\item Test
 			\begin{itemize}
 				\item Test di comunicazione tra Android e Sistema
+				\item Test architettura
 			\end{itemize}
 		\end{itemize}
 \end{enumerate}
@@ -116,3 +118,14 @@ Teoricamente il sistema prevede tre tipi di applicazioni:
 	\item Una per dispositivi Desktop 
 \end{itemize}
 Per motivi di tempistiche si è scelto di implementare solo le prime due. Per tutti i dipendenti un'applicazione Android, la quale viene rilasciata in formato \textit{.apk} con compatibilità minima del sistema operativo \textit{Lollipop 5.0}.
+
+\section{Altre pratiche}
+Vista la natura fortemente disaccoppiata delle componenti ed il numero delle persone presenti nel team si è potuto andare a dividere facilmente il lavoro.
+In particolare nelle fasi iniziali si è usato il pair programming per il sistema centrale e per i proxy.
+Antonio Emmanuele e Giuseppe di Cecio si sono occupati insieme del sistema centrale mentre Giuseppe De Rosa e Nicola D’Ambra si sono occupati dello sviluppo dei proxy.
+In seguito, quando si è passati alla necessità di integrazione, si è continuato ad usare il pair programming   per integrare proxy ed applicazione centrale (questa volta ci si sono dedicati Antonio Emmanuele e Giuseppe De Rosa).
+Nel frattempo i rimanenti membri hanno iniziato ad dedicarsi all’applicazione  android.
+\vspace{0.5cm}
+\\Altra pratica che abbiamo integrato è quella, presa dal framework scrum, del daily scrum.
+Ogni giorno c’è infatti stata una riunione in cui ci si è aggiornati sullo stato di tutti i lavori.
+Ovviamente, avendo usato il pair programming, il daily scrum si è svolto tra i due gruppi e non per ogni singola persona del gruppo.
