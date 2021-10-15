@@ -88,14 +88,12 @@ L'idea di base è che ogni utente, prima di effettuare l'accesso, può contattar
 Tutto il calcolo computazionale è a carico del \textit{Main System}, mentre lo smistamento dei messaggi è a carico dei \textit{Proxy}. L'applicazione deve solo ricevere e inviare eventi dal proxy (o dai proxy, se più di uno) associato. La costruzione del messaggio avviene tramite un'interfaccia grafica per ogni contesto, il resto è gestito tutto dal Main System.
 \\A tal proposito si è utilizzato il pattern Architetturale \textit{MVC (Model View Control)} per la realizzazione dell'applicazione.
 \begin{itemize}
-	\item \textit{Modello} contiene tutti i dati necessari per il messaggio da inviare o ricevuto dall'esterno.
+	\item \textit{Modello} contiene tutti i dati necessari per il messaggio da inviare o ricevuto dall'esterno. Nella pratica il modello è una copia del package \textit{Areas} del Main System. I dati infatti vengono scambiati tramite appositi messaggi utilizzato una serializzazione JSON.
 	\item \textit{Controllo} contiene tutte le funzionalità per interfacciarsi all'esterno tramite opportuni protocolli di rete per inviare e ricevere messaggi.
 	\item \textit{View} è la rappresentazione grafica dei dati.
 \end{itemize}
 
-
-
-\subsection{Component Diagram}
+\section{Component Diagram}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{Immagini/components.jpg}

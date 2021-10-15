@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.11.2)  15 OCT 2021 19:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.11.2)  15 OCT 2021 19:26
 entering extended mode
 **./main.tex
 (main.tex
@@ -1422,73 +1422,73 @@ Package pdftex.def Info: Immagini/proxy.png  used on input line 67.
 <Immagini/components.jpg, id=156, 2202.2275pt x 841.1425pt>
 File: Immagini/components.jpg Graphic file (type jpg)
 <use Immagini/components.jpg>
-Package pdftex.def Info: Immagini/components.jpg  used on input line 101.
+Package pdftex.def Info: Immagini/components.jpg  used on input line 99.
 (pdftex.def)             Requested size: 430.00462pt x 164.2339pt.
 
 [38 <./Immagini/components.jpg>]
 <Immagini/business_logic.jpg, id=160, 578.16pt x 726.715pt>
 File: Immagini/business_logic.jpg Graphic file (type jpg)
 <use Immagini/business_logic.jpg>
-Package pdftex.def Info: Immagini/business_logic.jpg  used on input line 125.
+Package pdftex.def Info: Immagini/business_logic.jpg  used on input line 123.
 (pdftex.def)             Requested size: 258.00539pt x 324.29088pt.
  [39] [40 <./Immagini/business_logic.jpg>]
 <Immagini/MenuAndWareHouseArea.jpg, id=167, 1080.035pt x 1266.7325pt>
 File: Immagini/MenuAndWareHouseArea.jpg Graphic file (type jpg)
 <use Immagini/MenuAndWareHouseArea.jpg>
 Package pdftex.def Info: Immagini/MenuAndWareHouseArea.jpg  used on input line 
-146.
+144.
 (pdftex.def)             Requested size: 344.005pt x 403.46846pt.
 <Immagini/TableAndOrdersArea.jpg, id=168, 1142.2675pt x 816.04875pt>
 File: Immagini/TableAndOrdersArea.jpg Graphic file (type jpg)
 <use Immagini/TableAndOrdersArea.jpg>
 Package pdftex.def Info: Immagini/TableAndOrdersArea.jpg  used on input line 15
-3.
+1.
 (pdftex.def)             Requested size: 344.005pt x 245.76286pt.
 
 [41 <./Immagini/MenuAndWareHouseArea.jpg>]
 <Immagini/UserData.jpg, id=173, 351.3125pt x 546.04pt>
 File: Immagini/UserData.jpg Graphic file (type jpg)
 <use Immagini/UserData.jpg>
-Package pdftex.def Info: Immagini/UserData.jpg  used on input line 160.
+Package pdftex.def Info: Immagini/UserData.jpg  used on input line 158.
 (pdftex.def)             Requested size: 129.00269pt x 200.51523pt.
  [42 <./Immagini/TableAndOrdersArea.jpg> <./Immagini/UserData.jpg>]
 <Immagini/DataAccess.jpg, id=177, 1132.23pt x 512.91624pt>
 File: Immagini/DataAccess.jpg Graphic file (type jpg)
 <use Immagini/DataAccess.jpg>
-Package pdftex.def Info: Immagini/DataAccess.jpg  used on input line 168.
+Package pdftex.def Info: Immagini/DataAccess.jpg  used on input line 166.
 (pdftex.def)             Requested size: 344.005pt x 155.83267pt.
 <Immagini/controller.jpg, id=178, 972.63374pt x 473.77pt>
 File: Immagini/controller.jpg Graphic file (type jpg)
 <use Immagini/controller.jpg>
-Package pdftex.def Info: Immagini/controller.jpg  used on input line 177.
+Package pdftex.def Info: Immagini/controller.jpg  used on input line 175.
 (pdftex.def)             Requested size: 344.005pt x 167.56421pt.
 <Immagini/request_generator.jpg, id=179, 1186.4325pt x 369.38pt>
 File: Immagini/request_generator.jpg Graphic file (type jpg)
 <use Immagini/request_generator.jpg>
-Package pdftex.def Info: Immagini/request_generator.jpg  used on input line 185
+Package pdftex.def Info: Immagini/request_generator.jpg  used on input line 183
 .
 (pdftex.def)             Requested size: 430.00462pt x 133.8785pt.
  [43 <./Immagini/DataAccess.jpg> <./Immagini/controller.jpg>]
 <Immagini/broker.jpg, id=183, 602.25pt x 397.485pt>
 File: Immagini/broker.jpg Graphic file (type jpg)
 <use Immagini/broker.jpg>
-Package pdftex.def Info: Immagini/broker.jpg  used on input line 195.
+Package pdftex.def Info: Immagini/broker.jpg  used on input line 193.
 (pdftex.def)             Requested size: 258.00539pt x 170.2905pt.
  [44 <./Immagini/request_generator.jpg>]
 <Immagini/proxy_classdiagram.jpg, id=187, 513.92pt x 370.38374pt>
 File: Immagini/proxy_classdiagram.jpg Graphic file (type jpg)
 <use Immagini/proxy_classdiagram.jpg>
 Package pdftex.def Info: Immagini/proxy_classdiagram.jpg  used on input line 20
-7.
+5.
 (pdftex.def)             Requested size: 215.0023pt x 154.95538pt.
  [45 <./Immagini/broker.jpg> <./Immagini/proxy_classdiagram.jpg>]
 <Immagini/database.jpg, id=191, 1365.1pt x 628.3475pt>
 File: Immagini/database.jpg Graphic file (type jpg)
 <use Immagini/database.jpg>
-Package pdftex.def Info: Immagini/database.jpg  used on input line 215.
+Package pdftex.def Info: Immagini/database.jpg  used on input line 213.
 (pdftex.def)             Requested size: 430.00462pt x 197.92091pt.
  [46 <./Immagini/database.jpg>]
-Overfull \hbox (13.41438pt too wide) in paragraph at lines 235--236
+Overfull \hbox (13.41438pt too wide) in paragraph at lines 233--234
 []$[]$\OT1/cmr/m/n/12 : Se-quen-ce del-l'a-rea del Con-trol-ler del-l'a-rea ri-
 sto-ran-te(tavoli
  []
@@ -1498,7 +1498,7 @@ sto-ran-te(tavoli
 File: Immagini/top_orderToTableGenerationRequest.jpg Graphic file (type jpg)
 <use Immagini/top_orderToTableGenerationRequest.jpg>
 Package pdftex.def Info: Immagini/top_orderToTableGenerationRequest.jpg  used o
-n input line 247.
+n input line 245.
 (pdftex.def)             Requested size: 430.00462pt x 233.13452pt.
 [47]
 <Immagini/tableAndOrdersArea_generateOrderForTableId.jpg, id=200, 2648.89626pt 
@@ -1507,33 +1507,33 @@ File: Immagini/tableAndOrdersArea_generateOrderForTableId.jpg Graphic file (typ
 e jpg)
 <use Immagini/tableAndOrdersArea_generateOrderForTableId.jpg>
 Package pdftex.def Info: Immagini/tableAndOrdersArea_generateOrderForTableId.jp
-g  used on input line 252.
+g  used on input line 250.
 (pdftex.def)             Requested size: 430.00462pt x 368.55063pt.
  [48 <./Immagini/top_orderToTableGenerationRequest.jpg>]
 <Immagini/tablesAndOrdersArea_getTable.jpg, id=204, 698.61pt x 628.3475pt>
 File: Immagini/tablesAndOrdersArea_getTable.jpg Graphic file (type jpg)
 <use Immagini/tablesAndOrdersArea_getTable.jpg>
 Package pdftex.def Info: Immagini/tablesAndOrdersArea_getTable.jpg  used on inp
-ut line 257.
+ut line 255.
 (pdftex.def)             Requested size: 258.00539pt x 232.05348pt.
  [49 <./Immagini/tableAndOrdersArea_generateOrderForTableId.jpg>]
 <Immagini/deploy.jpg, id=208, 1048.91875pt x 558.085pt>
 File: Immagini/deploy.jpg Graphic file (type jpg)
 <use Immagini/deploy.jpg>
-Package pdftex.def Info: Immagini/deploy.jpg  used on input line 267.
+Package pdftex.def Info: Immagini/deploy.jpg  used on input line 265.
 (pdftex.def)             Requested size: 430.00462pt x 228.78227pt.
  [50 <./Immagini/tablesAndOrdersArea_getTable.jpg>] [51 <./Immagini/deploy.jpg>
 ]
 <Immagini/messages_api.jpg, id=215, 2046.64626pt x 1105.12875pt>
 File: Immagini/messages_api.jpg Graphic file (type jpg)
 <use Immagini/messages_api.jpg>
-Package pdftex.def Info: Immagini/messages_api.jpg  used on input line 297.
+Package pdftex.def Info: Immagini/messages_api.jpg  used on input line 295.
 (pdftex.def)             Requested size: 430.00462pt x 232.18506pt.
  [52] [53 <./Immagini/messages_api.jpg>]
 <Immagini/loginScenario.png, id=223, 499.8675pt x 447.47176pt>
 File: Immagini/loginScenario.png Graphic file (type png)
 <use Immagini/loginScenario.png>
-Package pdftex.def Info: Immagini/loginScenario.png  used on input line 324.
+Package pdftex.def Info: Immagini/loginScenario.png  used on input line 322.
 (pdftex.def)             Requested size: 301.00192pt x 269.4615pt.
 ) [54 <./Immagini/loginScenario.png>]
 \openout2 = `Capitoli/Implementazione.aux'.
@@ -1577,7 +1577,7 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Giuseppe/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Giu
 seppe/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.p
 fb>
-Output written on main.pdf (58 pages, 2970169 bytes).
+Output written on main.pdf (58 pages, 2970325 bytes).
 PDF statistics:
  253 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
