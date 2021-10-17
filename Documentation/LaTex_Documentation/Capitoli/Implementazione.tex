@@ -1,12 +1,59 @@
 \chapter{Implementazione}
-L’implementazione è avvenuta usando il framework \textbf{Spring} vista la sua semplicità di utilizzo e la velocità di implementazione di un server per i test.
-Altro vantaggio di questo framework è l’enorme quantità di documentazione e di discussioni reperibili in rete che rendono ogni problema di facile risoluzione.
-\\L’enorme supporto di Spring ha inoltre concesso una libera scelta per le altre tecnologie usate nel progetto. In particolare ci ha concesso di usare ed integrare facilmente un database \textbf{PostgreSQL} ed \textbf{ActiveMQ Artemis} per la comunicazione tra Main System e Proxy.
-\vspace{0.5cm}
-PostgreSQL è stato scelto per il suo essere open source e per la sua facilità di utilizzo. Ciononostante si fa presente che grazie alla \textit{Dependency Injection} di Spring sarebbe facile cambiare database, pertanto la sua scelta non è stata dirimente nel progetto.
-\vspace{0.5cm}
-Artemis ActiveMQ è stato scelto come servizio di messaggistica in quanto:
+La parte implementativa riguarda il processo di implementazione, le tecniche e i framework utilizzati durante lo sviluppo sia del Main System e del database backend, sia dell'infrastruttura di comunicazione dei Proxy e sia dell'interfaccia client dell'applicazione Android. 
+
+\section{Database}
+Per le nostre esigenze, vi era la necessità di una base di dati sviluppabile in breve tempo e con un DBMS documentato e facile col quale comunicare. Sulla base di scelte implementative fatte anche nel Main System, la scelta è ricaduta su \textbf{PostgreSQL}. \textbf{(Continua Peppe)}
+
+\section{Main System}
+Il Main System è il cuore dell'applicazione, in quanto ne è il cervello pensante. L'implementazione di questa parte conta diverse centinaia di linee di codice, poiché gestisce tutte le meccaniche di creazione, eliminazione e aggiornamento di un evento relativo a tutti i possibili ruoli. Lo sviluppo, in concomitanza con i test, ha richiesto un'analisi attenta e precisa della modularità del codice. 
+\\In particolare, la scelta di un framework da utilizzare si è rivelata fondamentale per gestire opportunamento lo sviluppo. La scelta è ricaduta sul framework \textbf{Spring Boot} versione 2.5.5, versione di Java 11 e Maven per la gestione delle dipendenze. Tale decisione è dovuta alle meccaniche di injection fornite da Spring, che hanno reso estremamente semplice e scalabile la comunicazione con PostgreSQL. 
+\\Spring fornisce infatti diverse annotazioni estremamente veloci ed efficaci quali @Autowire per effettuare la dependency injection di oggetti che possono essere servizi, controller o semplici bean di configurazione. Ciò ha reso non solo di più semplice lettura il codice, ma ci ha anche notevolmente risparmiato il tempo di dover implementare le meccaniche di comunicazione fra classi sia interne sia esterne ai package implementati. \vspace{0.5cm}
+\\Il Main System utilizza queste facilitazioni definendosi di base la logica di controllo e poi un intreccio di controller organizzati gerarchicamente: un usersController, un restaurantController ed un menuAndWareHouseController, tutti organizzati sotto un unico GeneralController, esteso dal SystemController che ha il compito di interfacciare il sistema con il \textbf{Request Generator} e con il \textbf{Broker}. Ogni controller di base si occupa poi della comunicazione col database per le informazioni di proprio interesse, scambiandole con l'esterno attraverso il System Controller. 
+\\A questo livello, la comunicazione avviene tramite chiamata a funzione, poiché il Main System è pensate per essere avviato sulla stessa macchina del Broker e del Request Generator. 
+
+\subsection{Request Generator}
+Il Request Generator è il componente che si interfaccia coi proxy adibiti alla ricezione di richieste da parte dell'applicazione. 
+\\L'interfaccia sviluppata di basa su due componenti principali: 
 \begin{itemize}
-	\item Implementa il JMS 2.0
-	\item E’ un MOM configurabile in maniera particolarmente rapida: basta usare un comando per dichiararsi un broker ed un altro per avviarlo e subito si può iniziare a sperimentare.
+	\item Il \textbf{JMS}, versione 2.0;
+	\item \textbf{ActiveMQ Artemis}, un MOM configurabile in maniera particolarmente rapida: basta usare un comando per dichiararsi un broker ed un altro per avviarlo e subito si può iniziare a sperimentare.
 \end{itemize}
+I messaggi scambiati sono tutti in formato JSON. La progettazione rende di fatto già scalabile la comunicazione, di conseguenza il Request Generator ha il solo compito di fornire l'interfaccia verso Artemis attraverso un controller che prenda in carico, attraverso il JMS, i messaggi che sulle diverse code vengono prodotti. \vspace{0.5cm}
+\\Anche per il Request Generator è stato usato Spring Boot. In particolare, di fondamentale importanza è stata la dependency \textit{Spring for Apache ActiveMQ 5}. Essa mette a disposizione l'infrastruttura necessaria alla comunicazione coi server Artemis utilizzabile attraverso l'interfaccia, da estendere, MessageListener. E' per questo motivo che Request Generator implementa diversi controller a seconda della coda di messaggi: ogni controller modifica il metodo onMessage() per gestire opportunamente il messaggio JSON, la cui struttura può cambiare a seconda della coda sul quale si trova, che riceve. Internamente, il dispatcher si preoccupa poi solo di reindirizzare opportunamente al Main System i messaggi che arrivano implementando i controller del Request Generator e il System Controller e gestendone le chiamate a funzione.  
+
+\subsection{Broker}
+Il Broker ha il compito esattamente opposto al Request Generator: smistare i messaggi sulle code in maniera tale da informare l'applicazione utente degli eventi ai quale essa è interessata. 
+La struttura, poiché ricettiva, riceve i messaggi da pubblicare attraverso il System Controller che implementa un'interfaccia, la BrokerInterface, che poi il Dispatcher estende. \vspace{0.5cm}
+\\Anche il Broker utilizza il JMS e ActiveMQ Artemis per comunicare con l'applicazione attraverso i proxy. La differenza principale col Request Generator è che il Broker ha bisogno di aprire il messaggio JSON inviato dall'applicazione per smistarlo correttamente sulla base del codice nominativo dell'area, di fatto codice univoco per la coda su cui smistare.
+\\Come il Request Generator, non effettua poi alcuna modifica sui messaggi, preoccupandosi soltanto di gestirne il corretto invio. La comunicazione col Main System avviene anche qui attraverso semplice chiamata a funzione. 
+
+\section{Proxy}
+I proxy sono l'impalcatura su cui si fonda la rete di messaggi tra applicazione e sistema. 
+\\L'idea di implementare dei proxy è nata dalla difficoltà che l'applicazione aveva nel comunicare con il sistema in maniera corretta, gestendo correttamente tutti i tipi di messaggi, che nel concreto sono tutti eventi di diversa natura, che bisognava inviare e ricevere. 
+\\Da ciò, l'idea dei proxy per rendere non solo più semplice la comunicazione, affibiando a loro il compito di incaricarsi della comunicazione, ma anche per fornire un'interfaccia più scalabile e flessibile ad eventuali modifiche e aggiornamenti. \vspace{0.5cm}
+\\Anche l'implementazione dei proxy è basata su Spring Boot. Le dependency utilizzate sono \textbf{Spring Web} e \textbf{Spring for Apache ActiveMQ Artemis}. 
+\\I proxy hanno infatti sia il compito di fungere da client per il Request Generator sia quello di fungere da server per il Broker. Di conseguenza, la prima dependency di Spring mette a disposizione l'infrastruttura generale per aprire un server Tomcat in ascolto in localhost di default sul porto 8080, configurazione che può essere modificata attraverso il file di proprietà.
+\\Vi sono diversi proxy, ma tutti in generale hanno la stessa struttura ed implementazione che differisce solo sulla base dei messaggi che devono leggere e scambiare. \vspace{0.5cm}
+\\Per la gestione dei messaggi HTTP, i proxy utilizzano dei controller specifici che si preoccupano di istanziare un metodo wrapper per le POST effettuate al filepath indicato. La sintassi è la seguente:
+
+\begin{itemize}
+	\item @PostMapping(valude= {filepath})
+\end{itemize}
+
+Attraverso quest'annotazione, è possibile gestire in ricezione le richieste POST che arrivano dall'applicazione al filepath indicato. In questo modo, ogni proxy deve solo preoccuparsi, in ricezione, di girare poi il messaggio sulla coda corretta, attraverso una convertAndSend, cioè un metodo della classe JmsTemplate fornita da Spring nella libreria \textit{org.springframework.jms.core.JmsTemplate}. \vspace{0.5cm}
+\\In fase di ricezione, come per il Request Generator, ogni proxy deve invece mettersi in ascolto sui messaggi delle codce che il Broker riempie. Il lavoro che in questo caso il proxy deve effettuare è più delicato: 
+
+\begin{enumerate}
+      \item Deve spacchettare il messaggio JSON per comprendere di che tipo di evento si tratti;
+            
+      \item Se si tratta di un messaggio di registrazione, deve registrare l'uri dell'applicazione al proprio Webhook e rispedire il messaggio al destinatario corretto specificando il proprio uri di destinazione;
+      
+      \item Se si tratta di un messaggio da spedire ad un'applicazione, suppone che quest'ultima già conosca il proprio uri di destinazione e si preoccupa solo di verificare che essa sia registrata al proprio Webhook;
+      \begin{itemize}
+        \item In tal caso, manda in broadcast se più applicazioni sono interessate altrimenti manda al singolo destinatario interessato. 
+      \end{itemize}
+      
+      \item Impacchetta il messaggio nuovamente in un JSON ed invia. 
+\end{enumerate}
+
+L'invio è gestito sempre attraverso richieste POST all'indirizzo contenuto nella lista Webhook attraverso funzioni di utilità che fanno utilizzo della libreria Spring \textit{org.springframework.web.client.RestTemplate}. 
