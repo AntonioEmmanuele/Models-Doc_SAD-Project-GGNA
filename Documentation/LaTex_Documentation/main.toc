@@ -62,14 +62,16 @@
 \contentsline {subsubsection}{Request Generator}{44}%
 \contentsline {subsubsection}{Broker}{44}%
 \contentsline {subsection}{\numberline {6.3.2}Proxy}{45}%
-\contentsline {section}{\numberline {6.4}Database}{46}%
-\contentsline {section}{\numberline {6.5}Sequence Diagram}{47}%
-\contentsline {subsection}{\numberline {6.5.1}Creazione di un'ordine}{47}%
-\contentsline {section}{\numberline {6.6}Deployment Diagram}{51}%
-\contentsline {section}{\numberline {6.7}Messaggi}{51}%
-\contentsline {subsection}{\numberline {6.7.1}Liste di Richieste}{53}%
-\contentsline {subsection}{\numberline {6.7.2}Lista di Notifiche}{54}%
-\contentsline {subsection}{\numberline {6.7.3}Scenario di comunicazione}{54}%
-\contentsline {chapter}{\numberline {7}Implementazione}{55}%
-\contentsline {chapter}{\numberline {8}Test}{56}%
-\contentsline {section}{\numberline {8.1}Test di Integrazione}{56}%
+\contentsline {subsection}{\numberline {6.3.3}Applicazione Mobile}{46}%
+\contentsline {section}{\numberline {6.4}Database}{47}%
+\contentsline {section}{\numberline {6.5}Sequence Diagram}{48}%
+\contentsline {subsection}{\numberline {6.5.1}Creazione di un'ordine}{49}%
+\contentsline {subsection}{\numberline {6.5.2}Aggiornamento View}{51}%
+\contentsline {section}{\numberline {6.6}Deployment Diagram}{52}%
+\contentsline {section}{\numberline {6.7}Messaggi}{53}%
+\contentsline {subsection}{\numberline {6.7.1}Liste di Richieste}{54}%
+\contentsline {subsection}{\numberline {6.7.2}Lista di Notifiche}{55}%
+\contentsline {subsection}{\numberline {6.7.3}Scenario di comunicazione}{55}%
+\contentsline {chapter}{\numberline {7}Implementazione}{57}%
+\contentsline {chapter}{\numberline {8}Test}{58}%
+\contentsline {section}{\numberline {8.1}Test di Integrazione}{58}%

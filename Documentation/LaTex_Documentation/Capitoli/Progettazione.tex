@@ -85,7 +85,7 @@ Attraverso l'analisi degli attori precedentemente descritta si hanno sei tipi di
 L'idea di base è che ogni utente, prima di effettuare l'accesso, può contattare solo il \textit{Proxy Login}, il quale provvede in base alle credenziali ad associare il dispositivo al relativo Proxy.
 
 \subsection{Applicazione Mobile}
-Tutto il calcolo computazionale è a carico del \textit{Main System}, mentre lo smistamento dei messaggi è a carico dei \textit{Proxy}. L'applicazione deve solo ricevere e inviare eventi dal proxy (o dai proxy, se più di uno) associato. La costruzione del messaggio avviene tramite un'interfaccia grafica per ogni contesto, il resto è gestito tutto dal Main System.
+Tutto il calcolo computazionale è a carico del \textit{Main System}, mentre lo smistamento dei messaggi è a carico dei \textit{Proxy}. L'applicazione deve solo ricevere e inviare eventi al proxy (o ai proxy, se più di uno) associato. La costruzione del messaggio avviene tramite un'interfaccia grafica per ogni contesto, il resto è gestito tutto dal Main System.
 \\A tal proposito si è utilizzato il pattern Architetturale \textit{MVC (Model View Control)} per la realizzazione dell'applicazione.
 \begin{itemize}
 	\item \textit{Modello} contiene tutti i dati necessari per il messaggio da inviare o ricevuto dall'esterno. Nella pratica il modello è una copia del package \textit{Areas} del Main System. I dati infatti vengono scambiati tramite appositi messaggi utilizzato una serializzazione JSON.
@@ -206,6 +206,32 @@ I metodi del \textit{Sender} possono essere di due tipi:
 \end{figure}
 Lo scopo del Proxy è quello di inviare/ricevere i messaggi a specifici gruppi di utenti. Si occupa quindi di interfacciarsi dualmente con il Main System (attraver il ReceiverJMS e SenderJMS), e di interfacciarsi con le applicazioni esterne.
 
+
+\subsection{Applicazione Mobile}
+In accordo con il pattern MVC quindi, ad alto livello:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Immagini/android_classdiagram.jpg}
+\end{figure}
+Brevemente:
+\begin{itemize}
+	\item Controller si occupa di gestire gli eventi da e per l'esterno, interagendo con l'utente che utilizza l'applicazione.
+	\begin{itemize}
+		\item \textit{AppStateController} è una classe realizzata con design pattern \underline{Singleton}. Essa mantiene le informazioni riguardo allo stato dell'applicazione corrente (ad esempio l'activity in esecuzione).
+		\item \textit{UserSessionController} mantiene le informazioni riguardo all'utente connesso. Il suo scopo è di identificare il ruolo dell'utente in un particolare contesto e associare il relativo indirizzo del proxy da contattare. Ad esempio se l'utente sceglie di aggiornare lo stato di un tavolo allora è sicuramente con il ruolo di \textit{Addetto all'accoglienza}.
+		\item \textit{ConnectivityController} è una classe realizzata con design pattern \underline{Singleton}. Esso mantiene l'unico server in esecuzione che accoglie i messaggi esterni e interagisce con gli altri controller.
+	\end{itemize}
+	\item Model si occupa di gestire tutti i dati utili all'applicazione. Il package Areas al suo interno è idealmente identico all'omonimo package nella \textit{Business Logic}. In realtà però contiene solo classi e attributi che interessano ai fini dell'utilizzo.
+	\\La classe \textbf{Data} è una classe con design pattern \underline{Singleton} poiché all'interno del sistema deve esistere una sola istanza per gestire il modello.
+	\item View si occupa di realizzare un'interfaccia grafica dei dati del modello.
+\end{itemize}
+Il sistema di funzionamento è molto semplice:
+\begin{enumerate}
+	\item Viene ricevuto un aggiornamento dei dati tramite il \textit{ConnectivityController}.
+	\item Il \textit{ConnectivityController} aggiorna il modello tramite la classe \textit{Data}.
+	\item Il \textit{ConnectivityController} seleziona la View da utilizzare sfruttando il \textit{AppStateController}
+\end{enumerate}
+
 \section{Database}
 Il database deve contenere le informazioni di base che devono essere utilizzate, a partire dai dipendenti che vengono registrati nel sistema e finire con le ordinazioni che vengono effettuate durante l'utilizzo del sistema.
 \begin{figure}[H]
@@ -258,6 +284,12 @@ A sua volta esso richiama il metodo getTable, il cui SSD:
 \vspace{1cm}
 Analogamente tutti i SD vengono letti nello stesso modo.
 
+\subsection{Aggiornamento View}
+Lato Applicazione Mobile il seguente SD mostra l'interazione nell'MVC per aggiornare la View alla ricezione di un messaggio che contiene un update del modello.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Immagini/aggiornamento_view.jpg}
+\end{figure}
 
 \section{Deployment Diagram}
 \begin{figure}[H]
