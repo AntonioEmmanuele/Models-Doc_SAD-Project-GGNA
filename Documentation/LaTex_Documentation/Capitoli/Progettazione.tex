@@ -177,7 +177,7 @@ Ad ogni layer verticale del livello superiore è associato una sola classe di ac
 Il \textit{SystemController} offre tutte le funzioni di callback, per prelevare le informazioni necessarie dal modello. Inoltre definisce l’interfaccia che un Broker deve avere qualora voglia ricevere i nuovi eventi generati dalla parte centrale.
 
 \subsubsection{Request Generator}
-Si interfaccia con i \textit{Proxy} per ricevere i messaggi e, attraverso un Dispacher, selezionare la funzione di callback del \textit{Controller} giusta per la richiesta. Il Eequest Generator inoltre definisce l’interfaccia che un Controller deve avere, qualora voglia iscriversi a quest’ultimo come, dualmente, il Controller fa con il Broker.
+Si interfaccia con i \textit{Proxy} per ricevere i messaggi e, attraverso un Dispacher, selezionare la funzione di callback del \textit{Controller} giusta per la richiesta. Il Request Generator inoltre definisce l’interfaccia che un Controller deve avere, qualora voglia iscriversi a quest’ultimo come, dualmente, il Controller fa con il Broker.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{Immagini/request_generator.jpg}
