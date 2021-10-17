@@ -28,50 +28,56 @@
 \contentsline {subsubsection}{Genera Vendita}{15}%
 \contentsline {subsubsection}{Notifica Ordinazione}{15}%
 \contentsline {subsubsection}{Gestisci Merce}{15}%
+\contentsline {subsubsection}{Login}{16}%
 \contentsline {subsection}{\numberline {4.4.2}Descrizione Dettagliata}{16}%
-\contentsline {section}{\numberline {4.5}Requisiti non funzionali}{21}%
-\contentsline {subsection}{\numberline {4.5.1}Funzionalit\IeC {\`a}}{21}%
-\contentsline {subsection}{\numberline {4.5.2}Usabilit\IeC {\`a}}{21}%
-\contentsline {subsection}{\numberline {4.5.3}Affidabilit\IeC {\`a}}{21}%
-\contentsline {subsection}{\numberline {4.5.4}Prestazioni}{22}%
-\contentsline {subsection}{\numberline {4.5.5}Sostenibilit\IeC {\`a}}{22}%
-\contentsline {chapter}{\numberline {5}Analisi dei requisiti}{23}%
-\contentsline {section}{\numberline {5.1}Modello di Dominio}{23}%
-\contentsline {section}{\numberline {5.2}State Chart Diagram}{25}%
-\contentsline {subsection}{\numberline {5.2.1}Tavolo}{25}%
-\contentsline {subsection}{\numberline {5.2.2}Prodotto Ordinato}{26}%
-\contentsline {subsection}{\numberline {5.2.3}Ordine}{27}%
-\contentsline {section}{\numberline {5.3}Sequence Diagram di Dominio}{28}%
-\contentsline {subsection}{\numberline {5.3.1}Gestisci Ordinazioni}{28}%
-\contentsline {subsubsection}{Estensione A}{28}%
-\contentsline {subsubsection}{Estensione B}{29}%
-\contentsline {subsubsection}{Estensione C}{30}%
-\contentsline {subsubsection}{Estensione D}{31}%
-\contentsline {subsubsection}{Estensione E}{32}%
-\contentsline {subsection}{\numberline {5.3.2}Notifica Ordinazione}{33}%
-\contentsline {subsubsection}{Estensione A}{33}%
-\contentsline {chapter}{\numberline {6}Progettazione}{34}%
-\contentsline {section}{\numberline {6.1}Architettura}{35}%
-\contentsline {subsection}{\numberline {6.1.1}Main System}{35}%
-\contentsline {subsection}{\numberline {6.1.2}Proxy}{37}%
-\contentsline {subsection}{\numberline {6.1.3}Applicazione Mobile}{38}%
-\contentsline {section}{\numberline {6.2}Component Diagram}{38}%
-\contentsline {section}{\numberline {6.3}Class Diagram}{39}%
-\contentsline {subsection}{\numberline {6.3.1}Main System}{39}%
-\contentsline {subsubsection}{Business Logic}{39}%
-\contentsline {subsubsection}{Request Generator}{44}%
-\contentsline {subsubsection}{Broker}{44}%
-\contentsline {subsection}{\numberline {6.3.2}Proxy}{45}%
-\contentsline {subsection}{\numberline {6.3.3}Applicazione Mobile}{46}%
-\contentsline {section}{\numberline {6.4}Database}{47}%
-\contentsline {section}{\numberline {6.5}Sequence Diagram}{48}%
+\contentsline {section}{\numberline {4.5}Requisiti non funzionali}{22}%
+\contentsline {subsection}{\numberline {4.5.1}Funzionalit\IeC {\`a}}{22}%
+\contentsline {subsection}{\numberline {4.5.2}Usabilit\IeC {\`a}}{22}%
+\contentsline {subsection}{\numberline {4.5.3}Affidabilit\IeC {\`a}}{22}%
+\contentsline {subsection}{\numberline {4.5.4}Prestazioni}{23}%
+\contentsline {subsection}{\numberline {4.5.5}Sostenibilit\IeC {\`a}}{23}%
+\contentsline {chapter}{\numberline {5}Analisi dei requisiti}{24}%
+\contentsline {section}{\numberline {5.1}Modello di Dominio}{24}%
+\contentsline {section}{\numberline {5.2}State Chart Diagram}{26}%
+\contentsline {subsection}{\numberline {5.2.1}Tavolo}{26}%
+\contentsline {subsection}{\numberline {5.2.2}Prodotto Ordinato}{27}%
+\contentsline {subsection}{\numberline {5.2.3}Ordine}{28}%
+\contentsline {section}{\numberline {5.3}Sequence Diagram di Dominio}{29}%
+\contentsline {subsection}{\numberline {5.3.1}Gestisci Ordinazioni}{29}%
+\contentsline {subsubsection}{Estensione A}{29}%
+\contentsline {subsubsection}{Estensione B}{30}%
+\contentsline {subsubsection}{Estensione C}{31}%
+\contentsline {subsubsection}{Estensione D}{32}%
+\contentsline {subsubsection}{Estensione E}{33}%
+\contentsline {subsection}{\numberline {5.3.2}Notifica Ordinazione}{34}%
+\contentsline {subsubsection}{Estensione A}{34}%
+\contentsline {chapter}{\numberline {6}Progettazione}{35}%
+\contentsline {section}{\numberline {6.1}Architettura}{36}%
+\contentsline {subsection}{\numberline {6.1.1}Main System}{36}%
+\contentsline {subsection}{\numberline {6.1.2}Proxy}{38}%
+\contentsline {subsection}{\numberline {6.1.3}Applicazione Mobile}{39}%
+\contentsline {section}{\numberline {6.2}Component Diagram}{39}%
+\contentsline {section}{\numberline {6.3}Class Diagram}{40}%
+\contentsline {subsection}{\numberline {6.3.1}Main System}{40}%
+\contentsline {subsubsection}{Business Logic}{40}%
+\contentsline {subsubsection}{Request Generator}{45}%
+\contentsline {subsubsection}{Broker}{45}%
+\contentsline {subsection}{\numberline {6.3.2}Proxy}{46}%
+\contentsline {subsection}{\numberline {6.3.3}Applicazione Mobile}{47}%
+\contentsline {section}{\numberline {6.4}Database}{48}%
+\contentsline {section}{\numberline {6.5}Sequence Diagram}{49}%
 \contentsline {subsection}{\numberline {6.5.1}Creazione di un'ordine}{49}%
-\contentsline {subsection}{\numberline {6.5.2}Aggiornamento View}{51}%
-\contentsline {section}{\numberline {6.6}Deployment Diagram}{52}%
-\contentsline {section}{\numberline {6.7}Messaggi}{53}%
-\contentsline {subsection}{\numberline {6.7.1}Liste di Richieste}{54}%
-\contentsline {subsection}{\numberline {6.7.2}Lista di Notifiche}{55}%
-\contentsline {subsection}{\numberline {6.7.3}Scenario di comunicazione}{55}%
-\contentsline {chapter}{\numberline {7}Implementazione}{57}%
-\contentsline {chapter}{\numberline {8}Test}{58}%
-\contentsline {section}{\numberline {8.1}Test di Integrazione}{58}%
+\contentsline {subsection}{\numberline {6.5.2}Aggiornamento View}{52}%
+\contentsline {section}{\numberline {6.6}Deployment Diagram}{54}%
+\contentsline {section}{\numberline {6.7}Messaggi}{54}%
+\contentsline {subsection}{\numberline {6.7.1}Liste di Richieste}{56}%
+\contentsline {subsection}{\numberline {6.7.2}Lista di Notifiche}{57}%
+\contentsline {subsection}{\numberline {6.7.3}Scenario di comunicazione}{57}%
+\contentsline {chapter}{\numberline {7}Implementazione}{58}%
+\contentsline {section}{\numberline {7.1}Database}{58}%
+\contentsline {section}{\numberline {7.2}Main System}{59}%
+\contentsline {subsection}{\numberline {7.2.1}Request Generator}{59}%
+\contentsline {subsection}{\numberline {7.2.2}Broker}{60}%
+\contentsline {section}{\numberline {7.3}Proxy}{60}%
+\contentsline {chapter}{\numberline {8}Test}{63}%
+\contentsline {section}{\numberline {8.1}Test di Integrazione}{63}%

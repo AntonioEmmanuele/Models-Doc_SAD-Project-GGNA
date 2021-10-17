@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.11.2)  17 OCT 2021 13:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.11.2)  17 OCT 2021 15:17
 entering extended mode
 **./main.tex
 (main.tex
@@ -1106,18 +1106,18 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 nina.png>]) (main.toc [1
 
 
-])
-\tf@toc=\write4
-\openout4 = `main.toc'.
-
-
+]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 14.49998pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[1]
+[2])
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+ [1]
 \openout2 = `Capitoli/Introduzione.aux'.
 
  (Capitoli/Introduzione.tex
@@ -1162,7 +1162,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  (Capitoli/Specifica_dei_requisiti.tex
 Capitolo 4.
-<Immagini/AttoriPrimari.png, id=50, 765.6103pt x 310.91156pt>
+<Immagini/AttoriPrimari.png, id=54, 765.6103pt x 310.91156pt>
 File: Immagini/AttoriPrimari.png Graphic file (type png)
 <use Immagini/AttoriPrimari.png>
 Package pdftex.def Info: Immagini/AttoriPrimari.png  used on input line 8.
@@ -1172,7 +1172,7 @@ Package pdftex.def Info: Immagini/AttoriPrimari.png  used on input line 8.
 
 
  <./Immagini/AttoriPrimari.png>]
-<Immagini/AttoriFinali.png, id=56, 72.27pt x 86.57344pt>
+<Immagini/AttoriFinali.png, id=59, 72.27pt x 86.57344pt>
 File: Immagini/AttoriFinali.png Graphic file (type png)
 <use Immagini/AttoriFinali.png>
 Package pdftex.def Info: Immagini/AttoriFinali.png  used on input line 24.
@@ -1188,157 +1188,152 @@ Overfull \hbox (3.69841pt too wide) in paragraph at lines 36--84
  []
 
 [13]
-<Immagini/DiagrammaCasiUso.png, id=64, 639.13782pt x 387.69844pt>
+<Immagini/DiagrammaCasiUso.png, id=67, 639.13782pt x 387.69844pt>
 File: Immagini/DiagrammaCasiUso.png Graphic file (type png)
 <use Immagini/DiagrammaCasiUso.png>
 Package pdftex.def Info: Immagini/DiagrammaCasiUso.png  used on input line 93.
 (pdftex.def)             Requested size: 430.00462pt x 260.83919pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--95
+Underfull \hbox (badness 10000) in paragraph at lines 89--96
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--95
-
- []
-
-[14 <./Immagini/DiagrammaCasiUso.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+[14 <./Immagini/DiagrammaCasiUso.png>] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 []|\OT1/cmr/m/n/12 {$[]$ (vo-glio-no re-gi-stra-re/-mo-di-fi-ca-re
  []
 
 
-Underfull \hbox (badness 1205) in paragraph at lines 147--148
+Underfull \hbox (badness 1205) in paragraph at lines 150--151
 []|\OT1/cmr/m/n/12 {Una no-ti-fi-ca vie-ne in-via-ta ad un rea-liz-za-to-re di
  []
 
 
-Overfull \hbox (3.69841pt too wide) in alignment at lines 123--162
+Overfull \hbox (3.69841pt too wide) in alignment at lines 126--165
  [] [] 
  []
 
-[15]
-Underfull \vbox (badness 10000) detected at line 162
+
+Underfull \vbox (badness 10000) detected at line 165
  []
 
 
-Underfull \hbox (badness 2261) in paragraph at lines 163--164
+Underfull \hbox (badness 2261) in paragraph at lines 166--167
 []|\OT1/cmr/m/n/12 7.A Il di-pen-den-te di sa-la in-se-ri-sce pro-dot-ti con
  []
 
 
-Underfull \hbox (badness 2573) in paragraph at lines 168--169
+Underfull \hbox (badness 2573) in paragraph at lines 171--172
 []|\OT1/cmr/m/n/12 12.A Ven-go-no in-via-te no-ti-fi-che ai rea-liz-za-to-ri di
 
  []
 
 
-Underfull \hbox (badness 3849) in paragraph at lines 171--172
+Underfull \hbox (badness 3849) in paragraph at lines 174--175
 []|\OT1/cmr/m/n/12 5.B Il di-pen-den-te di sa-la ri-muo-ve l'or-di-na-zio-ne
  []
 
 
-Overfull \hbox (3.69841pt too wide) in alignment at lines 162--190
+Overfull \hbox (3.69841pt too wide) in alignment at lines 165--193
  [] [] 
  []
 
-[16]
-Underfull \hbox (badness 1215) in paragraph at lines 195--196
+[16] [17]
+Underfull \hbox (badness 1215) in paragraph at lines 198--199
 []|\OT1/cmr/m/n/12 5.C.1 L'or-di-na-zio-ne non e mo-di-fi-ca-bi-le (poiche in
 
  []
 
 
-Underfull \hbox (badness 5302) in paragraph at lines 201--202
+Underfull \hbox (badness 5302) in paragraph at lines 204--205
 []|\OT1/cmr/m/n/12 5.E.1 Il pro-dot-to non e ri-mo-vi-bi-le (poiche in
  []
 
 
-Overfull \hbox (3.69841pt too wide) in alignment at lines 190--204
- [] [] 
- []
-
-[17]
-Overfull \hbox (3.69841pt too wide) in alignment at lines 209--245
- [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 245
- []
-
-
-Overfull \hbox (3.69841pt too wide) in alignment at lines 245--247
+Overfull \hbox (3.69841pt too wide) in alignment at lines 193--207
  [] [] 
  []
 
 [18]
-Underfull \hbox (badness 1286) in paragraph at lines 272--273
+Overfull \hbox (3.69841pt too wide) in alignment at lines 212--248
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 248
+ []
+
+
+Overfull \hbox (3.69841pt too wide) in alignment at lines 248--250
+ [] [] 
+ []
+
+[19]
+Underfull \hbox (badness 1286) in paragraph at lines 275--276
 []|\OT1/cmr/m/n/12 {Prodotto in or-di-na-zio-ne vie-ne po-sto in sta-to di
  []
 
 
-Underfull \hbox (badness 1609) in paragraph at lines 287--287
+Underfull \hbox (badness 1609) in paragraph at lines 290--290
 []|\OT1/cmr/m/n/12 7.A Il si-ste-ma in-via un'or-di-na-zio-ne pen-den-te per
  []
 
 
-Underfull \hbox (badness 1478) in paragraph at lines 287--287
+Underfull \hbox (badness 1478) in paragraph at lines 290--290
 \OT1/cmr/m/n/12 al-tri rea-liz-za-to-ri di or-di-na-zio-ne in at-te-sa di quel
  []
 
 
-Overfull \hbox (3.69841pt too wide) in alignment at lines 251--287
+Overfull \hbox (3.69841pt too wide) in alignment at lines 254--290
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 287
+Underfull \vbox (badness 10000) detected at line 290
  []
 
 
-Overfull \hbox (3.69841pt too wide) in alignment at lines 287--292
+Overfull \hbox (3.69841pt too wide) in alignment at lines 290--295
  [] [] 
  []
 
-[19] [20] [21]) [22]
+[20] [21] [22]) [23]
 \openout2 = `Capitoli/Analisi_dei_requisiti.aux'.
 
  (Capitoli/Analisi_dei_requisiti.tex
 Capitolo 5.
-<Immagini/modello_dominio.jpg, id=94, 1494.58376pt x 1042.89626pt>
+<Immagini/modello_dominio.jpg, id=101, 1494.58376pt x 1042.89626pt>
 File: Immagini/modello_dominio.jpg Graphic file (type jpg)
 <use Immagini/modello_dominio.jpg>
 Package pdftex.def Info: Immagini/modello_dominio.jpg  used on input line 7.
 (pdftex.def)             Requested size: 430.00462pt x 300.04518pt.
-[23
+[24
 
 
 
- <./Immagini/modello_dominio.jpg>] [24]
-<Immagini/stati_tavolo.jpg, id=102, 1230.5975pt x 521.95pt>
+ <./Immagini/modello_dominio.jpg>] [25]
+<Immagini/stati_tavolo.jpg, id=108, 1230.5975pt x 521.95pt>
 File: Immagini/stati_tavolo.jpg Graphic file (type jpg)
 <use Immagini/stati_tavolo.jpg>
 Package pdftex.def Info: Immagini/stati_tavolo.jpg  used on input line 25.
 (pdftex.def)             Requested size: 430.00462pt x 182.38258pt.
-<Immagini/stati_prodotti_ordinati.jpg, id=103, 655.44875pt x 468.75125pt>
+<Immagini/stati_prodotti_ordinati.jpg, id=109, 655.44875pt x 468.75125pt>
 File: Immagini/stati_prodotti_ordinati.jpg Graphic file (type jpg)
 <use Immagini/stati_prodotti_ordinati.jpg>
 Package pdftex.def Info: Immagini/stati_prodotti_ordinati.jpg  used on input li
 ne 34.
 (pdftex.def)             Requested size: 344.005pt x 246.01941pt.
- [25 <./Immagini/stati_tavolo.jpg>]
-<Immagini/stati_ordinazione.jpg, id=107, 908.39375pt x 547.04375pt>
+ [26 <./Immagini/stati_tavolo.jpg>]
+<Immagini/stati_ordinazione.jpg, id=113, 908.39375pt x 547.04375pt>
 File: Immagini/stati_ordinazione.jpg Graphic file (type jpg)
 <use Immagini/stati_ordinazione.jpg>
 Package pdftex.def Info: Immagini/stati_ordinazione.jpg  used on input line 43.
 
 (pdftex.def)             Requested size: 430.00462pt x 258.95532pt.
 
-[26 <./Immagini/stati_prodotti_ordinati.jpg>] [27 <./Immagini/stati_ordinazione
+[27 <./Immagini/stati_prodotti_ordinati.jpg>] [28 <./Immagini/stati_ordinazione
 .jpg>]
-<Immagini/SSD Gestisci Ordinazioni (Successo).jpg, id=114, 1067.99pt x 981.6675
+<Immagini/SSD Gestisci Ordinazioni (Successo).jpg, id=121, 1067.99pt x 981.6675
 pt>
 File: Immagini/SSD Gestisci Ordinazioni (Successo).jpg Graphic file (type jpg)
 <use Immagini/SSD Gestisci Ordinazioni (Successo).jpg>
@@ -1346,7 +1341,7 @@ Package pdftex.def Info: Immagini/SSD Gestisci Ordinazioni (Successo).jpg  used
  on input line 56.
 (pdftex.def)             Requested size: 430.00462pt x 395.2514pt.
 <Immagini/SSD Gestisci Ordinazione (EstensioneB - Elimina Ordinazione).jpg, id=
-115, 919.435pt x 776.9025pt>
+122, 919.435pt x 776.9025pt>
 File: Immagini/SSD Gestisci Ordinazione (EstensioneB - Elimina Ordinazione).jpg
  Graphic file (type jpg)
 <use Immagini/SSD Gestisci Ordinazione (EstensioneB - Elimina Ordinazione).jpg>
@@ -1354,24 +1349,24 @@ File: Immagini/SSD Gestisci Ordinazione (EstensioneB - Elimina Ordinazione).jpg
 Package pdftex.def Info: Immagini/SSD Gestisci Ordinazione (EstensioneB - Elimi
 na Ordinazione).jpg  used on input line 62.
 (pdftex.def)             Requested size: 430.00462pt x 363.35417pt.
- [28 <./Immagini/SSD Gestisci Ordinazioni (Successo).jpg>]
-<Immagini/SSD Gestisci Ordinazione (EstensioneC - Aggiungi prodotto).jpg, id=11
-9, 1016.79875pt x 1417.295pt>
+ [29 <./Immagini/SSD Gestisci Ordinazioni (Successo).jpg>]
+<Immagini/SSD Gestisci Ordinazione (EstensioneC - Aggiungi prodotto).jpg, id=12
+6, 1016.79875pt x 1417.295pt>
 File: Immagini/SSD Gestisci Ordinazione (EstensioneC - Aggiungi prodotto).jpg G
 raphic file (type jpg)
 <use Immagini/SSD Gestisci Ordinazione (EstensioneC - Aggiungi prodotto).jpg>
 Package pdftex.def Info: Immagini/SSD Gestisci Ordinazione (EstensioneC - Aggiu
 ngi prodotto).jpg  used on input line 68.
 (pdftex.def)             Requested size: 430.00462pt x 599.36882pt.
- [29 <./Immagini/SSD Gestisci Ordinazione (EstensioneB - Elimina Ordinazione).j
+ [30 <./Immagini/SSD Gestisci Ordinazione (EstensioneB - Elimina Ordinazione).j
 pg>]
 Overfull \vbox (73.64226pt too high) has occurred while \output is active []
 
 
-[30 <./Immagini/SSD Gestisci Ordinazione (EstensioneC - Aggiungi prodotto).jpg>
+[31 <./Immagini/SSD Gestisci Ordinazione (EstensioneC - Aggiungi prodotto).jpg>
 ]
-<Immagini/SSD Gestisci Ordinazione (EstensioneD - Modifica prodotto).jpg, id=12
-7, 1065.9825pt x 1299.85625pt>
+<Immagini/SSD Gestisci Ordinazione (EstensioneD - Modifica prodotto).jpg, id=13
+3, 1065.9825pt x 1299.85625pt>
 File: Immagini/SSD Gestisci Ordinazione (EstensioneD - Modifica prodotto).jpg G
 raphic file (type jpg)
 <use Immagini/SSD Gestisci Ordinazione (EstensioneD - Modifica prodotto).jpg>
@@ -1379,7 +1374,7 @@ Package pdftex.def Info: Immagini/SSD Gestisci Ordinazione (EstensioneD - Modif
 ica prodotto).jpg  used on input line 74.
 (pdftex.def)             Requested size: 430.00462pt x 524.33649pt.
 <Immagini/SSD Gestisci Ordinazioni (Estensione E - Rimuovi prodotto ordinazione
-).jpg, id=128, 1333.98375pt x 834.11626pt>
+).jpg, id=134, 1333.98375pt x 834.11626pt>
 File: Immagini/SSD Gestisci Ordinazioni (Estensione E - Rimuovi prodotto ordina
 zione).jpg Graphic file (type jpg)
 <use Immagini/SSD Gestisci Ordinazioni (Estensione E - Rimuovi prodotto ordinaz
@@ -1387,102 +1382,102 @@ ione).jpg>
 Package pdftex.def Info: Immagini/SSD Gestisci Ordinazioni (Estensione E - Rimu
 ovi prodotto ordinazione).jpg  used on input line 80.
 (pdftex.def)             Requested size: 430.00462pt x 268.86998pt.
- [31 <./Immagini/SSD Gestisci Ordinazione (EstensioneD - Modifica prodotto).jpg
+ [32 <./Immagini/SSD Gestisci Ordinazione (EstensioneD - Modifica prodotto).jpg
 >]
-<Immagini/SSD Notifica Ordinazione.jpg, id=132, 1083.04625pt x 645.41125pt>
+<Immagini/SSD Notifica Ordinazione.jpg, id=138, 1083.04625pt x 645.41125pt>
 File: Immagini/SSD Notifica Ordinazione.jpg Graphic file (type jpg)
 <use Immagini/SSD Notifica Ordinazione.jpg>
 Package pdftex.def Info: Immagini/SSD Notifica Ordinazione.jpg  used on input l
 ine 87.
 (pdftex.def)             Requested size: 430.00462pt x 256.24937pt.
-) [32 <./Immagini/SSD Gestisci Ordinazioni (Estensione E - Rimuovi prodotto ord
-inazione).jpg>] [33 <./Immagini/SSD Notifica Ordinazione.jpg>]
+) [33 <./Immagini/SSD Gestisci Ordinazioni (Estensione E - Rimuovi prodotto ord
+inazione).jpg>] [34 <./Immagini/SSD Notifica Ordinazione.jpg>]
 \openout2 = `Capitoli/Progettazione.aux'.
 
 
 (Capitoli/Progettazione.tex
 Capitolo 6.
-[34
+[35
 
 
 
 ]
-<Immagini/main_system.png, id=142, 377.15906pt x 398.99063pt>
+<Immagini/main_system.png, id=149, 377.15906pt x 398.99063pt>
 File: Immagini/main_system.png Graphic file (type png)
 <use Immagini/main_system.png>
 Package pdftex.def Info: Immagini/main_system.png  used on input line 52.
 (pdftex.def)             Requested size: 171.99922pt x 181.955pt.
- [35]
-<Immagini/proxy.png, id=147, 314.67563pt x 118.19156pt>
+ [36]
+<Immagini/proxy.png, id=153, 314.67563pt x 118.19156pt>
 File: Immagini/proxy.png Graphic file (type png)
 <use Immagini/proxy.png>
 Package pdftex.def Info: Immagini/proxy.png  used on input line 67.
 (pdftex.def)             Requested size: 258.00539pt x 96.91049pt.
- [36 <./Immagini/main_system.png>] [37 <./Immagini/proxy.png>]
-<Immagini/components.jpg, id=156, 2202.2275pt x 841.1425pt>
+ [37 <./Immagini/main_system.png>] [38 <./Immagini/proxy.png>]
+<Immagini/components.jpg, id=162, 2202.2275pt x 841.1425pt>
 File: Immagini/components.jpg Graphic file (type jpg)
 <use Immagini/components.jpg>
 Package pdftex.def Info: Immagini/components.jpg  used on input line 99.
 (pdftex.def)             Requested size: 430.00462pt x 164.2339pt.
 
-[38 <./Immagini/components.jpg>]
-<Immagini/business_logic.jpg, id=160, 578.16pt x 726.715pt>
+[39 <./Immagini/components.jpg>]
+<Immagini/business_logic.jpg, id=166, 578.16pt x 726.715pt>
 File: Immagini/business_logic.jpg Graphic file (type jpg)
 <use Immagini/business_logic.jpg>
 Package pdftex.def Info: Immagini/business_logic.jpg  used on input line 123.
 (pdftex.def)             Requested size: 258.00539pt x 324.29088pt.
- [39] [40 <./Immagini/business_logic.jpg>]
-<Immagini/MenuAndWareHouseArea.jpg, id=167, 1080.035pt x 1266.7325pt>
+ [40] [41 <./Immagini/business_logic.jpg>]
+<Immagini/MenuAndWareHouseArea.jpg, id=174, 1080.035pt x 1266.7325pt>
 File: Immagini/MenuAndWareHouseArea.jpg Graphic file (type jpg)
 <use Immagini/MenuAndWareHouseArea.jpg>
 Package pdftex.def Info: Immagini/MenuAndWareHouseArea.jpg  used on input line 
 144.
 (pdftex.def)             Requested size: 344.005pt x 403.46846pt.
-<Immagini/TableAndOrdersArea.jpg, id=168, 1142.2675pt x 816.04875pt>
+<Immagini/TableAndOrdersArea.jpg, id=175, 1142.2675pt x 816.04875pt>
 File: Immagini/TableAndOrdersArea.jpg Graphic file (type jpg)
 <use Immagini/TableAndOrdersArea.jpg>
 Package pdftex.def Info: Immagini/TableAndOrdersArea.jpg  used on input line 15
 1.
 (pdftex.def)             Requested size: 344.005pt x 245.76286pt.
 
-[41 <./Immagini/MenuAndWareHouseArea.jpg>]
-<Immagini/UserData.jpg, id=173, 351.3125pt x 546.04pt>
+[42 <./Immagini/MenuAndWareHouseArea.jpg>]
+<Immagini/UserData.jpg, id=179, 351.3125pt x 546.04pt>
 File: Immagini/UserData.jpg Graphic file (type jpg)
 <use Immagini/UserData.jpg>
 Package pdftex.def Info: Immagini/UserData.jpg  used on input line 158.
 (pdftex.def)             Requested size: 129.00269pt x 200.51523pt.
- [42 <./Immagini/TableAndOrdersArea.jpg> <./Immagini/UserData.jpg>]
-<Immagini/DataAccess.jpg, id=177, 1132.23pt x 512.91624pt>
+ [43 <./Immagini/TableAndOrdersArea.jpg> <./Immagini/UserData.jpg>]
+<Immagini/DataAccess.jpg, id=183, 1132.23pt x 512.91624pt>
 File: Immagini/DataAccess.jpg Graphic file (type jpg)
 <use Immagini/DataAccess.jpg>
 Package pdftex.def Info: Immagini/DataAccess.jpg  used on input line 166.
 (pdftex.def)             Requested size: 344.005pt x 155.83267pt.
-<Immagini/controller.jpg, id=178, 972.63374pt x 473.77pt>
+<Immagini/controller.jpg, id=184, 972.63374pt x 473.77pt>
 File: Immagini/controller.jpg Graphic file (type jpg)
 <use Immagini/controller.jpg>
 Package pdftex.def Info: Immagini/controller.jpg  used on input line 175.
 (pdftex.def)             Requested size: 344.005pt x 167.56421pt.
-<Immagini/request_generator.jpg, id=179, 1186.4325pt x 369.38pt>
+<Immagini/request_generator.jpg, id=185, 1186.4325pt x 369.38pt>
 File: Immagini/request_generator.jpg Graphic file (type jpg)
 <use Immagini/request_generator.jpg>
 Package pdftex.def Info: Immagini/request_generator.jpg  used on input line 183
 .
 (pdftex.def)             Requested size: 430.00462pt x 133.8785pt.
- [43 <./Immagini/DataAccess.jpg> <./Immagini/controller.jpg>]
-<Immagini/broker.jpg, id=183, 602.25pt x 397.485pt>
+ [44 <./Immagini/DataAccess.jpg> <./Immagini/controller.jpg>]
+<Immagini/broker.jpg, id=189, 602.25pt x 397.485pt>
 File: Immagini/broker.jpg Graphic file (type jpg)
 <use Immagini/broker.jpg>
 Package pdftex.def Info: Immagini/broker.jpg  used on input line 193.
 (pdftex.def)             Requested size: 258.00539pt x 170.2905pt.
- [44 <./Immagini/request_generator.jpg>]
-<Immagini/proxy_classdiagram.jpg, id=187, 513.92pt x 370.38374pt>
+ [45 <./Immagini/request_generator.jpg>]
+<Immagini/proxy_classdiagram.jpg, id=193, 513.92pt x 370.38374pt>
 File: Immagini/proxy_classdiagram.jpg Graphic file (type jpg)
 <use Immagini/proxy_classdiagram.jpg>
 Package pdftex.def Info: Immagini/proxy_classdiagram.jpg  used on input line 20
 5.
 (pdftex.def)             Requested size: 215.0023pt x 154.95538pt.
- [45 <./Immagini/broker.jpg> <./Immagini/proxy_classdiagram.jpg>]
-<Immagini/android_classdiagram.jpg, id=191, 899.36pt x 454.69875pt>
+ [46 <./Immagini/broker.jpg> <./Immagini/proxy_classdiagram.jpg>]
+<Immagini/android_classdiagram.jpg, id=198, 899.36pt x 454.69875pt>
 File: Immagini/android_classdiagram.jpg Graphic file (type jpg)
 <use Immagini/android_classdiagram.jpg>
 Package pdftex.def Info: Immagini/android_classdiagram.jpg  used on input line 
@@ -1494,81 +1489,81 @@ Overfull \hbox (3.9168pt too wide) in paragraph at lines 222--223
 z-za-ta con de-si-gn pat-tern $[]$.
  []
 
-[46 <./Immagini/android_classdiagram.jpg>]
-<Immagini/database.jpg, id=195, 1365.1pt x 628.3475pt>
+[47 <./Immagini/android_classdiagram.jpg>]
+<Immagini/database.jpg, id=202, 1365.1pt x 628.3475pt>
 File: Immagini/database.jpg Graphic file (type jpg)
 <use Immagini/database.jpg>
-Package pdftex.def Info: Immagini/database.jpg  used on input line 239.
+Package pdftex.def Info: Immagini/database.jpg  used on input line 233.
 (pdftex.def)             Requested size: 430.00462pt x 197.92091pt.
- [47 <./Immagini/database.jpg>]
-Overfull \hbox (13.41438pt too wide) in paragraph at lines 259--260
+ [48 <./Immagini/database.jpg>]
+Overfull \hbox (13.41438pt too wide) in paragraph at lines 253--254
 []$[]$\OT1/cmr/m/n/12 : Se-quen-ce del-l'a-rea del Con-trol-ler del-l'a-rea ri-
 sto-ran-te(tavoli
  []
 
-<Immagini/top_orderToTableGenerationRequest.jpg, id=200, 1808.7575pt x 980.6637
+<Immagini/top_orderToTableGenerationRequest.jpg, id=206, 1808.7575pt x 980.6637
 6pt>
 File: Immagini/top_orderToTableGenerationRequest.jpg Graphic file (type jpg)
 <use Immagini/top_orderToTableGenerationRequest.jpg>
 Package pdftex.def Info: Immagini/top_orderToTableGenerationRequest.jpg  used o
-n input line 271.
+n input line 265.
 (pdftex.def)             Requested size: 430.00462pt x 233.13452pt.
-[48]
-<Immagini/tableAndOrdersArea_generateOrderForTableId.jpg, id=204, 2648.89626pt 
+[49]
+<Immagini/tableAndOrdersArea_generateOrderForTableId.jpg, id=210, 2648.89626pt 
 x 2270.4825pt>
 File: Immagini/tableAndOrdersArea_generateOrderForTableId.jpg Graphic file (typ
 e jpg)
 <use Immagini/tableAndOrdersArea_generateOrderForTableId.jpg>
 Package pdftex.def Info: Immagini/tableAndOrdersArea_generateOrderForTableId.jp
-g  used on input line 276.
+g  used on input line 270.
 (pdftex.def)             Requested size: 430.00462pt x 368.55063pt.
- [49 <./Immagini/top_orderToTableGenerationRequest.jpg>]
-<Immagini/tablesAndOrdersArea_getTable.jpg, id=208, 698.61pt x 628.3475pt>
+ [50 <./Immagini/top_orderToTableGenerationRequest.jpg>]
+<Immagini/tablesAndOrdersArea_getTable.jpg, id=214, 698.61pt x 628.3475pt>
 File: Immagini/tablesAndOrdersArea_getTable.jpg Graphic file (type jpg)
 <use Immagini/tablesAndOrdersArea_getTable.jpg>
 Package pdftex.def Info: Immagini/tablesAndOrdersArea_getTable.jpg  used on inp
-ut line 281.
+ut line 275.
 (pdftex.def)             Requested size: 258.00539pt x 232.05348pt.
- [50 <./Immagini/tableAndOrdersArea_generateOrderForTableId.jpg>]
-<Immagini/aggiornamento_view.jpg, id=212, 780.9175pt x 542.025pt>
+ [51 <./Immagini/tableAndOrdersArea_generateOrderForTableId.jpg>]
+<Immagini/aggiornamento_view.jpg, id=218, 780.9175pt x 542.025pt>
 File: Immagini/aggiornamento_view.jpg Graphic file (type jpg)
 <use Immagini/aggiornamento_view.jpg>
-Package pdftex.def Info: Immagini/aggiornamento_view.jpg  used on input line 29
-1.
+Package pdftex.def Info: Immagini/aggiornamento_view.jpg  used on input line 28
+5.
 (pdftex.def)             Requested size: 344.005pt x 238.76466pt.
- [51 <./Immagini/tablesAndOrdersArea_getTable.jpg>]
-<Immagini/deploy.jpg, id=216, 1048.91875pt x 558.085pt>
+ [52 <./Immagini/tablesAndOrdersArea_getTable.jpg>]
+<Immagini/deploy.jpg, id=223, 1048.91875pt x 558.085pt>
 File: Immagini/deploy.jpg Graphic file (type jpg)
 <use Immagini/deploy.jpg>
-Package pdftex.def Info: Immagini/deploy.jpg  used on input line 297.
+Package pdftex.def Info: Immagini/deploy.jpg  used on input line 292.
 (pdftex.def)             Requested size: 430.00462pt x 228.78227pt.
- [52 <./Immagini/aggiornamento_view.jpg> <./Immagini/deploy.jpg>] [53]
-<Immagini/messages_api.jpg, id=224, 2046.64626pt x 1105.12875pt>
+ [53 <./Immagini/aggiornamento_view.jpg>] [54 <./Immagini/deploy.jpg>]
+<Immagini/messages_api.jpg, id=230, 2046.64626pt x 1105.12875pt>
 File: Immagini/messages_api.jpg Graphic file (type jpg)
 <use Immagini/messages_api.jpg>
-Package pdftex.def Info: Immagini/messages_api.jpg  used on input line 327.
+Package pdftex.def Info: Immagini/messages_api.jpg  used on input line 322.
 (pdftex.def)             Requested size: 430.00462pt x 232.18506pt.
- [54 <./Immagini/messages_api.jpg>]
-<Immagini/loginScenario.png, id=228, 499.8675pt x 447.47176pt>
+ [55] [56 <./Immagini/messages_api.jpg>]
+<Immagini/loginScenario.png, id=237, 499.8675pt x 447.47176pt>
 File: Immagini/loginScenario.png Graphic file (type png)
 <use Immagini/loginScenario.png>
-Package pdftex.def Info: Immagini/loginScenario.png  used on input line 354.
+Package pdftex.def Info: Immagini/loginScenario.png  used on input line 349.
 (pdftex.def)             Requested size: 301.00192pt x 269.4615pt.
-) [55 <./Immagini/loginScenario.png>] [56]
+) [57 <./Immagini/loginScenario.png>]
 \openout2 = `Capitoli/Implementazione.aux'.
 
  (Capitoli/Implementazione.tex
 Capitolo 7.
-) [57
+[58
 
 
 
-]
+] [59] [60] [61]) [62]
 \openout2 = `Capitoli/Test.aux'.
 
  (Capitoli/Test.tex
 Capitolo 8.
-) [58
+) [63
 
 
 
@@ -1596,9 +1591,9 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Giuseppe/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Giu
 seppe/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.p
 fb>
-Output written on main.pdf (60 pages, 3049686 bytes).
+Output written on main.pdf (66 pages, 3062374 bytes).
 PDF statistics:
- 261 PDF objects out of 1000 (max. 8388607)
+ 280 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  188 words of extra memory for PDF output out of 10000 (max. 10000000)
 

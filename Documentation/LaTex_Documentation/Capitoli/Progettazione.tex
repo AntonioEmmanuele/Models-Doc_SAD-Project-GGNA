@@ -225,12 +225,6 @@ Brevemente:
 	\\La classe \textbf{Data} è una classe con design pattern \underline{Singleton} poiché all'interno del sistema deve esistere una sola istanza per gestire il modello.
 	\item View si occupa di realizzare un'interfaccia grafica dei dati del modello.
 \end{itemize}
-Il sistema di funzionamento è molto semplice:
-\begin{enumerate}
-	\item Viene ricevuto un aggiornamento dei dati tramite il \textit{ConnectivityController}.
-	\item Il \textit{ConnectivityController} aggiorna il modello tramite la classe \textit{Data}.
-	\item Il \textit{ConnectivityController} seleziona la View da utilizzare sfruttando il \textit{AppStateController}
-\end{enumerate}
 
 \section{Database}
 Il database deve contenere le informazioni di base che devono essere utilizzate, a partire dai dipendenti che vengono registrati nel sistema e finire con le ordinazioni che vengono effettuate durante l'utilizzo del sistema.
@@ -290,6 +284,7 @@ Lato Applicazione Mobile il seguente SD mostra l'interazione nell'MVC per aggior
 	\centering
 	\includegraphics[width=0.8\textwidth]{Immagini/aggiornamento_view.jpg}
 \end{figure}
+In linea generale il funzionamento è il precedente, ma non è rigidamente rispettato per tutti i possibili casi. Ad esempio in alcuni casi non è necessario richiamare una view, ma solo far visualizzare a video una notifica di aggiornamento.
 
 \section{Deployment Diagram}
 \begin{figure}[H]
