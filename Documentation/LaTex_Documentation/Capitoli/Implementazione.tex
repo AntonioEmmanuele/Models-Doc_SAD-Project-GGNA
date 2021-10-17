@@ -21,18 +21,18 @@ Il Request Generator è il componente che si interfaccia coi proxy adibiti alla 
 	\item \textbf{ActiveMQ Artemis}, un MOM configurabile in maniera particolarmente rapida: basta usare un comando per dichiararsi un broker ed un altro per avviarlo e subito si può iniziare a sperimentare.
 \end{itemize}
 I messaggi scambiati sono tutti in formato JSON. La progettazione rende di fatto già scalabile la comunicazione, di conseguenza il Request Generator ha il solo compito di fornire l'interfaccia verso Artemis attraverso un controller che prenda in carico, attraverso il JMS, i messaggi che sulle diverse code vengono prodotti. \vspace{0.5cm}
-\\Anche per il Request Generator è stato usato Spring Boot. In particolare, di fondamentale importanza è stata la dependency \textit{Spring for Apache ActiveMQ 5}. Essa mette a disposizione l'infrastruttura necessaria alla comunicazione coi server Artemis utilizzabile attraverso l'interfaccia, da estendere, MessageListener. E' per questo motivo che Request Generator implementa diversi controller a seconda della coda di messaggi: ogni controller modifica il metodo onMessage() per gestire opportunamente il messaggio JSON, la cui struttura può cambiare a seconda della coda sul quale si trova, che riceve. Internamente, il dispatcher si preoccupa poi solo di reindirizzare opportunamente al Main System i messaggi che arrivano implementando i controller del Request Generator e il System Controller e gestendone le chiamate a funzione.  
+\\Anche per il Request Generator è stato usato Spring Boot. In particolare, di fondamentale importanza è stata la dependency \textit{Spring for Apache ActiveMQ 5}. Essa mette a disposizione l'infrastruttura necessaria alla comunicazione coi server Artemis utilizzabile attraverso l'interfaccia, da estendere, MessageListener. E' per questo motivo che Request Generator implementa diversi controller a seconda della coda di messaggi: ogni controller modifica il metodo onMessage() per gestire opportunamente il messaggio JSON, la cui struttura può cambiare a seconda della coda sul quale si trova, che riceve. Il dispatcher, tramite il metodo \textit{caller factory}, va a  richiamare una specifica operazione di callback della \textit{controlInterface} definita dallo stesso Request, che è un controller deve implementare affinchè possa essere usato insieme a quest'ultimo.  
 
 \subsection{Broker}
 Il Broker ha il compito esattamente opposto al Request Generator: smistare i messaggi sulle code in maniera tale da informare l'applicazione utente degli eventi ai quale essa è interessata. 
 La struttura, poiché ricettiva, riceve i messaggi da pubblicare attraverso il System Controller che implementa un'interfaccia, la BrokerInterface, che poi il Dispatcher estende. \vspace{0.5cm}
 \\Anche il Broker utilizza il JMS e ActiveMQ Artemis per comunicare con l'applicazione attraverso i proxy. La differenza principale col Request Generator è che il Broker ha bisogno di aprire il messaggio JSON inviato dall'applicazione per smistarlo correttamente sulla base del codice nominativo dell'area, di fatto codice univoco per la coda su cui smistare.
-\\Come il Request Generator, non effettua poi alcuna modifica sui messaggi, preoccupandosi soltanto di gestirne il corretto invio. La comunicazione col Main System avviene anche qui attraverso semplice chiamata a funzione. 
+\\Il broker dualmente al Request Generator possiede un dispatcher che implementa l'interfaccia \textit{BrokerIface} definita dalla Business Logic.
+Il dispatcher a seconda dell'evento pubblicato va a notificare uno specifico Proxy.
 
 \section{Proxy}
 I proxy sono l'impalcatura su cui si fonda la rete di messaggi tra applicazione e sistema. 
-\\L'idea di implementare dei proxy è nata dalla difficoltà che l'applicazione aveva nel comunicare con il sistema in maniera corretta, gestendo correttamente tutti i tipi di messaggi, che nel concreto sono tutti eventi di diversa natura, che bisognava inviare e ricevere. 
-\\Da ciò, l'idea dei proxy per rendere non solo più semplice la comunicazione, affibiando a loro il compito di incaricarsi della comunicazione, ma anche per fornire un'interfaccia più scalabile e flessibile ad eventuali modifiche e aggiornamenti. \vspace{0.5cm}
+\\Il broker dualmente al request generator possiede un dispatcher che implementa l'interfaccia BrokerIface definita dalla Business Logic. Il dispatcher a seconda dell'evento pubblicato va a notificare uno specifico proxy. Ciò ha concesso un ulteriore livello di disaccoppiamento tra applicazione e Main System. \vspace{0.5cm}
 \\Anche l'implementazione dei proxy è basata su Spring Boot. Le dependency utilizzate sono \textbf{Spring Web} e \textbf{Spring for Apache ActiveMQ Artemis}. 
 \\I proxy hanno infatti sia il compito di fungere da client per il Request Generator sia quello di fungere da server per il Broker. Di conseguenza, la prima dependency di Spring mette a disposizione l'infrastruttura generale per aprire un server Tomcat in ascolto in localhost di default sul porto 8080, configurazione che può essere modificata attraverso il file di proprietà.
 \\Vi sono diversi proxy, ma tutti in generale hanno la stessa struttura ed implementazione che differisce solo sulla base dei messaggi che devono leggere e scambiare. \vspace{0.5cm}
@@ -52,7 +52,7 @@ Attraverso quest'annotazione, è possibile gestire in ricezione le richieste POS
       
       \item Se si tratta di un messaggio da spedire ad un'applicazione, suppone che quest'ultima già conosca il proprio uri di destinazione e si preoccupa solo di verificare che essa sia registrata al proprio Webhook;
       \begin{itemize}
-        \item In tal caso, manda in broadcast se più applicazioni sono interessate altrimenti manda al singolo destinatario interessato. 
+        \item In tal caso inoltra al singolo utente una Richiesta o una Notifica in broadcast. 
       \end{itemize}
       
       \item Impacchetta il messaggio nuovamente in un JSON ed invia. 

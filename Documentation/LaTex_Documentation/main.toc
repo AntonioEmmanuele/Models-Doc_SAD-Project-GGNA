@@ -6,8 +6,7 @@
 \contentsline {section}{\numberline {2.2}UP}{4}%
 \contentsline {subsection}{\numberline {2.2.1}Ideazione}{4}%
 \contentsline {subsection}{\numberline {2.2.2}Elaborazione}{5}%
-\contentsline {subsection}{\numberline {2.2.3}Transazione}{6}%
-\contentsline {section}{\numberline {2.3}Altre pratiche}{7}%
+\contentsline {section}{\numberline {2.3}Altre pratiche}{6}%
 \contentsline {chapter}{\numberline {3}Documento di visione}{8}%
 \contentsline {section}{\numberline {3.1}Introduzione}{8}%
 \contentsline {section}{\numberline {3.2}Parti interessate}{9}%
